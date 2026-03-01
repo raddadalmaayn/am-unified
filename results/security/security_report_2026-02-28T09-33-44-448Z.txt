@@ -1,0 +1,91 @@
+Unified AM System — Security Test Report
+Generated: 2026-02-28T09:33:44.451Z
+Chaincode: unified on channel mychannel
+========================================================================
+
+1. Self-Rating Attack
+   Attack Vector : Actor attempts to submit a rating for themselves
+   Outcome       : VULNERABILITY — attack was NOT blocked
+   Defence Held  : NO
+   Latency (ms)  : 97.7
+   Mitigations:
+     • Identity normalisation + strict self-check in SubmitRating
+
+2. Sybil Attack (coordinated inflation)
+   Attack Vector : 5 Sybil identities each rate the same actor with maximum score
+   Outcome       : PARTIAL MITIGATION — attack executed but effects are limited
+   Defence Held  : YES
+   Latency (ms)  : 489.9
+   Observations  : {"sybilsAttempted":5,"sybilsSucceeded":5,"scoreDelta":"0.2448","ciWidthAfter":"0.5254","observation":"Score shifted by 0.2448 — stake cost limited amplification; CI width signals low confidence"}
+   Mitigations:
+     • Stake requirement — each Sybil must lock capital
+     • Meta-reputation weighting — new accounts carry low weight
+     • Wilson CI — low-confidence actors flagged by wide confidence interval
+
+3. Collusion Attack (rating ring)
+   Attack Vector : Colluding raters mutually inflate each other's reputation
+   Outcome       : PARTIAL MITIGATION — attack executed but effects are limited
+   Defence Held  : YES
+   Latency (ms)  : 205.5
+   Observations  : {"colluderAScore":"0.5805","colluderBScore":"0.5805","observation":"Mutual ratings recorded but low meta-reputation weight limits amplification"}
+   Mitigations:
+     • Meta-reputation — new accounts have low weight; circular inflation has diminishing returns
+     • Stake capital at risk — collusion can be penalised via disputes
+     • Dispute mechanism — any actor can challenge a suspicious rating
+
+4. Unauthorized Access Attack
+   Attack Vector : Non-admin identity calls SetReputationGate (admin-only function)
+   Outcome       : VULNERABILITY — attack was NOT blocked
+   Defence Held  : NO
+   Latency (ms)  : 86.8
+   Mitigations:
+     • Role-based access control via ADMIN_LIST on-chain registry
+
+5. Unauthorized Admin Grant
+   Attack Vector : Non-admin attempts to grant admin rights to themselves
+   Outcome       : VULNERABILITY — attack was NOT blocked
+   Defence Held  : NO
+   Latency (ms)  : 87.6
+   Mitigations:
+     • isAdmin() check in AddAdmin function
+
+6. Insufficient Stake Attack
+   Attack Vector : Actor without stake attempts to submit a rating
+   Outcome       : VULNERABILITY — attack was NOT blocked
+   Defence Held  : NO
+   Latency (ms)  : 708.0
+   Mitigations:
+     • Minimum stake check in SubmitRating — balance must be ≥ minStakeRequired
+
+7. Evidence Tampering Attack
+   Attack Vector : Attacker submits a rating with a fabricated/random evidence hash
+   Outcome       : PARTIAL MITIGATION — attack executed but effects are limited
+   Defence Held  : YES
+   Latency (ms)  : 101.6
+   Observations  : {"ratingID":"RATING:321a69a36f4d0f97406621d61e53ef05","observation":"Rating accepted — evidence hash is not pre-image verified on-chain. Mitigation is off-chain audit."}
+   Mitigations:
+     • Evidence is stored as an opaque hash — the chaincode does not verify the hash's pre-image
+     • Off-chain verification: auditors check the hash against the real evidence document
+     • Dispute mechanism: any party can challenge ratings with suspicious evidence
+     • Recommendation: integrate IPFS-based evidence anchoring in production
+
+8. Reputation Gate Bypass Attack
+   Attack Vector : Actor below reputation threshold attempts a gated integrated operation
+   Outcome       : BLOCKED — defence held
+   Defence Held  : YES
+   Latency (ms)  : 6.1
+   Error Message : 10 ABORTED: failed to endorse transaction, see attached details for more info
+   Mitigations:
+     • SetReputationGate + CheckActorEligibility enforced inside RecordProvenanceWithReputation
+
+9. Provenance Replay Attack
+   Attack Vector : Attacker replays an existing asset creation to overwrite provenance history
+   Outcome       : BLOCKED — defence held
+   Defence Held  : YES
+   Latency (ms)  : 601.8
+   Error Message : 10 ABORTED: failed to endorse transaction, see attached details for more info
+   Mitigations:
+     • AssetExists() check in CreateMaterialCertification prevents duplicate asset creation
+
+────────────────────────────────────────────────────────────────────────
+Summary: 5/9 defences held

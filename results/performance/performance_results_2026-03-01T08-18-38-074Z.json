@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-03-01T08-18-38-074Z",
+  "results": [
+    {
+      "category": "Provenance",
+      "metric": "Sequential Write Latency — Mean (ms)",
+      "result": "49.00"
+    },
+    {
+      "category": "Provenance",
+      "metric": "Sequential Write Latency — P50 (ms)",
+      "result": "48.69"
+    },
+    {
+      "category": "Provenance",
+      "metric": "Sequential Write Latency — P95 (ms)",
+      "result": "54.93"
+    },
+    {
+      "category": "Provenance",
+      "metric": "Sequential Write Latency — P99 (ms)",
+      "result": "56.86"
+    },
+    {
+      "category": "Provenance",
+      "metric": "Sequential Write Latency — StdDev (ms)",
+      "result": "3.19"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Sequential Write Latency — Mean (ms)",
+      "result": "51.19"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Sequential Write Latency — P50 (ms)",
+      "result": "50.84"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Sequential Write Latency — P95 (ms)",
+      "result": "58.98"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Sequential Write Latency — P99 (ms)",
+      "result": "62.98"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Sequential Write Latency — StdDev (ms)",
+      "result": "4.05"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Write Latency (Atomic Prov+Rep) — Mean (ms)",
+      "result": "53.61"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Write Latency (Atomic Prov+Rep) — P50 (ms)",
+      "result": "53.45"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Write Latency (Atomic Prov+Rep) — P95 (ms)",
+      "result": "61.64"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Write Latency (Atomic Prov+Rep) — P99 (ms)",
+      "result": "69.68"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Write Latency (Atomic Prov+Rep) — StdDev (ms)",
+      "result": "5.17"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Read Latency (GetPartTrustReport) — Mean (ms)",
+      "result": "5.69"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Read Latency (GetPartTrustReport) — P50 (ms)",
+      "result": "5.39"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Read Latency (GetPartTrustReport) — P95 (ms)",
+      "result": "9.17"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Read Latency (GetPartTrustReport) — P99 (ms)",
+      "result": "12.93"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Sequential Read Latency (GetPartTrustReport) — StdDev (ms)",
+      "result": "1.44"
+    },
+    {
+      "category": "Provenance",
+      "metric": "Concurrent Write TPS",
+      "result": "280.83 TPS"
+    },
+    {
+      "category": "Provenance",
+      "metric": "MVCC Conflict Rate",
+      "result": "0.0%"
+    },
+    {
+      "category": "Reputation",
+      "metric": "Concurrent Write TPS",
+      "result": "303.56 TPS"
+    },
+    {
+      "category": "Reputation",
+      "metric": "MVCC Conflict Rate",
+      "result": "0.0%"
+    },
+    {
+      "category": "Integrated",
+      "metric": "Concurrent Write TPS",
+      "result": "299.67 TPS"
+    },
+    {
+      "category": "Integrated",
+      "metric": "MVCC Conflict Rate (low-conflict)",
+      "result": "0.0%"
+    },
+    {
+      "category": "Reputation",
+      "metric": "High-Contention TPS",
+      "result": "3.20 TPS"
+    },
+    {
+      "category": "Reputation",
+      "metric": "MVCC Conflict Rate (high-contention)",
+      "result": "99.0%"
+    },
+    {
+      "category": "Storage",
+      "metric": "Asset Record (bytes)",
+      "result": "177"
+    },
+    {
+      "category": "Storage",
+      "metric": "ProvenanceEvent Record (bytes)",
+      "result": "337"
+    },
+    {
+      "category": "Storage",
+      "metric": "Stake Record (bytes)",
+      "result": "70"
+    },
+    {
+      "category": "Storage",
+      "metric": "Rating Record (bytes)",
+      "result": "450"
+    },
+    {
+      "category": "Storage",
+      "metric": "Reputation Record (bytes)",
+      "result": "105"
+    },
+    {
+      "category": "Storage",
+      "metric": "IntegratedEvent Record (bytes)",
+      "result": "482"
+    },
+    {
+      "category": "Storage",
+      "metric": "ProvenanceRepLink Record (bytes)",
+      "result": "251"
+    }
+  ]
+}
