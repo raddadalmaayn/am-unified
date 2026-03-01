@@ -1,0 +1,20 @@
+# ── Node.js ──────────────────────────────────────────────────────────────────
+client-tests/node_modules/
+client-tests/.env
+npm-debug.log*
+
+# ── Go build artefacts ───────────────────────────────────────────────────────
+chaincode/unified/unified_ccaas
+chaincode/unified/*.test
+
+# ── Deployment / packaging artefacts ─────────────────────────────────────────
+*.tar.gz
+*.zip
+
+# ── OS / editor noise ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

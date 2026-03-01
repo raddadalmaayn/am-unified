@@ -1,0 +1,16 @@
+{
+  "name": "am-unified-client-tests",
+  "version": "1.0.0",
+  "description": "Performance and security tests for the unified AM provenance+reputation chaincode.",
+  "scripts": {
+    "perf": "node performance_test.js",
+    "security": "node security_test.js",
+    "enroll": "node enrollAdmin.js && node enrollUsers.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@hyperledger/fabric-gateway": "^1.8.0",
+    "fabric-ca-client": "2.2",
+    "fabric-network": "2.2"
+  }
+}
