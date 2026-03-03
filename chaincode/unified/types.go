@@ -117,12 +117,13 @@ type Dispute struct {
 
 // ReputationGate defines minimum reputation requirements for a lifecycle event type.
 type ReputationGate struct {
-	EventType    string  `json:"eventType"`
-	Dimension    string  `json:"dimension"`
-	MinScore     float64 `json:"minScore"`
-	MinEvents    int     `json:"minEvents"` // minimum number of ratings required (confidence gate)
-	Enforced     bool    `json:"enforced"`
-	LastUpdated  int64   `json:"lastUpdated"`
+	EventType   string  `json:"eventType"`
+	Dimension   string  `json:"dimension"`
+	MinScore    float64 `json:"minScore"`
+	MinEvents   int     `json:"minEvents"`   // minimum number of ratings required (confidence gate)
+	MaxCIWidth  float64 `json:"maxCIWidth"`  // 95% Wilson CI width must be ≤ this; 0 = disabled
+	Enforced    bool    `json:"enforced"`
+	LastUpdated int64   `json:"lastUpdated"`
 }
 
 // ActorReputationSummary holds reputation scores across all dimensions for one actor.
@@ -171,4 +172,35 @@ type SupplyChainMetrics struct {
 	TotalDisputes     int                      `json:"totalDisputes"`
 	LinkedEvents      int                      `json:"linkedEvents"` // events with reputation links
 	GeneratedAt       int64                    `json:"generatedAt"`
+}
+
+// ============================================================================
+// RATING AGGREGATION BUFFER TYPES
+// ============================================================================
+
+// PendingRating holds a buffered reputation rating that has been validated and
+// accepted but whose effect on the REPUTATION hot key is deferred until
+// FlushRatings is called.  Each record is stored under a unique composite key
+// derived from the Fabric transaction ID, so concurrent BufferRating calls
+// never contend on the same ledger key — eliminating MVCC conflicts entirely.
+type PendingRating struct {
+	PendingID  string  `json:"pendingId"`  // == source txID
+	ActorID    string  `json:"actorId"`
+	Dimension  string  `json:"dimension"`
+	Value      float64 `json:"value"`
+	Weight     float64 `json:"weight"`
+	RaterID    string  `json:"raterId"`
+	Timestamp  int64   `json:"timestamp"`
+	SourceTxID string  `json:"sourceTxId"`
+}
+
+// FlushResult summarises the outcome of a single FlushRatings call.
+type FlushResult struct {
+	ActorID        string  `json:"actorId"`
+	Dimension      string  `json:"dimension"`
+	RatingsFlushed int     `json:"ratingsFlushed"`
+	NewAlpha       float64 `json:"newAlpha"`
+	NewBeta        float64 `json:"newBeta"`
+	NewScore       float64 `json:"newScore"`
+	FlushedAt      int64   `json:"flushedAt"`
 }

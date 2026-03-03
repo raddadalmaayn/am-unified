@@ -5,11 +5,11 @@
 # ==============================================================================
 set -e
 
-export PATH=/home/raddad/fabric-samples/bin:$PATH
+export PATH="${FABRIC_SAMPLES_HOME:-${HOME}/fabric-samples}/bin:$PATH"
 
 GREEN='\033[0;32m'; RED='\033[0;31m'; YELLOW='\033[1;33m'; NC='\033[0m'
 
-TEST_NETWORK_PATH="/home/raddad/fabric-samples/test-network"
+TEST_NETWORK_PATH="${FABRIC_SAMPLES_HOME:-${HOME}/fabric-samples}/test-network"
 CA_ADMIN_USER="admin"
 CA_ADMIN_PASS="adminpw"
 CA_URL="localhost:7054"

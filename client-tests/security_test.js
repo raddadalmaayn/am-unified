@@ -299,7 +299,7 @@ async function main() {
             run: async () => {
                 // Set a high reputation gate for PRINT_JOB
                 await adminIntegCC.submitTransaction(
-                    'SetReputationGate', 'PRINT_JOB', 'quality', '0.99', '100', 'true'
+                    'SetReputationGate', 'PRINT_JOB', 'quality', '0.99', '100', '0.0', 'true'
                 );
                 await sleep(500);
 
@@ -318,7 +318,7 @@ async function main() {
             teardown: async () => {
                 // Remove the gate so other tests are unaffected
                 await adminIntegCC.submitTransaction(
-                    'SetReputationGate', 'PRINT_JOB', 'quality', '0.0', '0', 'false'
+                    'SetReputationGate', 'PRINT_JOB', 'quality', '0.0', '0', '0.0', 'false'
                 );
             }
         });
