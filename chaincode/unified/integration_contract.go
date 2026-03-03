@@ -35,17 +35,24 @@ type IntegrationContract struct {
 // Only callable by admins.
 //
 // Parameters:
-//   eventType  – the lifecycle event (e.g. "PRINT_JOB", "INSPECTION")
-//   dimension  – the reputation dimension to check (e.g. "quality")
-//   minScoreStr – minimum score in [0, 1]
+//   eventType    – the lifecycle event (e.g. "PRINT_JOB", "INSPECTION")
+//   dimension    – the reputation dimension to check (e.g. "quality")
+//   minScoreStr  – minimum score in [0, 1]
 //   minEventsStr – minimum number of ratings required (confidence gate)
+//   maxCIWidthStr – maximum allowed 95% Wilson CI width [0, 1]; "0" disables
 //   enforcedStr  – "true" to actively block under-threshold actors
+//
+// CI-width gating blocks Sybil attackers: low-stake Sybil identities have low
+// rater weight, so even many Sybil ratings accumulate little evidence (α+β
+// stays small) and the CI remains wide — the gate rejects the actor until
+// enough high-weight, diverse raters have contributed.
 func (ic *IntegrationContract) SetReputationGate(
 	ctx contractapi.TransactionContextInterface,
 	eventType string,
 	dimension string,
 	minScoreStr string,
 	minEventsStr string,
+	maxCIWidthStr string,
 	enforcedStr string,
 ) error {
 	if !isAdmin(ctx) {
@@ -60,6 +67,11 @@ func (ic *IntegrationContract) SetReputationGate(
 	minEvents, err := strconv.Atoi(minEventsStr)
 	if err != nil || minEvents < 0 {
 		return fmt.Errorf("invalid minEvents: must be a non-negative integer")
+	}
+
+	maxCIWidth, err := strconv.ParseFloat(maxCIWidthStr, 64)
+	if err != nil || maxCIWidth < 0 || maxCIWidth > 1 {
+		return fmt.Errorf("invalid maxCIWidth: must be in [0, 1] (0 = disabled)")
 	}
 
 	enforced := enforcedStr == "true"
@@ -78,6 +90,7 @@ func (ic *IntegrationContract) SetReputationGate(
 		Dimension:   dimension,
 		MinScore:    minScore,
 		MinEvents:   minEvents,
+		MaxCIWidth:  maxCIWidth,
 		Enforced:    enforced,
 		LastUpdated: time.Now().Unix(),
 	}
@@ -94,7 +107,8 @@ func (ic *IntegrationContract) SetReputationGate(
 
 	payload := map[string]interface{}{
 		"eventType": eventType, "dimension": dimension,
-		"minScore": minScore, "minEvents": minEvents, "enforced": enforced,
+		"minScore": minScore, "minEvents": minEvents,
+		"maxCIWidth": maxCIWidth, "enforced": enforced,
 	}
 	payloadJSON, _ := json.Marshal(payload)
 	ctx.GetStub().SetEvent("ReputationGateSet", payloadJSON)
@@ -168,8 +182,12 @@ func (ic *IntegrationContract) CheckActorEligibility(
 	effectiveRep := applyDynamicDecay(rep, config)
 	score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 	ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
+	ciWidth := ci[1] - ci[0]
 
-	eligible := score >= gate.MinScore && rep.TotalEvents >= gate.MinEvents
+	scoreOK  := score >= gate.MinScore
+	eventsOK := rep.TotalEvents >= gate.MinEvents
+	ciOK     := gate.MaxCIWidth == 0 || ciWidth <= gate.MaxCIWidth
+	eligible := scoreOK && eventsOK && ciOK
 
 	return map[string]interface{}{
 		"eligible":        eligible,
@@ -182,6 +200,9 @@ func (ic *IntegrationContract) CheckActorEligibility(
 		"requiredEvents":  gate.MinEvents,
 		"confidenceLow":   ci[0],
 		"confidenceHigh":  ci[1],
+		"ciWidth":         ciWidth,
+		"maxCIWidth":      gate.MaxCIWidth,
+		"ciWidthBlocked":  !ciOK,
 		"gateEnforced":    gate.Enforced,
 	}, nil
 }
@@ -250,11 +271,21 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 			}
 			effectiveRep := applyDynamicDecay(rep, config)
 			score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
+			ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
+			ciWidth := ci[1] - ci[0]
 
 			if score < gate.MinScore || rep.TotalEvents < gate.MinEvents {
 				return "", fmt.Errorf(
 					"actor %s does not meet reputation gate for %s: score=%.3f (required=%.3f), events=%d (required=%d)",
 					normalizedRatedActorID, eventType, score, gate.MinScore, rep.TotalEvents, gate.MinEvents,
+				)
+			}
+			// CI-width gate: blocks Sybil attackers whose low-weight ratings
+			// accumulate insufficient evidence to narrow the credible interval.
+			if gate.MaxCIWidth > 0 && ciWidth > gate.MaxCIWidth {
+				return "", fmt.Errorf(
+					"actor %s blocked by confidence gate for %s: CI width=%.3f exceeds max=%.3f (insufficient trustworthy evidence)",
+					normalizedRatedActorID, eventType, ciWidth, gate.MaxCIWidth,
 				)
 			}
 		}
@@ -684,4 +715,223 @@ func (ic *IntegrationContract) GetSupplyChainMetrics(
 	}
 
 	return metrics, nil
+}
+
+// ============================================================================
+// BUFFERED INTEGRATION — provenance atomic + reputation deferred
+// ============================================================================
+
+// RecordProvenanceWithBufferedReputation is a high-throughput variant of
+// RecordProvenanceWithReputation.  The provenance event is still written
+// atomically in the same transaction, but the reputation update is written to
+// the PendingRating buffer (a unique composite key per txID) rather than
+// directly to the REPUTATION hot key.
+//
+// This eliminates MVCC conflicts entirely when many raters update the same
+// actor's reputation concurrently — at the cost of deferring score visibility
+// until an explicit FlushRatings(actorID, dimension) call is made.
+//
+// Gate checks still use the current (pre-buffer) reputation score, which is
+// a known trade-off: buffered ratings do not affect gate enforcement until
+// flushed.
+//
+// Parameters: same as RecordProvenanceWithReputation (7 args)
+// Returns: the pending buffer key (source txID component) for audit trail
+func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
+	ctx contractapi.TransactionContextInterface,
+	assetID string,
+	eventType string,
+	offChainDataHash string,
+	ratedActorID string,
+	ratingValueStr string,
+	dimension string,
+	evidenceHash string,
+) (string, error) {
+	ratingValue, err := strconv.ParseFloat(ratingValueStr, 64)
+	if err != nil || ratingValue < 0 || ratingValue > 1 {
+		return "", fmt.Errorf("invalid ratingValue: must be in [0, 1]")
+	}
+
+	callerRawID, err := ctx.GetClientIdentity().GetID()
+	if err != nil {
+		return "", fmt.Errorf("failed to get caller ID: %v", err)
+	}
+	callerID := normalizeIdentity(callerRawID)
+	normalizedRatedActorID := normalizeIdentity(ratedActorID)
+
+	if callerID == normalizedRatedActorID {
+		return "", fmt.Errorf("caller cannot rate themselves via integrated recording")
+	}
+
+	// ── 1. Gate check (uses current reputation, not buffered) ─────────────────
+	gateKey := fmt.Sprintf("REP_GATE:%s", eventType)
+	gateJSON, _ := ctx.GetStub().GetState(gateKey)
+	if gateJSON != nil {
+		var gate ReputationGate
+		if err := json.Unmarshal(gateJSON, &gate); err == nil && gate.Enforced {
+			config, err := getConfig(ctx)
+			if err != nil {
+				return "", err
+			}
+			rep, err := getOrInitReputation(ctx, normalizedRatedActorID, gate.Dimension, config)
+			if err != nil {
+				return "", err
+			}
+			effectiveRep := applyDynamicDecay(rep, config)
+			score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
+			ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
+			ciWidth := ci[1] - ci[0]
+
+			if score < gate.MinScore || rep.TotalEvents < gate.MinEvents {
+				return "", fmt.Errorf(
+					"actor %s does not meet reputation gate for %s: score=%.3f (required=%.3f), events=%d (required=%d)",
+					normalizedRatedActorID, eventType, score, gate.MinScore, rep.TotalEvents, gate.MinEvents,
+				)
+			}
+			if gate.MaxCIWidth > 0 && ciWidth > gate.MaxCIWidth {
+				return "", fmt.Errorf(
+					"actor %s blocked by confidence gate for %s: CI width=%.3f exceeds max=%.3f (insufficient trustworthy evidence)",
+					normalizedRatedActorID, eventType, ciWidth, gate.MaxCIWidth,
+				)
+			}
+		}
+	}
+
+	// ── 2. Record provenance event (identical to direct variant) ─────────────
+	callerMSPID, err := ctx.GetClientIdentity().GetMSPID()
+	if err != nil {
+		return "", fmt.Errorf("failed to get MSPID: %v", err)
+	}
+
+	txID := ctx.GetStub().GetTxID()
+	txTimestamp, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return "", fmt.Errorf("failed to get tx timestamp: %v", err)
+	}
+	ts := txTimestamp.AsTime().UTC().Format(time.RFC3339)
+	tsUnix := txTimestamp.AsTime().Unix()
+
+	event := ProvenanceEvent{
+		EventType:        eventType,
+		AgentID:          callerMSPID,
+		Timestamp:        ts,
+		OffChainDataHash: offChainDataHash,
+	}
+
+	lifecycleStage := eventType
+	switch eventType {
+	case "MATERIAL_CERTIFICATION":
+		event.SupplierID = normalizedRatedActorID
+		lifecycleStage = "MATERIAL_CERTIFIED"
+	case "PRINT_JOB":
+		lifecycleStage = "PRINT_COMPLETE"
+	case "INSPECTION":
+		if ratingValue >= 0.5 {
+			lifecycleStage = "INSPECTION_PASSED"
+		} else {
+			lifecycleStage = "INSPECTION_FAILED"
+		}
+	case "CERTIFICATION":
+		if ratingValue >= 0.5 {
+			lifecycleStage = "CERTIFIED"
+		} else {
+			lifecycleStage = "CERTIFICATION_FAILED"
+		}
+	}
+
+	eventJSON, err := json.Marshal(event)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal event: %v", err)
+	}
+	if err := ctx.GetStub().PutState("EVENT_"+txID, eventJSON); err != nil {
+		return "", fmt.Errorf("failed to store provenance event: %v", err)
+	}
+
+	assetJSON, _ := ctx.GetStub().GetState(assetID)
+	var asset Asset
+	if assetJSON != nil {
+		json.Unmarshal(assetJSON, &asset)
+	} else {
+		asset = Asset{AssetID: assetID, Owner: callerMSPID, HistoryTxIDs: []string{}}
+	}
+	asset.CurrentLifecycleStage = lifecycleStage
+	asset.HistoryTxIDs = append(asset.HistoryTxIDs, txID)
+
+	updatedAssetJSON, err := json.Marshal(asset)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal asset: %v", err)
+	}
+	if err := ctx.GetStub().PutState(assetID, updatedAssetJSON); err != nil {
+		return "", fmt.Errorf("failed to update asset: %v", err)
+	}
+
+	// ── 3. Stake + weight validation ──────────────────────────────────────────
+	config, err := getConfig(ctx)
+	if err != nil {
+		return "", err
+	}
+	if !config.ValidDimensions[dimension] {
+		return "", fmt.Errorf("invalid dimension: %s", dimension)
+	}
+
+	callerStake, err := getOrInitStake(ctx, callerID)
+	if err != nil {
+		return "", fmt.Errorf("failed to get caller stake: %v", err)
+	}
+	if callerStake.Balance < config.MinStakeRequired {
+		return "", fmt.Errorf("caller has insufficient stake: have %.2f, require %.2f",
+			callerStake.Balance, config.MinStakeRequired)
+	}
+
+	rc := &ReputationContract{}
+	weight, err := rc.calculateRaterWeight(ctx, callerID, dimension)
+	if err != nil {
+		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
+	}
+
+	// ── 4. Write to pending buffer — no REPUTATION hot-key touched ────────────
+	pending := PendingRating{
+		PendingID:  txID,
+		ActorID:    normalizedRatedActorID,
+		Dimension:  dimension,
+		Value:      ratingValue,
+		Weight:     weight,
+		RaterID:    callerID,
+		Timestamp:  tsUnix,
+		SourceTxID: txID,
+	}
+	pendingJSON, err := json.Marshal(pending)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal pending rating: %v", err)
+	}
+
+	bufKey := fmt.Sprintf("PENDING_RATING:%s:%s:%s", normalizedRatedActorID, dimension, txID)
+	if err := ctx.GetStub().PutState(bufKey, pendingJSON); err != nil {
+		return "", fmt.Errorf("failed to store pending rating: %v", err)
+	}
+
+	// ── 5. Bidirectional provenance–reputation link (with pending flag) ────────
+	link := ProvenanceRepLink{
+		AssetID:    assetID,
+		EventTxID:  txID,
+		RatingID:   txID, // pending key ID — resolves to final ratingID after flush
+		EventType:  eventType,
+		RatedActor: normalizedRatedActorID,
+		CreatedAt:  tsUnix,
+	}
+	linkJSON, _ := json.Marshal(link)
+	linkKey := fmt.Sprintf("PROV_REP_LINK:%s:%s", assetID, txID)
+	ctx.GetStub().PutState(linkKey, linkJSON)
+
+	// ── 6. Unified event ──────────────────────────────────────────────────────
+	payload := map[string]interface{}{
+		"assetId": assetID, "eventType": eventType,
+		"lifecycleStage": lifecycleStage, "ratedActorId": normalizedRatedActorID,
+		"pendingKey": txID, "ratingValue": ratingValue, "dimension": dimension,
+		"txId": txID, "buffered": true,
+	}
+	payloadJSON, _ := json.Marshal(payload)
+	ctx.GetStub().SetEvent("ProvenanceWithBufferedReputation", payloadJSON)
+
+	return txID, nil
 }

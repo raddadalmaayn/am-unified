@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AM Supply Chain Blockchain Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header>
+  <div class="header-left">
+    <span class="logo-icon">⛓</span>
+    <h1>AM Supply Chain Blockchain Dashboard</h1>
+  </div>
+  <div class="header-right">
+    <span id="status-dot" class="dot dot-unknown"></span>
+    <span id="status-text">Checking…</span>
+    <button id="btn-init" class="btn btn-secondary" title="Initialise system + stake demo actors">Init System</button>
+  </div>
+</header>
+
+<!-- ══════════════════════ TAB BAR ══════════════════════ -->
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="lifecycle">① Lifecycle</button>
+  <button class="tab-btn" data-tab="reputation">② Reputation</button>
+  <button class="tab-btn" data-tab="ci-gate">③ CI Gate Demo</button>
+  <button class="tab-btn" data-tab="buffer">④ Buffer vs Direct</button>
+</nav>
+
+<!-- ══════════════════════ TAB 1: Lifecycle ══════════════════════ -->
+<div id="tab-lifecycle" class="tab-content active">
+
+  <main class="grid">
+
+    <!-- LEFT: Parts List -->
+    <section class="panel panel-parts">
+      <div class="panel-title">
+        Parts
+        <button id="btn-new-part" class="btn btn-primary btn-sm">+ New Part</button>
+      </div>
+      <ul id="parts-list" class="parts-list">
+        <li class="empty-state">No parts yet. Click + New Part.</li>
+      </ul>
+    </section>
+
+    <!-- CENTRE: Lifecycle Stepper -->
+    <section class="panel panel-lifecycle">
+      <div class="panel-title">AM Lifecycle</div>
+      <div id="no-part-msg" class="empty-state">Select or create a part to view lifecycle.</div>
+      <ol id="stepper" class="stepper hidden"></ol>
+      <div id="advance-form" class="advance-form hidden">
+        <div class="form-row">
+          <label>Actor</label>
+          <input id="adv-actor" type="text" class="input" />
+        </div>
+        <div class="form-row">
+          <label>Rating <span id="adv-rating-val">0.80</span></label>
+          <input id="adv-rating" type="range" min="0" max="1" step="0.01" value="0.80" class="slider" />
+        </div>
+        <button id="btn-advance" class="btn btn-primary btn-wide">&#9654; Advance Stage</button>
+      </div>
+    </section>
+
+    <!-- RIGHT: Reputation Panel -->
+    <section class="panel panel-reputation">
+      <div class="panel-title">Reputation</div>
+      <div id="rep-bars" class="rep-bars">
+        <div class="empty-state">Advance a stage to see reputation.</div>
+      </div>
+      <div class="chart-title">Quality Score Evolution</div>
+      <div class="chart-wrap">
+        <canvas id="rep-chart"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom row: Trust Report + TX Log -->
+  <div class="bottom-row">
+    <section class="panel">
+      <div class="panel-title">Part Trust Report</div>
+      <div id="report-content" class="report-content">
+        <div class="empty-state">Select a part to load its trust report.</div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="panel-title">Transaction Log</div>
+      <ul id="tx-log" class="tx-log">
+        <li class="empty-state">No transactions yet.</li>
+      </ul>
+    </section>
+  </div>
+
+</div><!-- #tab-lifecycle -->
+
+<!-- ══════════════════════ TAB 2: Reputation ══════════════════════ -->
+<div id="tab-reputation" class="tab-content">
+  <div class="tab-page">
+    <section class="panel panel-fill">
+      <div class="panel-title">
+        All Actor Reputation Scores
+        <button id="btn-refresh-rep" class="btn btn-secondary btn-sm">↻ Refresh</button>
+      </div>
+      <div id="rep-table-wrap" class="rep-table-wrap">
+        <div class="empty-state">Click ↻ Refresh to load actor reputation data.</div>
+      </div>
+    </section>
+  </div>
+</div><!-- #tab-reputation -->
+
+<!-- ══════════════════════ TAB 3: CI Gate Demo ══════════════════════ -->
+<div id="tab-ci-gate" class="tab-content">
+  <div class="tab-page tab-2col">
+
+    <!-- Left: config + controls -->
+    <div class="col-left">
+
+      <section class="panel">
+        <div class="panel-title">Gate Configuration</div>
+        <div class="config-rows">
+          <div class="config-row"><span>Event type</span><strong>DEMO_CI_GATE</strong></div>
+          <div class="config-row"><span>Dimension</span><strong>quality</strong></div>
+          <div class="config-row"><span>Min score</span><strong>0.50</strong></div>
+          <div class="config-row"><span>Min events</span><strong>3</strong></div>
+          <div class="config-row"><span>Max CI width</span><strong>0.50</strong></div>
+        </div>
+        <div class="panel-foot">
+          <p class="hint">Creates a fresh actor ID and installs the gate on-chain. Actor starts with no history — blocked until all thresholds are met.</p>
+          <button id="btn-ci-reset" class="btn btn-primary btn-wide" style="margin-top:10px">Reset Demo</button>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top:12px">
+        <div class="panel-title">Add Ratings to Actor</div>
+        <div style="padding:12px 16px">
+          <div class="form-row" style="margin-bottom:12px">
+            <label>Value</label>
+            <input id="ci-rating-val" type="range" min="0" max="1" step="0.01" value="0.85" class="slider" />
+            <span id="ci-rating-display" class="slider-val">0.85</span>
+          </div>
+          <div class="btn-group" style="margin-bottom:10px">
+            <button id="btn-ci-add1" class="btn btn-secondary" disabled>+1</button>
+            <button id="btn-ci-add3" class="btn btn-secondary" disabled>+3</button>
+            <button id="btn-ci-add5" class="btn btn-secondary" disabled>+5</button>
+          </div>
+          <button id="btn-ci-test" class="btn btn-primary btn-wide" disabled>Test Gate Passage</button>
+        </div>
+      </section>
+
+    </div><!-- .col-left -->
+
+    <!-- Right: live status -->
+    <section class="panel col-right">
+      <div class="panel-title">Actor Status</div>
+      <div id="ci-status-wrap" class="ci-status-wrap">
+        <div class="empty-state">Click "Reset Demo" to create a new actor and install the CI gate.</div>
+      </div>
+    </section>
+
+  </div>
+</div><!-- #tab-ci-gate -->
+
+<!-- ══════════════════════ TAB 4: Buffer vs Direct ══════════════════════ -->
+<div id="tab-buffer" class="tab-content">
+  <div class="tab-page tab-2col">
+
+    <!-- Left: controls -->
+    <div class="col-left">
+      <section class="panel">
+        <div class="panel-title">Concurrent Write Test</div>
+        <div style="padding:12px 16px">
+          <div class="form-row" style="margin-bottom:12px">
+            <label>Count</label>
+            <input id="buf-count" type="range" min="2" max="20" step="1" value="10" class="slider" />
+            <span id="buf-count-display" class="slider-val">10</span>
+          </div>
+          <p class="hint" style="margin-bottom:14px">
+            Fires N concurrent writes to the same actor/dimension.
+            <strong>Direct</strong> uses SubmitRating (hot key → MVCC conflicts).
+            <strong>Buffered</strong> uses BufferRating (unique keys) then one
+            FlushRatings (zero conflicts, one merge).
+          </p>
+          <div class="btn-group" style="margin-bottom:8px">
+            <button id="btn-buf-direct" class="btn btn-secondary">Run Direct</button>
+            <button id="btn-buf-buffer" class="btn btn-secondary">Run Buffered</button>
+          </div>
+          <button id="btn-buf-both" class="btn btn-primary btn-wide">Run Both</button>
+        </div>
+      </section>
+    </div><!-- .col-left -->
+
+    <!-- Right: side-by-side results -->
+    <div class="buf-results">
+      <section class="panel">
+        <div class="panel-title">Direct (SubmitRating)</div>
+        <div id="buf-direct-result" class="result-wrap">
+          <div class="empty-state">Run test to see results.</div>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-title">Buffered (BufferRating + FlushRatings)</div>
+        <div id="buf-buffer-result" class="result-wrap">
+          <div class="empty-state">Run test to see results.</div>
+        </div>
+      </section>
+    </div><!-- .buf-results -->
+
+  </div>
+</div><!-- #tab-buffer -->
+
+<!-- ══════════════════════ TOAST ══════════════════════ -->
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

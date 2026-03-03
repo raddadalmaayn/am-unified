@@ -1139,3 +1139,246 @@ func (rc *ReputationContract) slashStake(
 
 	return nil
 }
+
+// ============================================================================
+// RATING AGGREGATION BUFFER
+// ============================================================================
+
+// BufferRating validates a reputation rating and writes it to a unique
+// per-transaction plain-string key, completely avoiding the REPUTATION hot key.
+// Call FlushRatings to merge the buffer into the reputation record.
+//
+// Validation mirrors SubmitRating: stake check, self-rating prevention,
+// dimension validation, and rater-weight calculation all execute inside this
+// transaction so that the buffered rating carries a pre-computed weight.
+//
+// Parameters: actorID, dimension, valueStr [0,1], evidence (hash string)
+// Returns: the source txID that uniquely identifies this pending entry
+func (rc *ReputationContract) BufferRating(
+	ctx contractapi.TransactionContextInterface,
+	actorID string,
+	dimension string,
+	valueStr string,
+	evidence string,
+) (string, error) {
+	value, err := strconv.ParseFloat(valueStr, 64)
+	if err != nil || value < 0 || value > 1 {
+		return "", fmt.Errorf("invalid value: must be between 0 and 1")
+	}
+
+	config, err := getConfig(ctx)
+	if err != nil {
+		return "", err
+	}
+	if !config.ValidDimensions[dimension] {
+		return "", fmt.Errorf("invalid dimension: %s", dimension)
+	}
+
+	raterRawID, err := ctx.GetClientIdentity().GetID()
+	if err != nil {
+		return "", fmt.Errorf("failed to get rater ID: %v", err)
+	}
+	normalizedRaterID := normalizeIdentity(raterRawID)
+	normalizedActorID := normalizeIdentity(actorID)
+
+	if normalizedRaterID == normalizedActorID {
+		return "", fmt.Errorf("self-rating is not allowed")
+	}
+
+	raterStake, err := getOrInitStake(ctx, normalizedRaterID)
+	if err != nil {
+		return "", fmt.Errorf("failed to get rater stake: %v", err)
+	}
+	if raterStake.Balance < config.MinStakeRequired {
+		return "", fmt.Errorf("insufficient stake: have %.2f, require %.2f",
+			raterStake.Balance, config.MinStakeRequired)
+	}
+
+	weight, err := rc.calculateRaterWeight(ctx, normalizedRaterID, dimension)
+	if err != nil {
+		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
+	}
+
+	txID := ctx.GetStub().GetTxID()
+	txTs, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return "", fmt.Errorf("failed to get tx timestamp: %v", err)
+	}
+	ts := txTs.AsTime().Unix()
+
+	pending := PendingRating{
+		PendingID:  txID,
+		ActorID:    normalizedActorID,
+		Dimension:  dimension,
+		Value:      value,
+		Weight:     weight,
+		RaterID:    normalizedRaterID,
+		Timestamp:  ts,
+		SourceTxID: txID,
+	}
+	pendingJSON, err := json.Marshal(pending)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal pending rating: %v", err)
+	}
+
+	// Plain-string key is unique per txID — zero probability of MVCC conflict
+	// regardless of how many concurrent callers rate the same actor+dimension.
+	// Plain `:` separators avoid the \x00 null bytes produced by CreateCompositeKey,
+	// which cause protobuf string-field marshaling panics in gRPC PutState.
+	key := fmt.Sprintf("PENDING_RATING:%s:%s:%s", normalizedActorID, dimension, txID)
+	if err := ctx.GetStub().PutState(key, pendingJSON); err != nil {
+		return "", fmt.Errorf("failed to store pending rating: %v", err)
+	}
+
+	return txID, nil
+}
+
+// FlushRatings reads every buffered PendingRating for actorID+dimension,
+// applies all deltas to the REPUTATION record in a single PutState, then
+// deletes the consumed pending keys.
+//
+// Only one hot-key write occurs per flush call regardless of how many ratings
+// were buffered, turning N×(MVCC conflict risk) into 1×(safe write).
+//
+// Decay is applied to the current reputation before accumulating the buffer,
+// matching the behaviour of updateReputation.
+//
+// Can be called by any enrolled identity; the flush is idempotent if the
+// buffer is empty.  Returns a JSON-marshalled FlushResult.
+func (rc *ReputationContract) FlushRatings(
+	ctx contractapi.TransactionContextInterface,
+	actorID string,
+	dimension string,
+) (*FlushResult, error) {
+	config, err := getConfig(ctx)
+	if err != nil {
+		return nil, err
+	}
+	if !config.ValidDimensions[dimension] {
+		return nil, fmt.Errorf("invalid dimension: %s", dimension)
+	}
+
+	normalizedActorID := normalizeIdentity(actorID)
+
+	// Load and decay the current reputation record
+	rep, err := getOrInitReputation(ctx, normalizedActorID, dimension, config)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load reputation: %v", err)
+	}
+	rep = applyDynamicDecay(rep, config)
+
+	// Scan all pending ratings for this actor+dimension using a plain-key range.
+	// `:` as separator, `;` (ASCII 59 = `:` + 1) as exclusive end bound.
+	startKey := fmt.Sprintf("PENDING_RATING:%s:%s:", normalizedActorID, dimension)
+	endKey   := fmt.Sprintf("PENDING_RATING:%s:%s;", normalizedActorID, dimension)
+	iter, err := ctx.GetStub().GetStateByRange(startKey, endKey)
+	if err != nil {
+		return nil, fmt.Errorf("failed to query pending buffer: %v", err)
+	}
+	defer iter.Close()
+
+	var toDelete []string
+	flushed := 0
+	var latestTs int64
+
+	for iter.HasNext() {
+		kv, err := iter.Next()
+		if err != nil {
+			return nil, fmt.Errorf("failed to iterate pending ratings: %v", err)
+		}
+
+		var p PendingRating
+		if err := json.Unmarshal(kv.Value, &p); err != nil {
+			continue // skip corrupted entries rather than aborting the flush
+		}
+
+		// Apply the same threshold logic as updateReputation
+		if p.Value >= 0.5 {
+			rep.Alpha += p.Weight * p.Value
+		} else {
+			rep.Beta += p.Weight * (1.0 - p.Value)
+		}
+		rep.TotalEvents++
+
+		if p.Timestamp > latestTs {
+			latestTs = p.Timestamp
+		}
+
+		toDelete = append(toDelete, kv.Key)
+		flushed++
+	}
+
+	score := rep.Alpha / (rep.Alpha + rep.Beta)
+	now := time.Now().Unix()
+
+	if flushed == 0 {
+		return &FlushResult{
+			ActorID: normalizedActorID, Dimension: dimension,
+			RatingsFlushed: 0,
+			NewAlpha: rep.Alpha, NewBeta: rep.Beta, NewScore: score,
+			FlushedAt: now,
+		}, nil
+	}
+
+	if latestTs > rep.LastTs {
+		rep.LastTs = latestTs
+	}
+
+	// Single hot-key write for all N buffered ratings
+	repKey := fmt.Sprintf("REPUTATION:%s:%s", normalizedActorID, dimension)
+	repJSON, err := json.Marshal(rep)
+	if err != nil {
+		return nil, fmt.Errorf("failed to marshal reputation: %v", err)
+	}
+	if err := ctx.GetStub().PutState(repKey, repJSON); err != nil {
+		return nil, fmt.Errorf("failed to write reputation: %v", err)
+	}
+
+	// Delete all consumed pending keys
+	for _, k := range toDelete {
+		if err := ctx.GetStub().DelState(k); err != nil {
+			return nil, fmt.Errorf("failed to delete pending key %s: %v", k, err)
+		}
+	}
+
+	evtPayload, _ := json.Marshal(map[string]interface{}{
+		"actorId": normalizedActorID, "dimension": dimension,
+		"flushed": flushed, "newScore": score,
+	})
+	ctx.GetStub().SetEvent("RatingsFlushed", evtPayload)
+
+	return &FlushResult{
+		ActorID: normalizedActorID, Dimension: dimension,
+		RatingsFlushed: flushed,
+		NewAlpha: rep.Alpha, NewBeta: rep.Beta, NewScore: score,
+		FlushedAt: now,
+	}, nil
+}
+
+// GetPendingCount returns the number of ratings currently in the buffer for
+// a given actorID+dimension.  Zero means the buffer is clean (no pending flush
+// needed).  Useful for monitoring and deciding when to trigger FlushRatings.
+func (rc *ReputationContract) GetPendingCount(
+	ctx contractapi.TransactionContextInterface,
+	actorID string,
+	dimension string,
+) (int, error) {
+	normalizedActorID := normalizeIdentity(actorID)
+
+	startKey := fmt.Sprintf("PENDING_RATING:%s:%s:", normalizedActorID, dimension)
+	endKey   := fmt.Sprintf("PENDING_RATING:%s:%s;", normalizedActorID, dimension)
+	iter, err := ctx.GetStub().GetStateByRange(startKey, endKey)
+	if err != nil {
+		return 0, fmt.Errorf("failed to query pending buffer: %v", err)
+	}
+	defer iter.Close()
+
+	count := 0
+	for iter.HasNext() {
+		if _, err := iter.Next(); err != nil {
+			break
+		}
+		count++
+	}
+	return count, nil
+}

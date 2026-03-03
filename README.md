@@ -129,9 +129,5 @@ Standard Go chaincode lifecycle deployment (`peer lifecycle chaincode package --
 ## Related Work
 
 This repository unifies two prior systems:
-- [`am-provenance`](https://github.com/raddadalmaayn/am-provenance) — standalone provenance chaincode
-- [`am-reputation`](https://github.com/raddadalmaayn/am-reputation) — standalone reputation chaincode
-
-## Authors
-
-Raddad Almaayn
+- `am-provenance` — standalone provenance chaincode
+- `am-reputation` — standalone reputation chaincode

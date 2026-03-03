@@ -1,10 +1,12 @@
 # ── Node.js ──────────────────────────────────────────────────────────────────
 client-tests/node_modules/
 client-tests/.env
+dashboard/node_modules/
 npm-debug.log*
 
 # ── Go build artefacts ───────────────────────────────────────────────────────
 chaincode/unified/unified_ccaas
+chaincode/unified/unified
 chaincode/unified/*.test
 
 # ── Deployment / packaging artefacts ─────────────────────────────────────────

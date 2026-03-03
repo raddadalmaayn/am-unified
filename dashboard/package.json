@@ -1,0 +1,16 @@
+{
+  "name": "am-dashboard",
+  "version": "1.0.0",
+  "description": "AM Supply Chain Blockchain Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@hyperledger/fabric-gateway": "^1.8.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
