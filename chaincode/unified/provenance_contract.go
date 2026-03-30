@@ -128,6 +128,7 @@ func (pc *ProvenanceContract) CreateMaterialCertification(
 }
 
 // RecordPrintJob records the additive manufacturing print operation.
+// Requires the asset to be in MATERIAL_CERTIFIED state.
 func (pc *ProvenanceContract) RecordPrintJob(
 	ctx contractapi.TransactionContextInterface,
 	assetID string,
@@ -139,6 +140,15 @@ func (pc *ProvenanceContract) RecordPrintJob(
 	clientMSPID, err := ctx.GetClientIdentity().GetMSPID()
 	if err != nil {
 		return fmt.Errorf("failed to get client MSPID: %v", err)
+	}
+
+	// Enforce state machine: predecessor must be MATERIAL_CERTIFIED
+	asset, err := pc.ReadAsset(ctx, assetID)
+	if err != nil {
+		return err
+	}
+	if asset.CurrentLifecycleStage != "MATERIAL_CERTIFIED" {
+		return fmt.Errorf("invalid lifecycle transition: RecordPrintJob requires stage MATERIAL_CERTIFIED, current stage is %s", asset.CurrentLifecycleStage)
 	}
 
 	event := ProvenanceEvent{
@@ -159,6 +169,7 @@ func (pc *ProvenanceContract) RecordPrintJob(
 }
 
 // RecordInspection records a quality inspection outcome for a printed part.
+// Requires the asset to be in PRINT_COMPLETE state.
 func (pc *ProvenanceContract) RecordInspection(
 	ctx contractapi.TransactionContextInterface,
 	assetID string,
@@ -169,6 +180,15 @@ func (pc *ProvenanceContract) RecordInspection(
 	clientMSPID, err := ctx.GetClientIdentity().GetMSPID()
 	if err != nil {
 		return fmt.Errorf("failed to get client MSPID: %v", err)
+	}
+
+	// Enforce state machine: predecessor must be PRINT_COMPLETE
+	asset, err := pc.ReadAsset(ctx, assetID)
+	if err != nil {
+		return err
+	}
+	if asset.CurrentLifecycleStage != "PRINT_COMPLETE" {
+		return fmt.Errorf("invalid lifecycle transition: RecordInspection requires stage PRINT_COMPLETE, current stage is %s", asset.CurrentLifecycleStage)
 	}
 
 	event := ProvenanceEvent{
@@ -193,6 +213,7 @@ func (pc *ProvenanceContract) RecordInspection(
 }
 
 // RecordCertification records the final quality certification of the part.
+// Requires the asset to be in INSPECTION_PASSED state.
 func (pc *ProvenanceContract) RecordCertification(
 	ctx contractapi.TransactionContextInterface,
 	assetID string,
@@ -203,6 +224,15 @@ func (pc *ProvenanceContract) RecordCertification(
 	clientMSPID, err := ctx.GetClientIdentity().GetMSPID()
 	if err != nil {
 		return fmt.Errorf("failed to get client MSPID: %v", err)
+	}
+
+	// Enforce state machine: predecessor must be INSPECTION_PASSED
+	asset, err := pc.ReadAsset(ctx, assetID)
+	if err != nil {
+		return err
+	}
+	if asset.CurrentLifecycleStage != "INSPECTION_PASSED" {
+		return fmt.Errorf("invalid lifecycle transition: RecordCertification requires stage INSPECTION_PASSED, current stage is %s", asset.CurrentLifecycleStage)
 	}
 
 	event := ProvenanceEvent{

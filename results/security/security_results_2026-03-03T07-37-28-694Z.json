@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-03-03T07-37-28-694Z",
+  "attackResults": [
+    {
+      "name": "Self-Rating Attack",
+      "vector": "Actor attempts to submit a rating for themselves",
+      "expectBlocked": true,
+      "mitigations": [
+        "Identity normalisation + strict self-check in SubmitRating"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 17.892249,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    },
+    {
+      "name": "Sybil Attack (coordinated inflation)",
+      "vector": "5 Sybil identities each rate the same actor with maximum score",
+      "expectBlocked": false,
+      "mitigations": [
+        "Stake requirement — each Sybil must lock capital",
+        "Meta-reputation weighting — new accounts carry low weight",
+        "Wilson CI — low-confidence actors flagged by wide confidence interval"
+      ],
+      "outcome": "PARTIAL MITIGATION — attack executed but effects are limited",
+      "defenceHeld": true,
+      "latencyMs": 358.288809,
+      "details": {
+        "sybilsAttempted": 5,
+        "sybilsSucceeded": 5,
+        "scoreDelta": "0.2448",
+        "ciWidthAfter": "0.5254",
+        "observation": "Score shifted by 0.2448 — stake cost limited amplification; CI width signals low confidence"
+      },
+      "error": null
+    },
+    {
+      "name": "Collusion Attack (rating ring)",
+      "vector": "Colluding raters mutually inflate each other's reputation",
+      "expectBlocked": false,
+      "mitigations": [
+        "Meta-reputation — new accounts have low weight; circular inflation has diminishing returns",
+        "Stake capital at risk — collusion can be penalised via disputes",
+        "Dispute mechanism — any actor can challenge a suspicious rating"
+      ],
+      "outcome": "PARTIAL MITIGATION — attack executed but effects are limited",
+      "defenceHeld": true,
+      "latencyMs": 123.911861,
+      "details": {
+        "colluderAScore": "0.6386",
+        "colluderBScore": "0.6386",
+        "observation": "Mutual ratings recorded but low meta-reputation weight limits amplification"
+      },
+      "error": null
+    },
+    {
+      "name": "Unauthorized Access Attack",
+      "vector": "Non-admin identity calls SetReputationGate (admin-only function)",
+      "expectBlocked": true,
+      "mitigations": [
+        "Role-based access control via ADMIN_LIST on-chain registry"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 7.193612,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    },
+    {
+      "name": "Unauthorized Admin Grant",
+      "vector": "Non-admin attempts to grant admin rights to themselves",
+      "expectBlocked": true,
+      "mitigations": [
+        "isAdmin() check in AddAdmin function"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 9.460111,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    },
+    {
+      "name": "Insufficient Stake Attack",
+      "vector": "Actor without stake attempts to submit a rating",
+      "expectBlocked": true,
+      "mitigations": [
+        "Minimum stake check in SubmitRating — balance must be ≥ minStakeRequired"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 565.113796,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    },
+    {
+      "name": "Evidence Tampering Attack",
+      "vector": "Attacker submits a rating with a fabricated/random evidence hash",
+      "expectBlocked": false,
+      "mitigations": [
+        "Evidence is stored as an opaque hash — the chaincode does not verify the hash's pre-image",
+        "Off-chain verification: auditors check the hash against the real evidence document",
+        "Dispute mechanism: any party can challenge ratings with suspicious evidence",
+        "Recommendation: integrate IPFS-based evidence anchoring in production"
+      ],
+      "outcome": "PARTIAL MITIGATION — attack executed but effects are limited",
+      "defenceHeld": true,
+      "latencyMs": 68.32192,
+      "details": {
+        "ratingID": "RATING:f1da44e5e26e04aafd098c30eeb97e17",
+        "observation": "Rating accepted — evidence hash is not pre-image verified on-chain. Mitigation is off-chain audit."
+      },
+      "error": null
+    },
+    {
+      "name": "Reputation Gate Bypass Attack",
+      "vector": "Actor below reputation threshold attempts a gated integrated operation",
+      "expectBlocked": true,
+      "mitigations": [
+        "SetReputationGate + CheckActorEligibility enforced inside RecordProvenanceWithReputation"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 8.171604,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    },
+    {
+      "name": "Provenance Replay Attack",
+      "vector": "Attacker replays an existing asset creation to overwrite provenance history",
+      "expectBlocked": true,
+      "mitigations": [
+        "AssetExists() check in CreateMaterialCertification prevents duplicate asset creation"
+      ],
+      "outcome": "BLOCKED — defence held",
+      "defenceHeld": true,
+      "latencyMs": 569.40945,
+      "details": null,
+      "error": "10 ABORTED: failed to endorse transaction, see attached details for more info"
+    }
+  ]
+}

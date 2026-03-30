@@ -41,12 +41,17 @@ enroll_user() {
     echo -e "  ${GREEN}✓${NC} ${name}"
 }
 
-echo -e "\n${YELLOW}==> Re-enrolling Admin...${NC}"
+echo -e "\n${YELLOW}==> Re-enrolling Admin (org1admin, type=admin)...${NC}"
+# Use org1admin (registered by test-network with --id.type admin) so the cert
+# carries OU=admin, satisfying the channel's NodeOU admin policy.
 fabric-ca-client enroll \
-    -u "https://admin:adminpw@${CA_URL}" \
+    -u "https://org1admin:org1adminpw@${CA_URL}" \
     --caname ca-org1 \
     -M "${FABRIC_CA_CLIENT_HOME}/users/Admin@org1.example.com/msp" \
     --tls.certfiles "${CA_TLS_CERT}" >/dev/null 2>&1
+# Copy NodeOU config so the MSP can resolve the OU roles
+cp "${FABRIC_CA_CLIENT_HOME}/msp/config.yaml" \
+   "${FABRIC_CA_CLIENT_HOME}/users/Admin@org1.example.com/msp/config.yaml" 2>/dev/null || true
 echo -e "  ${GREEN}✓${NC} Admin"
 
 echo -e "\n${YELLOW}==> Enrolling buyer1...${NC}"

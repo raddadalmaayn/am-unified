@@ -1,0 +1,54 @@
+version: '2.1'
+
+volumes:
+  pgdata:
+
+networks:
+  fabric_test:
+    external: true
+
+services:
+
+  explorerdb:
+    image: hyperledger/explorer-db:latest
+    container_name: explorerdb.am-unified
+    hostname: explorerdb.am-unified
+    environment:
+      - DATABASE_DATABASE=fabricexplorer
+      - DATABASE_USERNAME=hppoc
+      - DATABASE_PASSWORD=password
+    healthcheck:
+      test: "pg_isready -h localhost -p 5432 -q -U postgres"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - fabric_test
+
+  explorer:
+    image: hyperledger/explorer:latest
+    container_name: explorer.am-unified
+    hostname: explorer.am-unified
+    environment:
+      - DATABASE_HOST=explorerdb.am-unified
+      - DATABASE_DATABASE=fabricexplorer
+      - DATABASE_USERNAME=hppoc
+      - DATABASE_PASSWD=password
+      - LOG_LEVEL_APP=info
+      - LOG_LEVEL_DB=info
+      - LOG_LEVEL_CONSOLE=info
+      - LOG_CONSOLE_STDOUT=true
+      - DISCOVERY_AS_LOCALHOST=false
+    volumes:
+      - ./config.json:/opt/explorer/app/platform/fabric/config.json
+      - ./connection-profile:/opt/explorer/app/platform/fabric/connection-profile
+      - /home/raddad/fabric-samples/test-network/organizations:/tmp/crypto
+    ports:
+      - 8080:8080
+    depends_on:
+      explorerdb:
+        condition: service_healthy
+    networks:
+      - fabric_test
