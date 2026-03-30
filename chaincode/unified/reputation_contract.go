@@ -236,6 +236,18 @@ func (rc *ReputationContract) AddAdmin(
 		return fmt.Errorf("failed to update admin list: %v", err)
 	}
 
+	callerID, _ := ctx.GetClientIdentity().GetID()
+	auditRecord := map[string]interface{}{
+		"action":    "ADD_ADMIN",
+		"targetId":  normalizedAdminID,
+		"callerId":  normalizeIdentity(callerID),
+		"timestamp": time.Now().Unix(),
+		"txId":      ctx.GetStub().GetTxID(),
+	}
+	auditJSON, _ := json.Marshal(auditRecord)
+	auditKey := fmt.Sprintf("ADMIN_AUDIT:%s", ctx.GetStub().GetTxID())
+	ctx.GetStub().PutState(auditKey, auditJSON)
+
 	payload := map[string]interface{}{"adminId": normalizedAdminID, "action": "added"}
 	payloadJSON, _ := json.Marshal(payload)
 	ctx.GetStub().SetEvent("AdminUpdated", payloadJSON)
@@ -267,6 +279,18 @@ func (rc *ReputationContract) RemoveAdmin(
 	if err := ctx.GetStub().PutState("ADMIN_LIST", updatedJSON); err != nil {
 		return fmt.Errorf("failed to update admin list: %v", err)
 	}
+
+	callerID, _ := ctx.GetClientIdentity().GetID()
+	auditRecord := map[string]interface{}{
+		"action":    "REMOVE_ADMIN",
+		"targetId":  normalizedAdminID,
+		"callerId":  normalizeIdentity(callerID),
+		"timestamp": time.Now().Unix(),
+		"txId":      ctx.GetStub().GetTxID(),
+	}
+	auditJSON, _ := json.Marshal(auditRecord)
+	auditKey := fmt.Sprintf("ADMIN_AUDIT:%s", ctx.GetStub().GetTxID())
+	ctx.GetStub().PutState(auditKey, auditJSON)
 
 	payload := map[string]interface{}{"adminId": normalizedAdminID, "action": "removed"}
 	payloadJSON, _ := json.Marshal(payload)
@@ -301,6 +325,18 @@ func (rc *ReputationContract) AddArbitrator(
 		return fmt.Errorf("failed to update arbitrator list: %v", err)
 	}
 
+	callerID, _ := ctx.GetClientIdentity().GetID()
+	auditRecord := map[string]interface{}{
+		"action":    "ADD_ARBITRATOR",
+		"targetId":  normalizedArbitratorID,
+		"callerId":  normalizeIdentity(callerID),
+		"timestamp": time.Now().Unix(),
+		"txId":      ctx.GetStub().GetTxID(),
+	}
+	auditJSON, _ := json.Marshal(auditRecord)
+	auditKey := fmt.Sprintf("ADMIN_AUDIT:%s", ctx.GetStub().GetTxID())
+	ctx.GetStub().PutState(auditKey, auditJSON)
+
 	payload := map[string]interface{}{"arbitratorId": normalizedArbitratorID, "action": "added"}
 	payloadJSON, _ := json.Marshal(payload)
 	ctx.GetStub().SetEvent("ArbitratorUpdated", payloadJSON)
@@ -332,6 +368,18 @@ func (rc *ReputationContract) RemoveArbitrator(
 	if err := ctx.GetStub().PutState("ARBITRATOR_LIST", updatedJSON); err != nil {
 		return fmt.Errorf("failed to update arbitrator list: %v", err)
 	}
+
+	callerID, _ := ctx.GetClientIdentity().GetID()
+	auditRecord := map[string]interface{}{
+		"action":    "REMOVE_ARBITRATOR",
+		"targetId":  normalizedArbitratorID,
+		"callerId":  normalizeIdentity(callerID),
+		"timestamp": time.Now().Unix(),
+		"txId":      ctx.GetStub().GetTxID(),
+	}
+	auditJSON, _ := json.Marshal(auditRecord)
+	auditKey := fmt.Sprintf("ADMIN_AUDIT:%s", ctx.GetStub().GetTxID())
+	ctx.GetStub().PutState(auditKey, auditJSON)
 
 	payload := map[string]interface{}{"arbitratorId": normalizedArbitratorID, "action": "removed"}
 	payloadJSON, _ := json.Marshal(payload)
@@ -737,6 +785,9 @@ func (rc *ReputationContract) GetReputation(
 }
 
 // GetRatingHistory retrieves all ratings for a given actor and dimension.
+// GetRatingHistory retrieves ratings for an actor in a given dimension.
+// REQUIRES CouchDB state database. Returns an error with LevelDB (the default).
+// Enable CouchDB via CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS in peer config.
 func (rc *ReputationContract) GetRatingHistory(
 	ctx contractapi.TransactionContextInterface,
 	actorID string,
@@ -773,6 +824,8 @@ func (rc *ReputationContract) GetRatingHistory(
 }
 
 // GetRatingsByRater retrieves all ratings submitted by a specific rater.
+// REQUIRES CouchDB state database. Returns an error with LevelDB (the default).
+// Enable CouchDB via CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS in peer config.
 func (rc *ReputationContract) GetRatingsByRater(
 	ctx contractapi.TransactionContextInterface,
 	raterID string,
@@ -807,6 +860,8 @@ func (rc *ReputationContract) GetRatingsByRater(
 }
 
 // GetDisputesByStatus retrieves all disputes with the given status.
+// REQUIRES CouchDB state database. Returns an error with LevelDB (the default).
+// Enable CouchDB via CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS in peer config.
 func (rc *ReputationContract) GetDisputesByStatus(
 	ctx contractapi.TransactionContextInterface,
 	status string,
@@ -838,6 +893,8 @@ func (rc *ReputationContract) GetDisputesByStatus(
 }
 
 // GetActorsByDimension retrieves actors whose reputation score exceeds a threshold.
+// REQUIRES CouchDB state database. Returns an error with LevelDB (the default).
+// Enable CouchDB via CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS in peer config.
 func (rc *ReputationContract) GetActorsByDimension(
 	ctx contractapi.TransactionContextInterface,
 	dimension string,

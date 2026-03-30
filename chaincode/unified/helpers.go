@@ -60,8 +60,13 @@ func isAdmin(ctx contractapi.TransactionContextInterface) bool {
 	normalizedClientID := normalizeIdentity(clientID)
 
 	adminListJSON, err := ctx.GetStub().GetState("ADMIN_LIST")
-	if err != nil || adminListJSON == nil {
-		// Bootstrap: if no admin list exists, the first caller becomes admin
+	if err != nil {
+		// Fail closed on ledger read errors — do not grant admin on transient failures
+		return false
+	}
+	if adminListJSON == nil {
+		// Bootstrap: if no admin list exists yet, the caller becomes admin
+		// (closed by InitConfig seeding ADMIN_LIST on first call)
 		return true
 	}
 

@@ -1,0 +1,9 @@
+{
+  "network-configs": {
+    "am-unified": {
+      "name": "am-unified",
+      "profile": "./connection-profile/am-unified.json"
+    }
+  },
+  "license": "Apache-2.0"
+}
