@@ -1,0 +1,14 @@
+{
+  "name": "am-unified-sdk-benchmark",
+  "version": "1.0.0",
+  "description": "SDK benchmark for AM Unified chaincode on 4-org geo-distributed testbed",
+  "main": "benchmark.js",
+  "scripts": {
+    "benchmark": "node benchmark.js",
+    "test-connection": "node test-connection.js"
+  },
+  "dependencies": {
+    "@hyperledger/fabric-gateway": "^1.5.0",
+    "@grpc/grpc-js": "^1.10.0"
+  }
+}
