@@ -13,6 +13,20 @@ chaincode/unified/*.test
 *.tar.gz
 *.zip
 
+# ── Crypto material and network secrets ──────────────────────────────────────
+network/organizations/
+network/genesis.block
+# keep network/config/ (configtx.yaml, crypto-config.yaml — no secrets)
+
+# ── Compiled binaries ─────────────────────────────────────────────────────────
+build/
+
+# ── Backup directories ────────────────────────────────────────────────────────
+chaincode.backup*/
+
+# ── Node module trees ─────────────────────────────────────────────────────────
+sdk-benchmark/node_modules/
+
 # ── OS / editor noise ────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db

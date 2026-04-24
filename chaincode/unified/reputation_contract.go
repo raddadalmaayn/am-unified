@@ -35,6 +35,11 @@ func (rc *ReputationContract) InitConfig(ctx contractapi.TransactionContextInter
 		return fmt.Errorf("system config already initialized")
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	config := SystemConfig{
 		MinStakeRequired: 10000.0,
 		DisputeCost:      100.0,
@@ -61,7 +66,7 @@ func (rc *ReputationContract) InitConfig(ctx contractapi.TransactionContextInter
 		},
 
 		Version:     1,
-		LastUpdated: time.Now().Unix(),
+		LastUpdated: nowTs,
 	}
 
 	configJSON, err := json.Marshal(config)
@@ -110,8 +115,13 @@ func (rc *ReputationContract) UpdateConfig(
 		return fmt.Errorf("invalid configuration: %v", err)
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	newConfig.Version++
-	newConfig.LastUpdated = time.Now().Unix()
+	newConfig.LastUpdated = nowTs
 
 	updatedJSON, err := json.Marshal(newConfig)
 	if err != nil {
@@ -145,9 +155,14 @@ func (rc *ReputationContract) UpdateDecayRate(
 		return err
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	config.DecayRate = newRate
 	config.Version++
-	config.LastUpdated = time.Now().Unix()
+	config.LastUpdated = nowTs
 
 	configJSON, err := json.Marshal(config)
 	if err != nil {
@@ -185,10 +200,15 @@ func (rc *ReputationContract) AddDimension(
 		return err
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	config.ValidDimensions[baseDimension] = true
 	config.MetaDimensions[baseDimension] = metaDimension
 	config.Version++
-	config.LastUpdated = time.Now().Unix()
+	config.LastUpdated = nowTs
 
 	configJSON, err := json.Marshal(config)
 	if err != nil {
@@ -219,6 +239,11 @@ func (rc *ReputationContract) AddAdmin(
 		return fmt.Errorf("unauthorized: admin role required")
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	normalizedAdminID := normalizeIdentity(adminID)
 
 	adminListJSON, _ := ctx.GetStub().GetState("ADMIN_LIST")
@@ -241,7 +266,7 @@ func (rc *ReputationContract) AddAdmin(
 		"action":    "ADD_ADMIN",
 		"targetId":  normalizedAdminID,
 		"callerId":  normalizeIdentity(callerID),
-		"timestamp": time.Now().Unix(),
+		"timestamp": nowTs,
 		"txId":      ctx.GetStub().GetTxID(),
 	}
 	auditJSON, _ := json.Marshal(auditRecord)
@@ -262,6 +287,11 @@ func (rc *ReputationContract) RemoveAdmin(
 ) error {
 	if !isAdmin(ctx) {
 		return fmt.Errorf("unauthorized: admin role required")
+	}
+
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
 	}
 
 	normalizedAdminID := normalizeIdentity(adminID)
@@ -285,7 +315,7 @@ func (rc *ReputationContract) RemoveAdmin(
 		"action":    "REMOVE_ADMIN",
 		"targetId":  normalizedAdminID,
 		"callerId":  normalizeIdentity(callerID),
-		"timestamp": time.Now().Unix(),
+		"timestamp": nowTs,
 		"txId":      ctx.GetStub().GetTxID(),
 	}
 	auditJSON, _ := json.Marshal(auditRecord)
@@ -306,6 +336,11 @@ func (rc *ReputationContract) AddArbitrator(
 ) error {
 	if !isAdmin(ctx) {
 		return fmt.Errorf("unauthorized: only admin can add arbitrators")
+	}
+
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
 	}
 
 	normalizedArbitratorID := normalizeIdentity(arbitratorID)
@@ -330,7 +365,7 @@ func (rc *ReputationContract) AddArbitrator(
 		"action":    "ADD_ARBITRATOR",
 		"targetId":  normalizedArbitratorID,
 		"callerId":  normalizeIdentity(callerID),
-		"timestamp": time.Now().Unix(),
+		"timestamp": nowTs,
 		"txId":      ctx.GetStub().GetTxID(),
 	}
 	auditJSON, _ := json.Marshal(auditRecord)
@@ -351,6 +386,11 @@ func (rc *ReputationContract) RemoveArbitrator(
 ) error {
 	if !isAdmin(ctx) {
 		return fmt.Errorf("unauthorized: only admin can remove arbitrators")
+	}
+
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
 	}
 
 	normalizedArbitratorID := normalizeIdentity(arbitratorID)
@@ -374,7 +414,7 @@ func (rc *ReputationContract) RemoveArbitrator(
 		"action":    "REMOVE_ARBITRATOR",
 		"targetId":  normalizedArbitratorID,
 		"callerId":  normalizeIdentity(callerID),
-		"timestamp": time.Now().Unix(),
+		"timestamp": nowTs,
 		"txId":      ctx.GetStub().GetTxID(),
 	}
 	auditJSON, _ := json.Marshal(auditRecord)
@@ -408,13 +448,18 @@ func (rc *ReputationContract) AddStake(
 	}
 	normalizedID := normalizeIdentity(actorID)
 
-	stake, err := getOrInitStake(ctx, normalizedID)
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
+	stake, err := getOrInitStake(ctx, normalizedID, nowTs)
 	if err != nil {
 		return err
 	}
 
 	stake.Balance += amount
-	stake.UpdatedAt = time.Now().Unix()
+	stake.UpdatedAt = nowTs
 
 	stakeJSON, err := json.Marshal(stake)
 	if err != nil {
@@ -439,7 +484,7 @@ func (rc *ReputationContract) GetStake(
 	actorID string,
 ) (*Stake, error) {
 	normalizedID := normalizeIdentity(actorID)
-	return getOrInitStake(ctx, normalizedID)
+	return getOrInitStake(ctx, normalizedID, time.Now().Unix())
 }
 
 // ResetStake zeroes an actor's stake — for testing only.
@@ -449,11 +494,16 @@ func (rc *ReputationContract) ResetStake(
 ) error {
 	normalizedID := normalizeIdentity(actorID)
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	stake := &Stake{
 		ActorID:   normalizedID,
 		Balance:   0,
 		Locked:    0,
-		UpdatedAt: time.Now().Unix(),
+		UpdatedAt: nowTs,
 	}
 
 	stakeKey := fmt.Sprintf("STAKE:%s", normalizedID)
@@ -511,8 +561,13 @@ func (rc *ReputationContract) SubmitRating(
 		return "", fmt.Errorf("invalid dimension: %s", dimension)
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return "", err
+	}
+
 	// Verify rater has minimum stake
-	raterStake, err := getOrInitStake(ctx, normalizedRaterID)
+	raterStake, err := getOrInitStake(ctx, normalizedRaterID, nowTs)
 	if err != nil {
 		return "", fmt.Errorf("failed to get rater stake: %v", err)
 	}
@@ -521,7 +576,7 @@ func (rc *ReputationContract) SubmitRating(
 	}
 
 	// Calculate rater weight from meta-reputation
-	weight, err := rc.calculateRaterWeight(ctx, normalizedRaterID, dimension)
+	weight, err := rc.calculateRaterWeight(ctx, normalizedRaterID, dimension, nowTs)
 	if err != nil {
 		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
 	}
@@ -563,7 +618,7 @@ func (rc *ReputationContract) SubmitRating(
 	ctx.GetStub().PutState(raterActorKey, raterActorJSON)
 
 	// Update the rated actor's Beta distribution
-	if err := rc.updateReputation(ctx, &rating); err != nil {
+	if err := rc.updateReputation(ctx, &rating, nowTs); err != nil {
 		return "", fmt.Errorf("failed to update reputation: %v", err)
 	}
 
@@ -614,7 +669,12 @@ func (rc *ReputationContract) InitiateDispute(
 		return "", err
 	}
 
-	stake, err := getOrInitStake(ctx, normalizedInitiatorID)
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return "", err
+	}
+
+	stake, err := getOrInitStake(ctx, normalizedInitiatorID, nowTs)
 	if err != nil {
 		return "", err
 	}
@@ -625,14 +685,13 @@ func (rc *ReputationContract) InitiateDispute(
 	// Lock the dispute cost
 	stake.Balance -= config.DisputeCost
 	stake.Locked += config.DisputeCost
-	stake.UpdatedAt = time.Now().Unix()
+	stake.UpdatedAt = nowTs
 
 	stakeKey := fmt.Sprintf("STAKE:%s", normalizedInitiatorID)
 	stakeJSON, _ := json.Marshal(stake)
 	ctx.GetStub().PutState(stakeKey, stakeJSON)
 
-	now := time.Now().Unix()
-	disputeID := generateDisputeID(ratingID, normalizedInitiatorID, now)
+	disputeID := generateDisputeID(ratingID, normalizedInitiatorID, nowTs)
 
 	dispute := Dispute{
 		DisputeID:   disputeID,
@@ -643,7 +702,7 @@ func (rc *ReputationContract) InitiateDispute(
 		Dimension:   rating.Dimension,
 		Reason:      reason,
 		Status:      "pending",
-		CreatedAt:   now,
+		CreatedAt:   nowTs,
 	}
 
 	disputeJSON, err := json.Marshal(dispute)
@@ -692,37 +751,42 @@ func (rc *ReputationContract) ResolveDispute(
 		return fmt.Errorf("dispute already resolved")
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	arbitratorID, _ := ctx.GetClientIdentity().GetID()
 	normalizedArbitratorID := normalizeIdentity(arbitratorID)
 
 	dispute.Status = verdict
 	dispute.ArbitratorID = normalizedArbitratorID
 	dispute.ArbitratorNotes = arbitratorNotes
-	dispute.ResolvedAt = time.Now().Unix()
+	dispute.ResolvedAt = nowTs
 
 	raterWasCorrect := verdict == "upheld"
 
 	// Update rater's meta-reputation
-	if err := rc.updateMetaReputation(ctx, dispute.RaterID, dispute.Dimension, raterWasCorrect); err != nil {
+	if err := rc.updateMetaReputation(ctx, dispute.RaterID, dispute.Dimension, raterWasCorrect, nowTs); err != nil {
 		return fmt.Errorf("failed to update metareputation: %v", err)
 	}
 
 	// If overturned, undo the rating and penalise the rater
 	if verdict == "overturned" {
-		if err := rc.reverseRating(ctx, dispute.RatingID); err != nil {
+		if err := rc.reverseRating(ctx, dispute.RatingID, nowTs); err != nil {
 			return fmt.Errorf("failed to reverse rating: %v", err)
 		}
-		if err := rc.slashStake(ctx, dispute.RaterID); err != nil {
+		if err := rc.slashStake(ctx, dispute.RaterID, nowTs); err != nil {
 			return fmt.Errorf("failed to slash stake: %v", err)
 		}
 	}
 
 	// Return the dispute cost to the initiator
 	config, _ := getConfig(ctx)
-	initiatorStake, _ := getOrInitStake(ctx, dispute.InitiatorID)
+	initiatorStake, _ := getOrInitStake(ctx, dispute.InitiatorID, nowTs)
 	initiatorStake.Locked -= config.DisputeCost
 	initiatorStake.Balance += config.DisputeCost
-	initiatorStake.UpdatedAt = time.Now().Unix()
+	initiatorStake.UpdatedAt = nowTs
 
 	stakeKey := fmt.Sprintf("STAKE:%s", dispute.InitiatorID)
 	stakeJSON, _ := json.Marshal(initiatorStake)
@@ -761,13 +825,14 @@ func (rc *ReputationContract) GetReputation(
 	}
 
 	normalizedActorID := normalizeIdentity(actorID)
+	nowTs := time.Now().Unix()
 
-	rep, err := getOrInitReputation(ctx, normalizedActorID, dimension, config)
+	rep, err := getOrInitReputation(ctx, normalizedActorID, dimension, config, nowTs)
 	if err != nil {
 		return nil, err
 	}
 
-	effectiveRep := applyDynamicDecay(rep, config)
+	effectiveRep := applyDynamicDecay(rep, config, nowTs)
 	score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 	ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 
@@ -918,6 +983,7 @@ func (rc *ReputationContract) GetActorsByDimension(
 	}
 	defer resultsIterator.Close()
 
+	nowTs := time.Now().Unix()
 	var results []map[string]interface{}
 	for resultsIterator.HasNext() {
 		queryResult, err := resultsIterator.Next()
@@ -932,7 +998,7 @@ func (rc *ReputationContract) GetActorsByDimension(
 			continue
 		}
 
-		effectiveRep := applyDynamicDecay(&rep, config)
+		effectiveRep := applyDynamicDecay(&rep, config, nowTs)
 		score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 
 		if score >= minScore {
@@ -990,13 +1056,14 @@ func (rc *ReputationContract) GetRating(
 func (rc *ReputationContract) updateReputation(
 	ctx contractapi.TransactionContextInterface,
 	rating *Rating,
+	nowTs int64,
 ) error {
 	config, err := getConfig(ctx)
 	if err != nil {
 		return err
 	}
 
-	rep, err := getOrInitReputation(ctx, rating.ActorID, rating.Dimension, config)
+	rep, err := getOrInitReputation(ctx, rating.ActorID, rating.Dimension, config, nowTs)
 	if err != nil {
 		return err
 	}
@@ -1009,7 +1076,7 @@ func (rc *ReputationContract) updateReputation(
 	}
 
 	rep.TotalEvents++
-	rep.LastTs = time.Now().Unix()
+	rep.LastTs = nowTs
 
 	repKey := fmt.Sprintf("REPUTATION:%s:%s", rating.ActorID, rating.Dimension)
 	repJSON, err := json.Marshal(rep)
@@ -1033,10 +1100,12 @@ func (rc *ReputationContract) updateReputation(
 }
 
 // calculateRaterWeight computes the influence of a rater based on their meta-reputation.
+// nowTs must be the transaction timestamp in write paths.
 func (rc *ReputationContract) calculateRaterWeight(
 	ctx contractapi.TransactionContextInterface,
 	raterID string,
 	baseDimension string,
+	nowTs int64,
 ) (float64, error) {
 	config, err := getConfig(ctx)
 	if err != nil {
@@ -1048,12 +1117,12 @@ func (rc *ReputationContract) calculateRaterWeight(
 		return config.MinRaterWeight, nil
 	}
 
-	rep, err := getOrInitReputation(ctx, raterID, metaDimension, config)
+	rep, err := getOrInitReputation(ctx, raterID, metaDimension, config, nowTs)
 	if err != nil {
 		return config.MinRaterWeight, err
 	}
 
-	effectiveRep := applyDynamicDecay(rep, config)
+	effectiveRep := applyDynamicDecay(rep, config, nowTs)
 	metaScore := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 
 	totalEvents := effectiveRep.Alpha + effectiveRep.Beta
@@ -1077,6 +1146,7 @@ func (rc *ReputationContract) updateMetaReputation(
 	raterID string,
 	baseDimension string,
 	wasCorrect bool,
+	nowTs int64,
 ) error {
 	config, err := getConfig(ctx)
 	if err != nil {
@@ -1088,7 +1158,7 @@ func (rc *ReputationContract) updateMetaReputation(
 		return fmt.Errorf("no meta-dimension for %s", baseDimension)
 	}
 
-	rep, err := getOrInitReputation(ctx, raterID, metaDimension, config)
+	rep, err := getOrInitReputation(ctx, raterID, metaDimension, config, nowTs)
 	if err != nil {
 		return err
 	}
@@ -1099,7 +1169,7 @@ func (rc *ReputationContract) updateMetaReputation(
 		rep.Beta += 1.0
 	}
 
-	rep.LastTs = time.Now().Unix()
+	rep.LastTs = nowTs
 	rep.TotalEvents++
 
 	repKey := fmt.Sprintf("REPUTATION:%s:%s", raterID, metaDimension)
@@ -1115,6 +1185,7 @@ func (rc *ReputationContract) updateMetaReputation(
 func (rc *ReputationContract) reverseRating(
 	ctx contractapi.TransactionContextInterface,
 	ratingID string,
+	nowTs int64,
 ) error {
 	ratingJSON, err := ctx.GetStub().GetState(ratingID)
 	if err != nil || ratingJSON == nil {
@@ -1128,7 +1199,7 @@ func (rc *ReputationContract) reverseRating(
 
 	config, _ := getConfig(ctx)
 
-	rep, err := getOrInitReputation(ctx, rating.ActorID, rating.Dimension, config)
+	rep, err := getOrInitReputation(ctx, rating.ActorID, rating.Dimension, config, nowTs)
 	if err != nil {
 		return err
 	}
@@ -1163,20 +1234,21 @@ func (rc *ReputationContract) reverseRating(
 func (rc *ReputationContract) slashStake(
 	ctx contractapi.TransactionContextInterface,
 	raterID string,
+	nowTs int64,
 ) error {
 	config, err := getConfig(ctx)
 	if err != nil {
 		return err
 	}
 
-	stake, err := getOrInitStake(ctx, raterID)
+	stake, err := getOrInitStake(ctx, raterID, nowTs)
 	if err != nil {
 		return err
 	}
 
 	slashAmount := stake.Balance * config.SlashPercentage
 	stake.Balance -= slashAmount
-	stake.UpdatedAt = time.Now().Unix()
+	stake.UpdatedAt = nowTs
 
 	stakeKey := fmt.Sprintf("STAKE:%s", raterID)
 	stakeJSON, err := json.Marshal(stake)
@@ -1242,7 +1314,13 @@ func (rc *ReputationContract) BufferRating(
 		return "", fmt.Errorf("self-rating is not allowed")
 	}
 
-	raterStake, err := getOrInitStake(ctx, normalizedRaterID)
+	txTs, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return "", fmt.Errorf("failed to get tx timestamp: %v", err)
+	}
+	ts := txTs.GetSeconds()
+
+	raterStake, err := getOrInitStake(ctx, normalizedRaterID, ts)
 	if err != nil {
 		return "", fmt.Errorf("failed to get rater stake: %v", err)
 	}
@@ -1251,17 +1329,12 @@ func (rc *ReputationContract) BufferRating(
 			raterStake.Balance, config.MinStakeRequired)
 	}
 
-	weight, err := rc.calculateRaterWeight(ctx, normalizedRaterID, dimension)
+	weight, err := rc.calculateRaterWeight(ctx, normalizedRaterID, dimension, ts)
 	if err != nil {
 		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
 	}
 
 	txID := ctx.GetStub().GetTxID()
-	txTs, err := ctx.GetStub().GetTxTimestamp()
-	if err != nil {
-		return "", fmt.Errorf("failed to get tx timestamp: %v", err)
-	}
-	ts := txTs.AsTime().Unix()
 
 	pending := PendingRating{
 		PendingID:  txID,
@@ -1317,12 +1390,17 @@ func (rc *ReputationContract) FlushRatings(
 
 	normalizedActorID := normalizeIdentity(actorID)
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return nil, err
+	}
+
 	// Load and decay the current reputation record
-	rep, err := getOrInitReputation(ctx, normalizedActorID, dimension, config)
+	rep, err := getOrInitReputation(ctx, normalizedActorID, dimension, config, nowTs)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load reputation: %v", err)
 	}
-	rep = applyDynamicDecay(rep, config)
+	rep = applyDynamicDecay(rep, config, nowTs)
 
 	// Scan all pending ratings for this actor+dimension using a plain-key range.
 	// `:` as separator, `;` (ASCII 59 = `:` + 1) as exclusive end bound.
@@ -1366,14 +1444,13 @@ func (rc *ReputationContract) FlushRatings(
 	}
 
 	score := rep.Alpha / (rep.Alpha + rep.Beta)
-	now := time.Now().Unix()
 
 	if flushed == 0 {
 		return &FlushResult{
 			ActorID: normalizedActorID, Dimension: dimension,
 			RatingsFlushed: 0,
 			NewAlpha: rep.Alpha, NewBeta: rep.Beta, NewScore: score,
-			FlushedAt: now,
+			FlushedAt: nowTs,
 		}, nil
 	}
 
@@ -1408,7 +1485,7 @@ func (rc *ReputationContract) FlushRatings(
 		ActorID: normalizedActorID, Dimension: dimension,
 		RatingsFlushed: flushed,
 		NewAlpha: rep.Alpha, NewBeta: rep.Beta, NewScore: score,
-		FlushedAt: now,
+		FlushedAt: nowTs,
 	}, nil
 }
 

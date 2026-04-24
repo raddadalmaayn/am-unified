@@ -1,0 +1,59 @@
+╔══════════════════════════════════════════════════════╗
+║  Geo-Distributed AM Benchmark — 4-Org (amchannel)   ║
+╚══════════════════════════════════════════════════════╝
+  Peer:    localhost:7051  |  Channel: amchannel
+  Users:   Admin, User1
+  Seq runs: 500  |  Conc runs: 2000  |  Concurrency: 20
+
+[Setup] InitConfig...
+  ✓ Already initialized
+[Setup] Staking users...
+  ✓ Staked Admin
+  ✓ Staked User1
+
+[Test 1] Sequential provenance writes (500 runs)...
+  10/500  20/500  30/500  40/500  50/500  60/500  70/500  80/500  90/500  100/500  110/500  120/500  130/500  140/500  150/500  160/500  170/500  180/500  190/500  200/500  210/500  220/500  230/500  240/500  250/500  260/500  270/500  280/500  290/500  300/500  310/500  320/500  330/500  340/500  350/500  360/500  370/500  380/500  390/500  400/500  410/500  420/500  430/500  440/500  450/500  460/500  470/500  480/500  490/500  500/500  Provenance sequential: Mean=358ms  P50=345ms  P95=468ms  P99=935ms  σ=85ms
+  Failures: 0/500
+[Test 2] Sequential reputation writes (500 runs)...
+  NOTE: chaincode uses time.Now() — occasional endorsement-mismatch possible
+  10/500  20/500  30/500  40/500  50/500  60/500  70/500  80/500  90/500  100/500  110/500  120/500  130/500  140/500  150/500  160/500  170/500  180/500  190/500  200/500  210/500  220/500  230/500  240/500  250/500  260/500  270/500  280/500  290/500  300/500  310/500  320/500  330/500  340/500  350/500  360/500  370/500  380/500  390/500  400/500  410/500  420/500  430/500  440/500  450/500  460/500  470/500  480/500  490/500  500/500  Reputation sequential: Mean=368ms  P50=346ms  P95=479ms  P99=779ms  σ=86ms
+  Failures: 0/500
+[Test 3] Sequential bridge (integrated) writes (500 runs)...
+  10/500  20/500  30/500  40/500  50/500  60/500  70/500  80/500  90/500  100/500  110/500  120/500  130/500  140/500  150/500  160/500  170/500  180/500  190/500  200/500  210/500  220/500  230/500  240/500  250/500  260/500  270/500  280/500  290/500  300/500  310/500  320/500  330/500  340/500  350/500  360/500  370/500  380/500  390/500  400/500  410/500  420/500  430/500  440/500  450/500  460/500  470/500  480/500  490/500  500/500  Bridge sequential: Mean=372ms  P50=356ms  P95=481ms  P99=802ms  σ=80ms
+  Failures: 0/500
+[Test 4] Sequential read latency — GetPartTrustReport (500 reads)...
+  Read (GetPartTrustReport): Mean=5ms  P50=5ms  P95=6ms  P99=8ms  σ=1ms
+[Test 5] Cross-org endorsement baseline (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Cross-org endorsement: Mean=344ms  P50=335ms  P95=401ms  P99=501ms  σ=31ms
+  Failures: 0/50
+[Test 6] Concurrent provenance throughput (2000 txs, c=20)...
+  → 30.69 TPS  MVCC: 0.0%  Failures: 0/2000
+[Test 7] Concurrent reputation throughput (2000 txs, c=20)...
+  Each tx targets unique actorID — no MVCC conflicts expected
+  → 29.81 TPS  MVCC: 0.0%  Failures: 0/2000
+[Test 8] Concurrent bridge throughput (2000 txs, c=20)...
+  → 29.20 TPS  MVCC: 0.0%  Failures: 0/2000
+[Test 9] High-contention reputation (same actor, 2000 txs, c=20)...
+  → 1.51 TPS  MVCC: 95.0%  Failures: 1900/2000
+
+
+╔═══════════════════════════════════════════════════════════════════╗
+║               GEO-DISTRIBUTED BENCHMARK RESULTS                  ║
+╚═══════════════════════════════════════════════════════════════════╝
+| Test                          | Count | TPS    | Mean    | P95     | MVCC% | Fail |
+|-------------------------------|-------|--------|---------|---------|-------|------|
+| provenance_sequential         |   500 |   2.79 |   358ms |   468ms |   N/A |    0 |
+| reputation_sequential         |   500 |   2.72 |   368ms |   479ms |   N/A |    0 |
+| bridge_sequential             |   500 |   2.69 |   372ms |   481ms |   N/A |    0 |
+| read_latency                  |   500 |    N/A |     5ms |     6ms |   N/A |    0 |
+| cross_org_endorsement         |    50 |   2.91 |   344ms |   401ms |   N/A |    0 |
+| concurrent_provenance         |  2000 |  30.69 |     N/A |     N/A |  0.0% |    0 |
+| concurrent_reputation         |  2000 |  29.81 |     N/A |     N/A |  0.0% |    0 |
+| concurrent_bridge             |  2000 |  29.20 |     N/A |     N/A |  0.0% |    0 |
+| high_contention_reputation    |  2000 |   1.51 |     N/A |     N/A | 95.0% | 1900 |
+
+✅ Results saved:
+   JSON: /home/iot-lab/am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T22-49-35-257Z.json
+   CSV:  /home/iot-lab/am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T22-49-35-257Z.csv
+
+Total benchmark time: 14.7 min

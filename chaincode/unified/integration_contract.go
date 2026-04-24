@@ -85,6 +85,11 @@ func (ic *IntegrationContract) SetReputationGate(
 		return fmt.Errorf("unknown dimension: %s", dimension)
 	}
 
+	nowTs, err := getTxNow(ctx)
+	if err != nil {
+		return err
+	}
+
 	gate := ReputationGate{
 		EventType:   eventType,
 		Dimension:   dimension,
@@ -92,7 +97,7 @@ func (ic *IntegrationContract) SetReputationGate(
 		MinEvents:   minEvents,
 		MaxCIWidth:  maxCIWidth,
 		Enforced:    enforced,
-		LastUpdated: time.Now().Unix(),
+		LastUpdated: nowTs,
 	}
 
 	gateJSON, err := json.Marshal(gate)
@@ -174,12 +179,13 @@ func (ic *IntegrationContract) CheckActorEligibility(
 		return nil, err
 	}
 
-	rep, err := getOrInitReputation(ctx, normalizedActorID, gate.Dimension, config)
+	nowTs := time.Now().Unix()
+	rep, err := getOrInitReputation(ctx, normalizedActorID, gate.Dimension, config, nowTs)
 	if err != nil {
 		return nil, err
 	}
 
-	effectiveRep := applyDynamicDecay(rep, config)
+	effectiveRep := applyDynamicDecay(rep, config, nowTs)
 	score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 	ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 	ciWidth := ci[1] - ci[0]
@@ -265,11 +271,16 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 			if err != nil {
 				return "", err
 			}
-			rep, err := getOrInitReputation(ctx, normalizedRatedActorID, gate.Dimension, config)
+			txTs0, err := ctx.GetStub().GetTxTimestamp()
+			if err != nil {
+				return "", fmt.Errorf("failed to get tx timestamp: %v", err)
+			}
+			gateNowTs := txTs0.GetSeconds()
+			rep, err := getOrInitReputation(ctx, normalizedRatedActorID, gate.Dimension, config, gateNowTs)
 			if err != nil {
 				return "", err
 			}
-			effectiveRep := applyDynamicDecay(rep, config)
+			effectiveRep := applyDynamicDecay(rep, config, gateNowTs)
 			score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 			ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 			ciWidth := ci[1] - ci[0]
@@ -377,7 +388,8 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 	}
 
 	// Verify caller has minimum stake to rate
-	callerStake, err := getOrInitStake(ctx, callerID)
+	txNowTs := txTimestamp.GetSeconds()
+	callerStake, err := getOrInitStake(ctx, callerID, txNowTs)
 	if err != nil {
 		return "", fmt.Errorf("failed to get caller stake: %v", err)
 	}
@@ -388,7 +400,7 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 
 	// Calculate rater weight (use ReputationContract's helper indirectly)
 	rc := &ReputationContract{}
-	weight, err := rc.calculateRaterWeight(ctx, callerID, dimension)
+	weight, err := rc.calculateRaterWeight(ctx, callerID, dimension, txNowTs)
 	if err != nil {
 		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
 	}
@@ -419,7 +431,7 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 	}
 
 	// Update Beta distribution
-	if err := rc.updateReputation(ctx, &rating); err != nil {
+	if err := rc.updateReputation(ctx, &rating, txNowTs); err != nil {
 		return "", fmt.Errorf("failed to update reputation: %v", err)
 	}
 
@@ -488,13 +500,14 @@ func (ic *IntegrationContract) GetPartTrustReport(
 		return nil, err
 	}
 
+	queryNowTs := time.Now().Unix()
 	report := &PartTrustReport{
 		AssetID:          assetID,
 		CurrentStage:     asset.CurrentLifecycleStage,
 		ProvenanceHistory: []ProvenanceEvent{},
 		ActorTrustScores: make(map[string]ActorReputationSummary),
 		LinkedRatings:    []Rating{},
-		GeneratedAt:      time.Now().Unix(),
+		GeneratedAt:      queryNowTs,
 	}
 
 	seenActors := make(map[string]bool)
@@ -543,11 +556,11 @@ func (ic *IntegrationContract) GetPartTrustReport(
 			if !config.ValidDimensions[dim] {
 				continue
 			}
-			rep, err := getOrInitReputation(ctx, actorID, dim, config)
+			rep, err := getOrInitReputation(ctx, actorID, dim, config, queryNowTs)
 			if err != nil {
 				continue
 			}
-			effectiveRep := applyDynamicDecay(rep, config)
+			effectiveRep := applyDynamicDecay(rep, config, queryNowTs)
 			score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 			ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 
@@ -563,7 +576,7 @@ func (ic *IntegrationContract) GetPartTrustReport(
 		}
 
 		summary.TotalRatings = totalRatings
-		summary.GeneratedAt = time.Now().Unix()
+		summary.GeneratedAt = queryNowTs
 		report.ActorTrustScores[actorID] = summary
 	}
 
@@ -582,20 +595,21 @@ func (ic *IntegrationContract) GetActorTrustSummary(
 		return nil, err
 	}
 
+	queryNowTs := time.Now().Unix()
 	summary := &ActorReputationSummary{
 		ActorID:    normalizedActorID,
 		Dimensions: make(map[string]DimensionScore),
-		GeneratedAt: time.Now().Unix(),
+		GeneratedAt: queryNowTs,
 	}
 
 	totalRatings := 0
 
 	for dim := range config.ValidDimensions {
-		rep, err := getOrInitReputation(ctx, normalizedActorID, dim, config)
+		rep, err := getOrInitReputation(ctx, normalizedActorID, dim, config, queryNowTs)
 		if err != nil {
 			continue
 		}
-		effectiveRep := applyDynamicDecay(rep, config)
+		effectiveRep := applyDynamicDecay(rep, config, queryNowTs)
 		score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 		ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 
@@ -773,11 +787,16 @@ func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
 			if err != nil {
 				return "", err
 			}
-			rep, err := getOrInitReputation(ctx, normalizedRatedActorID, gate.Dimension, config)
+			txTs0, err := ctx.GetStub().GetTxTimestamp()
+			if err != nil {
+				return "", fmt.Errorf("failed to get tx timestamp: %v", err)
+			}
+			gateNowTs := txTs0.GetSeconds()
+			rep, err := getOrInitReputation(ctx, normalizedRatedActorID, gate.Dimension, config, gateNowTs)
 			if err != nil {
 				return "", err
 			}
-			effectiveRep := applyDynamicDecay(rep, config)
+			effectiveRep := applyDynamicDecay(rep, config, gateNowTs)
 			score := effectiveRep.Alpha / (effectiveRep.Alpha + effectiveRep.Beta)
 			ci := calculateWilsonCI(effectiveRep.Alpha, effectiveRep.Beta, 0.95)
 			ciWidth := ci[1] - ci[0]
@@ -874,7 +893,7 @@ func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
 		return "", fmt.Errorf("invalid dimension: %s", dimension)
 	}
 
-	callerStake, err := getOrInitStake(ctx, callerID)
+	callerStake, err := getOrInitStake(ctx, callerID, tsUnix)
 	if err != nil {
 		return "", fmt.Errorf("failed to get caller stake: %v", err)
 	}
@@ -884,7 +903,7 @@ func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
 	}
 
 	rc := &ReputationContract{}
-	weight, err := rc.calculateRaterWeight(ctx, callerID, dimension)
+	weight, err := rc.calculateRaterWeight(ctx, callerID, dimension, tsUnix)
 	if err != nil {
 		return "", fmt.Errorf("failed to calculate rater weight: %v", err)
 	}

@@ -7,10 +7,20 @@ import (
 	"fmt"
 	"math"
 	"strings"
-	"time"
 
 	"github.com/hyperledger/fabric-contract-api-go/v2/contractapi"
 )
+
+// getTxNow returns the transaction timestamp as Unix epoch seconds.
+// Use this in all state-writing paths instead of time.Now().Unix() to
+// guarantee deterministic results across endorsing peers.
+func getTxNow(ctx contractapi.TransactionContextInterface) (int64, error) {
+	txTs, err := ctx.GetStub().GetTxTimestamp()
+	if err != nil {
+		return 0, fmt.Errorf("failed to get tx timestamp: %w", err)
+	}
+	return txTs.GetSeconds(), nil
+}
 
 // ============================================================================
 // IDENTITY HELPERS
@@ -155,11 +165,14 @@ func validateConfig(config *SystemConfig) error {
 // ============================================================================
 
 // getOrInitReputation loads an existing reputation record or creates a fresh one.
+// nowTs must be the transaction timestamp (from getTxNow) in write paths, or
+// time.Now().Unix() in read-only query paths.
 func getOrInitReputation(
 	ctx contractapi.TransactionContextInterface,
 	actorID string,
 	dimension string,
 	config *SystemConfig,
+	nowTs int64,
 ) (*Reputation, error) {
 	repKey := fmt.Sprintf("REPUTATION:%s:%s", actorID, dimension)
 	repJSON, err := ctx.GetStub().GetState(repKey)
@@ -182,14 +195,16 @@ func getOrInitReputation(
 		Alpha:       config.InitialAlpha,
 		Beta:        config.InitialBeta,
 		TotalEvents: 0,
-		LastTs:      time.Now().Unix(),
+		LastTs:      nowTs,
 	}, nil
 }
 
 // getOrInitStake loads an existing stake or creates an empty one.
+// nowTs must be the transaction timestamp in write paths.
 func getOrInitStake(
 	ctx contractapi.TransactionContextInterface,
 	actorID string,
+	nowTs int64,
 ) (*Stake, error) {
 	stakeKey := fmt.Sprintf("STAKE:%s", actorID)
 	stakeJSON, err := ctx.GetStub().GetState(stakeKey)
@@ -209,7 +224,7 @@ func getOrInitStake(
 		ActorID:   actorID,
 		Balance:   0,
 		Locked:    0,
-		UpdatedAt: time.Now().Unix(),
+		UpdatedAt: nowTs,
 	}, nil
 }
 
@@ -219,12 +234,14 @@ func getOrInitStake(
 
 // applyDynamicDecay applies exponential time-decay to a reputation record,
 // pulling the score back toward the uninformative prior as time passes.
-func applyDynamicDecay(rep *Reputation, config *SystemConfig) *Reputation {
+// nowTs must be the transaction timestamp (getTxNow) in write paths, or
+// time.Now().Unix() in read-only query paths.
+func applyDynamicDecay(rep *Reputation, config *SystemConfig, nowTs int64) *Reputation {
 	if rep.LastTs == 0 {
 		return rep
 	}
 
-	elapsed := float64(time.Now().Unix()-rep.LastTs) / config.DecayPeriod
+	elapsed := float64(nowTs-rep.LastTs) / config.DecayPeriod
 	if elapsed <= 0 {
 		return rep
 	}
