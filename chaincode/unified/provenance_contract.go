@@ -147,8 +147,8 @@ func (pc *ProvenanceContract) RecordPrintJob(
 	if err != nil {
 		return err
 	}
-	if asset.CurrentLifecycleStage != "MATERIAL_CERTIFIED" {
-		return fmt.Errorf("invalid lifecycle transition: RecordPrintJob requires stage MATERIAL_CERTIFIED, current stage is %s", asset.CurrentLifecycleStage)
+	if err := assertLifecyclePredecessor("PRINT_JOB", asset.CurrentLifecycleStage); err != nil {
+		return err
 	}
 
 	event := ProvenanceEvent{
@@ -187,8 +187,8 @@ func (pc *ProvenanceContract) RecordInspection(
 	if err != nil {
 		return err
 	}
-	if asset.CurrentLifecycleStage != "PRINT_COMPLETE" {
-		return fmt.Errorf("invalid lifecycle transition: RecordInspection requires stage PRINT_COMPLETE, current stage is %s", asset.CurrentLifecycleStage)
+	if err := assertLifecyclePredecessor("INSPECTION", asset.CurrentLifecycleStage); err != nil {
+		return err
 	}
 
 	event := ProvenanceEvent{
@@ -231,8 +231,8 @@ func (pc *ProvenanceContract) RecordCertification(
 	if err != nil {
 		return err
 	}
-	if asset.CurrentLifecycleStage != "INSPECTION_PASSED" {
-		return fmt.Errorf("invalid lifecycle transition: RecordCertification requires stage INSPECTION_PASSED, current stage is %s", asset.CurrentLifecycleStage)
+	if err := assertLifecyclePredecessor("CERTIFICATION", asset.CurrentLifecycleStage); err != nil {
+		return err
 	}
 
 	event := ProvenanceEvent{

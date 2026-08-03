@@ -23,6 +23,45 @@ func getTxNow(ctx contractapi.TransactionContextInterface) (int64, error) {
 }
 
 // ============================================================================
+// LIFECYCLE HELPERS
+// ============================================================================
+
+// requiredPredecessorStage maps a lifecycle event type to the asset stage that
+// must already be recorded before that event is legal. An event type absent
+// from this map is unconstrained. MATERIAL_CERTIFICATION is the genesis event,
+// so its requirement is the empty stage of an asset that does not yet exist.
+var requiredPredecessorStage = map[string]string{
+	"MATERIAL_CERTIFICATION": "",
+	"PRINT_JOB":              "MATERIAL_CERTIFIED",
+	"INSPECTION":             "PRINT_COMPLETE",
+	"CERTIFICATION":          "INSPECTION_PASSED",
+}
+
+// assertLifecyclePredecessor reports whether eventType may legally follow
+// currentStage. currentStage is supplied by the caller from an asset it has
+// already loaded, so this performs no ledger read of its own; pass "" for an
+// asset that does not exist yet.
+func assertLifecyclePredecessor(eventType, currentStage string) error {
+	required, constrained := requiredPredecessorStage[eventType]
+	if !constrained || currentStage == required {
+		return nil
+	}
+	if required == "" {
+		return fmt.Errorf(
+			"invalid lifecycle transition: %s is a genesis event and requires an asset that does not yet exist, current stage is %s",
+			eventType, currentStage)
+	}
+	if currentStage == "" {
+		return fmt.Errorf(
+			"invalid lifecycle transition: %s requires stage %s, asset does not exist",
+			eventType, required)
+	}
+	return fmt.Errorf(
+		"invalid lifecycle transition: %s requires stage %s, current stage is %s",
+		eventType, required, currentStage)
+}
+
+// ============================================================================
 // IDENTITY HELPERS
 // ============================================================================
 

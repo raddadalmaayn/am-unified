@@ -345,16 +345,9 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 		}
 	}
 
-	// Store the provenance event
-	eventJSON, err := json.Marshal(event)
-	if err != nil {
-		return "", fmt.Errorf("failed to marshal event: %v", err)
-	}
-	if err := ctx.GetStub().PutState("EVENT_"+txID, eventJSON); err != nil {
-		return "", fmt.Errorf("failed to store provenance event: %v", err)
-	}
-
-	// Update or create the asset record
+	// Load the asset before writing anything: the predecessor assertion below
+	// needs its current stage. This is the same read the asset update already
+	// performed, moved earlier, so no additional ledger read is introduced.
 	assetJSON, _ := ctx.GetStub().GetState(assetID)
 	var asset Asset
 	if assetJSON != nil {
@@ -367,6 +360,23 @@ func (ic *IntegrationContract) RecordProvenanceWithReputation(
 			HistoryTxIDs: []string{},
 		}
 	}
+
+	// Enforce the same lifecycle state machine as the dedicated provenance
+	// functions, so the bridge cannot be used to skip an intervening event.
+	if err := assertLifecyclePredecessor(eventType, asset.CurrentLifecycleStage); err != nil {
+		return "", err
+	}
+
+	// Store the provenance event
+	eventJSON, err := json.Marshal(event)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal event: %v", err)
+	}
+	if err := ctx.GetStub().PutState("EVENT_"+txID, eventJSON); err != nil {
+		return "", fmt.Errorf("failed to store provenance event: %v", err)
+	}
+
+	// Update the asset record
 	asset.CurrentLifecycleStage = lifecycleStage
 	asset.HistoryTxIDs = append(asset.HistoryTxIDs, txID)
 
@@ -858,6 +868,22 @@ func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
 		}
 	}
 
+	// Load the asset before writing anything so the predecessor assertion can
+	// read its current stage. Same read as before, moved earlier.
+	assetJSON, _ := ctx.GetStub().GetState(assetID)
+	var asset Asset
+	if assetJSON != nil {
+		json.Unmarshal(assetJSON, &asset)
+	} else {
+		asset = Asset{AssetID: assetID, Owner: callerMSPID, HistoryTxIDs: []string{}}
+	}
+
+	// Enforce the same lifecycle state machine as the dedicated provenance
+	// functions, so the bridge cannot be used to skip an intervening event.
+	if err := assertLifecyclePredecessor(eventType, asset.CurrentLifecycleStage); err != nil {
+		return "", err
+	}
+
 	eventJSON, err := json.Marshal(event)
 	if err != nil {
 		return "", fmt.Errorf("failed to marshal event: %v", err)
@@ -866,13 +892,6 @@ func (ic *IntegrationContract) RecordProvenanceWithBufferedReputation(
 		return "", fmt.Errorf("failed to store provenance event: %v", err)
 	}
 
-	assetJSON, _ := ctx.GetStub().GetState(assetID)
-	var asset Asset
-	if assetJSON != nil {
-		json.Unmarshal(assetJSON, &asset)
-	} else {
-		asset = Asset{AssetID: assetID, Owner: callerMSPID, HistoryTxIDs: []string{}}
-	}
 	asset.CurrentLifecycleStage = lifecycleStage
 	asset.HistoryTxIDs = append(asset.HistoryTxIDs, txID)
 
