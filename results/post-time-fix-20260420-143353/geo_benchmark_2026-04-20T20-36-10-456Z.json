@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-04-20T20:36:10.457Z",
+  "config": {
+    "channel": "amchannel",
+    "chaincode": "unified",
+    "peer": "localhost:7051",
+    "sequential_runs": 50,
+    "concurrent_runs": 200,
+    "concurrency_level": 20,
+    "phase_cooldown_ms": 3000
+  },
+  "results": [
+    {
+      "test_name": "provenance_sequential",
+      "txn_count": 50,
+      "total_ms": 18687,
+      "tps": 2.6756568737625086,
+      "mean_ms": 373.7,
+      "p50_ms": 357,
+      "p95_ms": 446,
+      "p99_ms": 702,
+      "failures": 0
+    },
+    {
+      "test_name": "reputation_sequential",
+      "txn_count": 50,
+      "total_ms": 19431,
+      "tps": 2.521743605578714,
+      "mean_ms": 395.6530612244898,
+      "p50_ms": 378,
+      "p95_ms": 489,
+      "p99_ms": 1090,
+      "failures": 1
+    },
+    {
+      "test_name": "bridge_sequential",
+      "txn_count": 50,
+      "total_ms": 18438,
+      "tps": 2.603319232020827,
+      "mean_ms": 382.8333333333333,
+      "p50_ms": 370,
+      "p95_ms": 520,
+      "p99_ms": 601,
+      "failures": 2
+    },
+    {
+      "test_name": "read_latency",
+      "txn_count": 50,
+      "total_ms": 322,
+      "tps": null,
+      "mean_ms": 6.44,
+      "p50_ms": 6,
+      "p95_ms": 8,
+      "p99_ms": 35,
+      "failures": 0
+    },
+    {
+      "test_name": "cross_org_endorsement",
+      "txn_count": 50,
+      "total_ms": 18480,
+      "tps": 2.7056277056277054,
+      "mean_ms": 369.6,
+      "p50_ms": 356,
+      "p95_ms": 468,
+      "p99_ms": 834,
+      "failures": 0
+    },
+    {
+      "test_name": "concurrent_provenance",
+      "txn_count": 200,
+      "total_ms": 7832,
+      "tps": 25.53626149131767,
+      "mvcc_rate": "0.0",
+      "failures": 0
+    },
+    {
+      "test_name": "concurrent_reputation",
+      "txn_count": 200,
+      "total_ms": 6714,
+      "tps": 28.15013404825737,
+      "mvcc_rate": "0.0",
+      "failures": 11
+    },
+    {
+      "test_name": "concurrent_bridge",
+      "txn_count": 200,
+      "total_ms": 6533,
+      "tps": 30.61380682687892,
+      "mvcc_rate": "0.0",
+      "failures": 0
+    },
+    {
+      "test_name": "high_contention_reputation",
+      "txn_count": 200,
+      "total_ms": 6394,
+      "tps": 1.563966218329684,
+      "mvcc_rate": "95.0",
+      "failures": 190
+    }
+  ]
+}

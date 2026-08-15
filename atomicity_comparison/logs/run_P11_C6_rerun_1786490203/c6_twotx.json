@@ -1,0 +1,21 @@
+{
+  "mode": "twotx",
+  "n": 500,
+  "conc_level": 20,
+  "invokes_per_logical_tx": 2,
+  "sequential": {
+    "samples": 500,
+    "mean": 77.278,
+    "p50": 74,
+    "p95": 94
+  },
+  "concurrent": {
+    "total": 500,
+    "ok": 498,
+    "mvcc": 0,
+    "other": 2,
+    "wall_s": 3.117,
+    "tps": 159.76900866217517,
+    "mvcc_rate": 0
+  }
+}

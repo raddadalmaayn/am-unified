@@ -1,0 +1,248 @@
+{
+  "run_id": "Smspj26ql-A-r3",
+  "condition": "A",
+  "run_index": 3,
+  "harness_version": "2.1.0",
+  "schema_version": 1,
+  "git_commit_source": "9a9db0ef541d2e400effdb08e3b4a135692a2c10",
+  "source_chaincode_tree_dirty": false,
+  "git_commit_harness_host": "9a9db0ef541d2e400effdb08e3b4a135692a2c10",
+  "chaincode_sha256_expected": "41f333d6ffcab44b5d2c3f50fb2797ddd21a6093d9c0a17a9836033623029cbe",
+  "chaincode_package_ids": {
+    "org1": "unified_1.0:e41a6a4fdeb3050ef7bd45952b4772e5baf0474c553c2928b619916caa2a6153",
+    "org2": "unified_1.0:e41a6a4fdeb3050ef7bd45952b4772e5baf0474c553c2928b619916caa2a6153"
+  },
+  "channel_params": {
+    "error": "ERROR: Command failed: bash -lc export PATH=$HOME/fabric-tools/bin:$PATH; cd /tmp && rm -f _m.pb _m.json && source /tmp/pe.sh 1 7051 >/dev/null 2>&1; peer channel fetch config /tmp/_m.pb -o orderer.example.com:7050 --ordererTLSHostnameOverride orderer.example.com -c mychannel --tls --cafile $ORDERER"
+  },
+  "condition_params": {
+    "W": 1,
+    "total": 500,
+    "warmup_count": 5,
+    "warmup_ms": 2000,
+    "read_target_key": null
+  },
+  "wall_clock_start": "2026-08-12T03:29:08.521Z",
+  "wall_clock_end": "2026-08-12T03:29:28.780Z",
+  "cooldown_observed_ms": 60004,
+  "timing": {
+    "wall_start_ns": "27763314887349",
+    "wall_end_ns": "27783150661375",
+    "steady_start_ns": "27765319150127",
+    "steady_end_ns": "27783150654022",
+    "steady_duration_ms": 17831.503895,
+    "total_duration_ms": 19835.774026,
+    "completed": 500
+  },
+  "ledger_before": {
+    "captured_at": "2026-08-12T03:29:08.526Z",
+    "peers": {
+      "org1": {
+        "height": 21926,
+        "currentBlockHash": "2dKugiK4nvyvNFJuXMwnaiY+u2DRODx1WqSG3qojsdM=",
+        "previousBlockHash": "SIoj2SOFTdiouL23TTwiuL3jI0PdlgoFRhDb573wDA4="
+      },
+      "org2": {
+        "height": 21926,
+        "currentBlockHash": "2dKugiK4nvyvNFJuXMwnaiY+u2DRODx1WqSG3qojsdM=",
+        "previousBlockHash": "SIoj2SOFTdiouL23TTwiuL3jI0PdlgoFRhDb573wDA4="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "mychannel",
+        "url": "/participation/v1/channels/mychannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 21926
+      }
+    }
+  },
+  "ledger_after": {
+    "captured_at": "2026-08-12T03:29:28.784Z",
+    "peers": {
+      "org1": {
+        "height": 22426,
+        "currentBlockHash": "wXl6CtJCVsBlMqKeoGIgXx8PTI+BwEg68FXKQFgh4EE=",
+        "previousBlockHash": "GboZpkfZ8JnduqWrLP3cUKhFIexHXoNlThjfHurwOGg="
+      },
+      "org2": {
+        "height": 22426,
+        "currentBlockHash": "wXl6CtJCVsBlMqKeoGIgXx8PTI+BwEg68FXKQFgh4EE=",
+        "previousBlockHash": "GboZpkfZ8JnduqWrLP3cUKhFIexHXoNlThjfHurwOGg="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "mychannel",
+        "url": "/participation/v1/channels/mychannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 22426
+      }
+    },
+    "convergence": {
+      "converged": true,
+      "wait_ms": 110,
+      "polls": 1,
+      "timeout_ms": 900000,
+      "poll_ms": 1000,
+      "laggards_last_poll": null
+    }
+  },
+  "ledger_convergence": {
+    "converged": true,
+    "wait_ms": 110,
+    "polls": 1,
+    "timeout_ms": 900000,
+    "poll_ms": 1000,
+    "laggards_last_poll": null
+  },
+  "height_delta": {
+    "org1": 500,
+    "org2": 500
+  },
+  "peers_agree_after": {
+    "height": true,
+    "hash": true
+  },
+  "counts": {
+    "submitted": 500,
+    "committed": 500,
+    "errors_by_class": {
+      "MVCC_READ_CONFLICT": 0,
+      "PHANTOM_READ_CONFLICT": 0,
+      "ENDORSEMENT_POLICY_FAILURE": 0,
+      "CHAINCODE_REJECT": 0,
+      "ENDORSE_MISMATCH": 0,
+      "GATEWAY_DEADLINE": 0,
+      "GATEWAY_UNAVAILABLE": 0,
+      "ORDERER_UNAVAILABLE": 0,
+      "COMMIT_TIMEOUT": 0,
+      "OTHER": 0
+    },
+    "error_total": 0,
+    "invariant_holds": true,
+    "warmup_count_observed": 56,
+    "steady_count": 444
+  },
+  "suspect_low_steady_count": false,
+  "stake_before": null,
+  "stake_after": null,
+  "state_keys_before": {
+    "activeActors": 30958,
+    "totalRatings": 31010,
+    "linkedEvents": 17453,
+    "totalDisputes": 0,
+    "totalAssets_DEFECTIVE_ALWAYS_ZERO": 0,
+    "counted_keys": 79421
+  },
+  "state_keys_after": {
+    "activeActors": 30958,
+    "totalRatings": 31010,
+    "linkedEvents": 17453,
+    "totalDisputes": 0,
+    "totalAssets_DEFECTIVE_ALWAYS_ZERO": 0,
+    "counted_keys": 79421
+  },
+  "resource_coverage": "PENDING",
+  "gateway_deadlines_ms": {
+    "evaluate": 15000,
+    "endorse": 60000,
+    "submit": 60000,
+    "commitStatus": 300000
+  },
+  "clients_n": 1,
+  "container_inventory": {
+    "L1": [
+      {
+        "name": "peer0org2_rep_ccaas",
+        "image_tag": "rep_ccaas_image:latest",
+        "image_digest": "sha256:3d85e16391a6939b1d52d4f2f7b867d348ca6f94faca5a8be72239f0e5a804c7",
+        "started_at": "2026-08-11T23:08:53.203758431Z"
+      },
+      {
+        "name": "peer0org1_rep_ccaas",
+        "image_tag": "rep_ccaas_image:latest",
+        "image_digest": "sha256:3d85e16391a6939b1d52d4f2f7b867d348ca6f94faca5a8be72239f0e5a804c7",
+        "started_at": "2026-08-11T23:08:53.044293163Z"
+      },
+      {
+        "name": "peer0org2_prov_ccaas",
+        "image_tag": "prov_ccaas_image:latest",
+        "image_digest": "sha256:1639c1d988787bd5032fde99182257727e5159e744b1f267adcb255cc5f0f8e4",
+        "started_at": "2026-08-11T23:08:52.896468543Z"
+      },
+      {
+        "name": "peer0org1_prov_ccaas",
+        "image_tag": "prov_ccaas_image:latest",
+        "image_digest": "sha256:1639c1d988787bd5032fde99182257727e5159e744b1f267adcb255cc5f0f8e4",
+        "started_at": "2026-08-11T23:08:52.76328344Z"
+      },
+      {
+        "name": "peer0org2_unified_ccaas",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:242e80b3871e5c3b7e2170c8d2a556734dbd580d87e5318ec1434f629618945b",
+        "started_at": "2026-08-11T23:08:52.607423237Z"
+      },
+      {
+        "name": "peer0org1_unified_ccaas",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:242e80b3871e5c3b7e2170c8d2a556734dbd580d87e5318ec1434f629618945b",
+        "started_at": "2026-08-11T23:08:52.451266544Z"
+      },
+      {
+        "name": "peer0.org1.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:d0c8e53735626da30d66cdc8b81406d45458583d3779be4a1a2aac1eba84e01c",
+        "started_at": "2026-08-11T23:08:40.151961031Z"
+      },
+      {
+        "name": "orderer.example.com",
+        "image_tag": "hyperledger/fabric-orderer:latest",
+        "image_digest": "sha256:ac3b801a6da5c056e967e9738b0a998df5f9b159df6986196406a757cd03c075",
+        "started_at": "2026-08-11T23:08:40.689271578Z"
+      },
+      {
+        "name": "peer0.org2.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:d0c8e53735626da30d66cdc8b81406d45458583d3779be4a1a2aac1eba84e01c",
+        "started_at": "2026-08-11T23:08:40.479586127Z"
+      },
+      {
+        "name": "ca_orderer",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-11T23:08:52.234029719Z"
+      },
+      {
+        "name": "ca_org1",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-11T23:08:51.822706671Z"
+      },
+      {
+        "name": "ca_org2",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-11T23:08:52.061759436Z"
+      }
+    ]
+  },
+  "chaincode_sha256_observed": {
+    "L1": "41f333d6ffcab44b5d2c3f50fb2797ddd21a6093d9c0a17a9836033623029cbe"
+  },
+  "env_snapshot_captured_at": "2026-08-12T03:25:53.961Z",
+  "qdisc_state": {
+    "L1": {
+      "iface": "lo",
+      "qdisc": "qdisc noqueue 0: root refcnt 2  "
+    }
+  },
+  "netem_in_effect": null,
+  "endorsement_policy_in_effect": "MAJORITY",
+  "node_versions": {
+    "node": "v18.19.1",
+    "harness_host": "zenbook"
+  }
+}

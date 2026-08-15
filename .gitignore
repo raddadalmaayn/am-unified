@@ -34,3 +34,14 @@ Thumbs.db
 .idea/
 *.swp
 *~
+
+# ── Raw evidence: published as tagged release assets, not repository content ──
+# Regenerable analysis outputs (analysis.json, occupancy.json, manifests) ARE
+# tracked; these two are the bulk per-transaction records behind them.
+results/**/txs.jsonl
+results/**/resources.csv
+results/**/resources.csv.pid
+results/_sampler_raw/
+
+# Unrelated manuscript source (A8 audit W1): IEEE TII 2026 draft and journal template assets
+Paper/

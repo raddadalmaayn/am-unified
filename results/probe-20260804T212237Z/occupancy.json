@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-08-04T22:02:12.650Z",
+  "note": "blocks_produced spans the whole run; steady_window_s is a subset, so block_rate_per_s over the steady window overstates. Total-window figure reported alongside.",
+  "runs": [
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 20,
+      "n": 1000,
+      "committed": 1000,
+      "blocks_produced": 309,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 309,
+        "org2": 309,
+        "org3": 309,
+        "org4": 309
+      },
+      "tx_per_block": 3.236245954692557,
+      "steady_window_s": 76.705372728,
+      "block_rate_per_s": 4.028400997355493,
+      "total_window_s": 88.031114445,
+      "block_rate_per_s_total_window": 3.510122550965281,
+      "steady_tps": 11.459431963351062,
+      "p50_ms": 1585.960682,
+      "endorse_median_ms": 362.85921900000005,
+      "order_commit_median_ms": 1190.928751,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 30064,
+        "polls": 35
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 20,
+      "n": 1000,
+      "committed": 1000,
+      "blocks_produced": 366,
+      "height_delta_all_agree": false,
+      "height_deltas": {
+        "org1": 366,
+        "org2": 334,
+        "org3": 366,
+        "org4": 366
+      },
+      "tx_per_block": 2.73224043715847,
+      "steady_window_s": 92.636969931,
+      "block_rate_per_s": 3.9509064283148785,
+      "total_window_s": 100.19383066,
+      "block_rate_per_s_total_window": 3.652919521981275,
+      "steady_tps": 9.488652323739831,
+      "p50_ms": 2071.82716,
+      "endorse_median_ms": 382.506486,
+      "order_commit_median_ms": 1677.0749095,
+      "convergence": {
+        "converged": false,
+        "wait_ms": 30273,
+        "polls": 36
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 20,
+      "n": 1000,
+      "committed": 1000,
+      "blocks_produced": 402,
+      "height_delta_all_agree": false,
+      "height_deltas": {
+        "org1": 402,
+        "org2": 361,
+        "org3": 402,
+        "org4": 402
+      },
+      "tx_per_block": 2.487562189054726,
+      "steady_window_s": 101.457102661,
+      "block_rate_per_s": 3.9622657207471033,
+      "total_window_s": 112.025815116,
+      "block_rate_per_s_total_window": 3.5884586029009364,
+      "steady_tps": 8.66376012073807,
+      "p50_ms": 2244.772287,
+      "endorse_median_ms": 374.3054735,
+      "order_commit_median_ms": 1811.595812,
+      "convergence": {
+        "converged": false,
+        "wait_ms": 30468,
+        "polls": 36
+      }
+    }
+  ]
+}

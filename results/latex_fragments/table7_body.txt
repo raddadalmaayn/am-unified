@@ -1,0 +1,99 @@
+TABLE 7 (single-host concurrent, W=100) — number provenance
+===========================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+T7.state_counted_keys_at_measurement  = 7509
+                                        phase8-20260810T040300Z/E/run1/manifest.json
+                                        state_keys_before.counted_keys
+T7.ledger_height_at_measurement       = 4534
+                                        phase8-20260810T040300Z/E/run1/manifest.json
+                                        ledger_before.peers.org1.height
+T7.E.steady_tps                       = 389.69
+                                        phase8-20260810T040300Z/E/*/txs.jsonl
+                                        steady.js computeSteady() median across runs   [E1 definition]
+T7.E.total_window_tps                 = 397.35
+                                        phase8-20260810T040300Z/E/*/txs.jsonl
+                                        steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T7.E.p50_ms                           = 243.1
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.E.median_across_runs.p50
+T7.E.tx_per_block                     = 7.52
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=E].tx_per_block   [from manifest height_delta]
+T7.E.block_rate_per_s                 = 69.78
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=E].block_rate_per_s   [from manifest height_delta]
+T7.E.committed                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.E.committed_total
+T7.E.submitted                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.E.n_total
+T7.F.steady_tps                       = 355.07
+                                        phase8-20260810T040300Z/F/*/txs.jsonl
+                                        steady.js computeSteady() median across runs   [E1 definition]
+T7.F.total_window_tps                 = 362.78
+                                        phase8-20260810T040300Z/F/*/txs.jsonl
+                                        steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T7.F.p50_ms                           = 259.5
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.F.median_across_runs.p50
+T7.F.tx_per_block                     = 6.99
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=F].tx_per_block   [from manifest height_delta]
+T7.F.block_rate_per_s                 = 67.01
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=F].block_rate_per_s   [from manifest height_delta]
+T7.F.committed                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.F.committed_total
+T7.F.submitted                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.F.n_total
+T7.G.steady_tps                       = 346.22
+                                        phase8-20260810T040300Z/G/*/txs.jsonl
+                                        steady.js computeSteady() median across runs   [E1 definition]
+T7.G.total_window_tps                 = 357.83
+                                        phase8-20260810T040300Z/G/*/txs.jsonl
+                                        steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T7.G.p50_ms                           = 274.5
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.G.median_across_runs.p50
+T7.G.tx_per_block                     = 6.45
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=G].tx_per_block   [from manifest height_delta]
+T7.G.block_rate_per_s                 = 71.19
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=G].block_rate_per_s   [from manifest height_delta]
+T7.G.committed                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.G.committed_total
+T7.G.submitted                        = 6000
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.G.n_total
+T7.H.steady_tps                       = 7.78
+                                        phase8-20260810T040300Z/H/*/txs.jsonl
+                                        steady.js computeSteady() median across runs   [E1 definition]
+T7.H.total_window_tps                 = 8.13
+                                        phase8-20260810T040300Z/H/*/txs.jsonl
+                                        steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T7.H.p50_ms                           = 225.9
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.H.median_across_runs.p50
+T7.H.tx_per_block                     = 0.14
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=H].tx_per_block   [from manifest height_delta]
+T7.H.block_rate_per_s                 = n/a
+                                        phase8-20260810T040300Z/occupancy.json
+                                        runs[condition=H].block_rate_per_s   [from manifest height_delta]
+T7.H.committed                        = 27
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.H.committed_total
+T7.H.submitted                        = 1500
+                                        phase8-20260810T040300Z/analysis.json
+                                        per_condition.H.n_total

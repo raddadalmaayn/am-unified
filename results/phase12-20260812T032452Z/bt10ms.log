@@ -1,0 +1,69 @@
+════════════════════════════════════════════════════════════════════════
+ bench.js v2.1.0  session=Smspj26ql
+ out=am-unified/results/phase12-20260812T032452Z/bt10ms/seq
+ conditions=A runs=3 cooldown=60000ms BT10ms seq
+════════════════════════════════════════════════════════════════════════
+chaincode sha256 verified on all four nodes: 41f333d6ffcab44b...
+chaincode source commit: 9a9db0ef541d2e400effdb08e3b4a135692a2c10 (chaincode tree dirty: false)
+gateway deadlines (ms): {"evaluate":15000,"endorse":60000,"submit":60000,"commitStatus":300000}
+ledger convergence timeout: 900000 ms
+grpc clients: 1
+setup: config already initialized
+setup: staked Admin
+setup: staked User1
+setup: read target asset Smspj26ql-READTARGET created
+setup: read target verified, stage=MATERIAL_CERTIFIED, history=1, linkedRatings=1
+
+[A run1] W=1 total=500 run_id=Smspj26ql-A-r1
+  submitted=500 committed=500 errors=0 invariant=OK
+  height delta: {"org1":500,"org2":500}  peers agree after: h=true hash=true
+  steady window 20931 ms of 22969 ms total
+cooldown 60000 ms ...
+
+[A run2] W=1 total=500 run_id=Smspj26ql-A-r2
+  submitted=500 committed=500 errors=0 invariant=OK
+  height delta: {"org1":500,"org2":500}  peers agree after: h=true hash=true
+  steady window 16250 ms of 18270 ms total
+cooldown 60000 ms ...
+
+[A run3] W=1 total=500 run_id=Smspj26ql-A-r3
+  submitted=500 committed=500 errors=0 invariant=OK
+  height delta: {"org1":500,"org2":500}  peers agree after: h=true hash=true
+  steady window 17832 ms of 19836 ms total
+
+Done. Results under am-unified/results/phase12-20260812T032452Z/bt10ms/seq
+════════════════════════════════════════════════════════════════════════
+ bench.js v2.1.0  session=Smspj65a7
+ out=am-unified/results/phase12-20260812T032452Z/bt10ms/conc
+ conditions=E runs=3 cooldown=60000ms BT10ms conc
+════════════════════════════════════════════════════════════════════════
+chaincode sha256 verified on all four nodes: 41f333d6ffcab44b...
+chaincode source commit: 9a9db0ef541d2e400effdb08e3b4a135692a2c10 (chaincode tree dirty: false)
+gateway deadlines (ms): {"evaluate":15000,"endorse":60000,"submit":60000,"commitStatus":300000}
+ledger convergence timeout: 900000 ms
+grpc clients: 1
+setup: config already initialized
+setup: staked Admin
+setup: staked User1
+setup: read target asset Smspj65a7-READTARGET created
+setup: read target verified, stage=MATERIAL_CERTIFIED, history=1, linkedRatings=1
+
+[E run1] W=100 total=2000 run_id=Smspj65a7-E-r1
+  submitted=2000 committed=2000 errors=0 invariant=OK
+  height delta: {"org1":256,"org2":256}  peers agree after: h=true hash=true
+  steady window 3639 ms of 5185 ms total
+cooldown 60000 ms ...
+
+[E run2] W=100 total=2000 run_id=Smspj65a7-E-r2
+  submitted=2000 committed=2000 errors=0 invariant=OK
+  height delta: {"org1":277,"org2":277}  peers agree after: h=true hash=true
+  steady window 3498 ms of 4872 ms total
+cooldown 60000 ms ...
+
+[E run3] W=100 total=2000 run_id=Smspj65a7-E-r3
+  submitted=2000 committed=2000 errors=0 invariant=OK
+  height delta: {"org1":253,"org2":253}  peers agree after: h=true hash=true
+  steady window 3479 ms of 4892 ms total
+
+Done. Results under am-unified/results/phase12-20260812T032452Z/bt10ms/conc
+BT10MS_DONE

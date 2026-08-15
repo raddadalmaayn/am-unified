@@ -1,0 +1,69 @@
+╔══════════════════════════════════════════════════════╗
+║  Geo-Distributed AM Benchmark — 4-Org (amchannel)   ║
+╚══════════════════════════════════════════════════════╝
+  Peer:    localhost:7051  |  Channel: amchannel
+  Users:   Admin, User1
+  Seq runs: 50  |  Conc runs: 200  |  Concurrency: 20
+
+[Setup] InitConfig...
+  ✓ Already initialized
+[Setup] Staking users...
+  ✓ Staked Admin
+  ✓ Staked User1
+
+[Test 1] Sequential provenance writes (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Provenance sequential: Mean=365ms  P50=346ms  P95=612ms  P99=701ms  σ=78ms
+  Failures: 0/50
+[Test 2] Sequential reputation writes (50 runs)...
+  NOTE: chaincode uses time.Now() — occasional endorsement-mismatch possible
+  10/50  20/50  30/50  40/50  50/50  Reputation sequential: Mean=357ms  P50=356ms  P95=421ms  P99=524ms  σ=34ms
+  Failures: 0/50
+[Test 3] Sequential bridge (integrated) writes (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Bridge sequential: Mean=366ms  P50=357ms  P95=480ms  P99=634ms  σ=53ms
+  Failures: 0/50
+[Test 4] Sequential read latency — GetPartTrustReport (50 reads)...
+  Read (GetPartTrustReport): Mean=7ms  P50=7ms  P95=9ms  P99=12ms  σ=1ms
+[Test 5] Cross-org endorsement baseline (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Cross-org endorsement: Mean=364ms  P50=346ms  P95=512ms  P99=635ms  σ=63ms
+  Failures: 0/50
+[Test 6] Concurrent provenance throughput (200 txs, c=20)...
+  → 32.88 TPS  MVCC: 0.0%  Failures: 0/200
+[Test 7] Concurrent reputation throughput (200 txs, c=20)...
+  Each tx targets unique actorID — no MVCC conflicts expected
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+  → 28.27 TPS  MVCC: 0.0%  Failures: 5/200
+[Test 8] Concurrent bridge throughput (200 txs, c=20)...
+  → 27.80 TPS  MVCC: 0.0%  Failures: 0/200
+[Test 9] High-contention reputation (same actor, 200 txs, c=20)...
+  → 1.50 TPS  MVCC: 95.0%  Failures: 190/200
+
+
+╔═══════════════════════════════════════════════════════════════════╗
+║               GEO-DISTRIBUTED BENCHMARK RESULTS                  ║
+╚═══════════════════════════════════════════════════════════════════╝
+| Test                          | Count | TPS    | Mean    | P95     | MVCC% | Fail |
+|-------------------------------|-------|--------|---------|---------|-------|------|
+| provenance_sequential         |    50 |   2.74 |   365ms |   612ms |   N/A |    0 |
+| reputation_sequential         |    50 |   2.80 |   357ms |   421ms |   N/A |    0 |
+| bridge_sequential             |    50 |   2.73 |   366ms |   480ms |   N/A |    0 |
+| read_latency                  |    50 |    N/A |     7ms |     9ms |   N/A |    0 |
+| cross_org_endorsement         |    50 |   2.75 |   364ms |   512ms |   N/A |    0 |
+| concurrent_provenance         |   200 |  32.88 |     N/A |     N/A |  0.0% |    0 |
+| concurrent_reputation         |   200 |  28.27 |     N/A |     N/A |  0.0% |    5 |
+| concurrent_bridge             |   200 |  27.80 |     N/A |     N/A |  0.0% |    0 |
+| high_contention_reputation    |   200 |   1.50 |     N/A |     N/A | 95.0% |  190 |
+
+✅ Results saved:
+   JSON: am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T20-40-44-442Z.json
+   CSV:  am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T20-40-44-442Z.csv
+
+Total benchmark time: 2.2 min

@@ -1,0 +1,29 @@
+% Figure 4, panel (a): throughput against offered concurrency.
+% Replaces the single-line figure. The "saturation region" annotation is
+% deliberately absent: throughput was still rising at the highest level measured.
+\begin{groupplot}[
+  group style={group size=1 by 2, vertical sep=1.1cm},
+  width=\columnwidth, height=5.2cm,
+  xmode=log, log basis x=10,
+  xlabel={Transactions in flight $W$},
+  xtick={1,5,10,20,50,100,200,400},
+  xticklabels={1,5,10,20,50,100,200,400},
+  grid=both, grid style={line width=.1pt, draw=gray!20},
+  tick label style={font=\footnotesize},
+  label style={font=\footnotesize},
+  legend style={font=\footnotesize, at={(0.02,0.98)}, anchor=north west, draw=none, fill=none},
+]
+\nextgroupplot[ylabel={Steady-state throughput (tx/s)}, ymin=0]
+\addplot[mark=*, thick] coordinates {(1,2.32) (5,8.27) (10,13.66) (20,12.73) (50,11.75) (100,12.47) (200,13.24) (400,17.44)};
+\addlegendentry{committed tx/s}
+
+% panel (b): the mechanism. Block production rate is near-flat across a twentyfold
+% concurrency range while occupancy never approaches the MaxMessageCount ceiling.
+\nextgroupplot[ylabel={Block occupancy and rate}, ymin=0, ymax=11]
+\addplot[mark=square*, thick] coordinates {(1,1.00) (5,2.86) (10,4.10) (20,3.55) (50,3.31) (100,3.58) (200,3.99) (400,4.94)};
+\addlegendentry{transactions per block}
+\addplot[mark=triangle*, thick, dashed] coordinates {(1,2.52) (5,3.10) (10,3.83) (20,4.32) (50,4.07) (100,4.11) (200,4.31) (400,5.87)};
+\addlegendentry{blocks per second}
+\addplot[domain=1:400, samples=2, densely dotted, thick, gray] {10};
+\addlegendentry{\texttt{MaxMessageCount}\,=\,10}
+\end{groupplot}

@@ -1,0 +1,13 @@
+=== NETWORK LATENCY BASELINE ===
+D1 -> D2: rtt min/avg/max/mdev = 0.321/0.347/0.384/0.018 ms
+D1 -> D3: rtt min/avg/max/mdev = 0.354/0.598/0.723/0.140 ms
+D1 -> D4: rtt min/avg/max/mdev = 0.414/0.669/0.916/0.187 ms
+D2 -> D1: rtt min/avg/max/mdev = 0.341/0.502/0.590/0.079 ms
+D2 -> D3: rtt min/avg/max/mdev = 0.521/0.718/0.788/0.078 ms
+D2 -> D4: rtt min/avg/max/mdev = 0.307/0.682/0.770/0.142 ms
+D3 -> D1: rtt min/avg/max/mdev = 0.380/0.694/0.851/0.129 ms
+D3 -> D2: rtt min/avg/max/mdev = 0.258/0.411/0.520/0.092 ms
+D3 -> D4: rtt min/avg/max/mdev = 0.932/1.069/1.162/0.079 ms
+D4 -> D1: rtt min/avg/max/mdev = 0.378/0.603/0.737/0.107 ms
+D4 -> D2: rtt min/avg/max/mdev = 0.178/0.447/0.607/0.131 ms
+D4 -> D3: rtt min/avg/max/mdev = 0.552/0.841/1.114/0.190 ms

@@ -1,0 +1,100 @@
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-04-03 20:49:31.714 UTC 3f63 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Channel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:31.714 UTC 3f64 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel created
+[34m2026-04-03 20:49:31.714 UTC 3f65 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Channel exiting idle mode
+[34m2026-04-03 20:49:31.714 UTC 3f66 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:31.714 UTC 3f67 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel picks a new address "peer0.org1.example.com:7051" to connect
+[34m2026-04-03 20:49:31.722 UTC 3f68 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel Connectivity change to READY
+[34m2026-04-03 20:49:31.722 UTC 3f69 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x1e4f98f24ab0] SubConn 0x1e4f9a33d310 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-04-03 20:49:31.722 UTC 3f6a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Channel Connectivity change to READY
+[34m2026-04-03 20:49:31.726 UTC 3f6b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Channel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:31.727 UTC 3f6c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Closing the name resolver
+[34m2026-04-03 20:49:31.727 UTC 3f6d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]ccBalancerWrapper: closing
+[34m2026-04-03 20:49:31.727 UTC 3f6e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:31.727 UTC 3f6f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291 SubChannel #292]Subchannel deleted
+[34m2026-04-03 20:49:31.727 UTC 3f70 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x1e4f9a612248] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:31.727 UTC 3f71 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x1e4f9a612248] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:31.727 UTC 3f72 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #291]Channel deleted
+[33m2026-04-03 20:49:31.727 UTC 3f73 WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: <nil>, Metadata:  : peer0.org1.example.com:7051 isn't in our organization, cannot be a bootstrap peer
+[34m2026-04-03 20:49:56.728 UTC 3f74 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.org1.example.com:7051"
+[34m2026-04-03 20:49:56.728 UTC 3f75 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel created
+[34m2026-04-03 20:49:56.728 UTC 3f76 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.org1.example.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-04-03 20:49:56.728 UTC 3f77 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel authority set to "peer0.org1.example.com:7051"
+[34m2026-04-03 20:49:56.729 UTC 3f78 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.org1.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org1.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-04-03 20:49:56.729 UTC 3f79 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel switches to new LB policy "pick_first"
+[34m2026-04-03 20:49:56.729 UTC 3f7a INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x1e4fa1204480] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.org1.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org1.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-04-03 20:49:56.729 UTC 3f7b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:56.729 UTC 3f7c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel created
+[34m2026-04-03 20:49:56.729 UTC 3f7d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel exiting idle mode
+[34m2026-04-03 20:49:56.729 UTC 3f7e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:56.729 UTC 3f7f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel picks a new address "peer0.org1.example.com:7051" to connect
+[34m2026-04-03 20:49:56.737 UTC 3f80 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel Connectivity change to READY
+[34m2026-04-03 20:49:56.737 UTC 3f81 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x1e4fa1204480] SubConn 0x1e4f990a1720 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-04-03 20:49:56.737 UTC 3f82 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel Connectivity change to READY
+[34m2026-04-03 20:49:56.741 UTC 3f83 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:56.741 UTC 3f84 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Closing the name resolver
+[34m2026-04-03 20:49:56.741 UTC 3f85 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]ccBalancerWrapper: closing
+[34m2026-04-03 20:49:56.741 UTC 3f86 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:56.741 UTC 3f87 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294 SubChannel #295]Subchannel deleted
+[34m2026-04-03 20:49:56.741 UTC 3f88 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x1e4f9a4c6488] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:56.741 UTC 3f89 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x1e4f9a4c6488] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:56.742 UTC 3f8a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #294]Channel deleted
+[33m2026-04-03 20:49:56.742 UTC 3f8b WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: <nil>, Metadata:  : peer0.org1.example.com:7051 isn't in our organization, cannot be a bootstrap peer

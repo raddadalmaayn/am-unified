@@ -1,0 +1,9 @@
+{
+  "name": "atomicity-harness",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@hyperledger/fabric-gateway": "^1.8.0"
+  }
+}

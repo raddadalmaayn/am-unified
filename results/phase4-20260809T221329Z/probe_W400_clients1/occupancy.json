@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-08-09T23:39:47.847Z",
+  "note": "blocks_produced spans the whole run; steady_window_s is a subset, so block_rate_per_s over the steady window overstates. Total-window figure reported alongside.",
+  "runs": [
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 400,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 400,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 400,
+        "org2": 400,
+        "org3": 400,
+        "org4": 400
+      },
+      "tx_per_block": 5,
+      "steady_window_s": 72.602055385,
+      "block_rate_per_s": 5.5094858937374145,
+      "total_window_s": 107.71556355000001,
+      "block_rate_per_s_total_window": 3.713483797671687,
+      "steady_tps": 16.5146839664779,
+      "p50_ms": 21434.1805375,
+      "endorse_median_ms": 425.186666,
+      "order_commit_median_ms": 20958.794373999997,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 43161,
+        "polls": 32,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 40408,
+          "at_poll": 31
+        }
+      }
+    }
+  ]
+}

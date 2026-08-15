@@ -1,0 +1,21 @@
+{
+  "mode": "unified",
+  "n": 500,
+  "conc_level": 20,
+  "invokes_per_logical_tx": 1,
+  "sequential": {
+    "samples": 500,
+    "mean": 42.712,
+    "p50": 40,
+    "p95": 58
+  },
+  "concurrent": {
+    "total": 500,
+    "ok": 500,
+    "mvcc": 0,
+    "other": 0,
+    "wall_s": 1.645,
+    "tps": 303.951367781155,
+    "mvcc_rate": 0
+  }
+}

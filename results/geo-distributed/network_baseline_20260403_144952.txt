@@ -1,0 +1,13 @@
+=== NETWORK LATENCY ===
+D1 -> D2: rtt min/avg/max/mdev = 0.310/0.369/0.404/0.035 ms
+D1 -> D3: rtt min/avg/max/mdev = 0.408/0.649/0.921/0.210 ms
+D1 -> D4: rtt min/avg/max/mdev = 0.368/0.527/0.868/0.177 ms
+D2 -> D1: rtt min/avg/max/mdev = 0.404/0.497/0.549/0.060 ms
+D2 -> D3: rtt min/avg/max/mdev = 0.344/0.526/0.744/0.157 ms
+D2 -> D4: rtt min/avg/max/mdev = 0.319/0.625/0.763/0.161 ms
+D3 -> D1: rtt min/avg/max/mdev = 0.591/0.713/0.878/0.112 ms
+D3 -> D2: rtt min/avg/max/mdev = 0.296/0.436/0.600/0.111 ms
+D3 -> D4: rtt min/avg/max/mdev = 0.585/0.936/1.159/0.215 ms
+D4 -> D1: rtt min/avg/max/mdev = 0.641/0.766/0.899/0.083 ms
+D4 -> D2: rtt min/avg/max/mdev = 0.382/0.475/0.603/0.077 ms
+D4 -> D3: rtt min/avg/max/mdev = 0.648/0.784/0.895/0.080 ms

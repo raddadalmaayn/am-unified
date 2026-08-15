@@ -1,0 +1,34 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 10,
+    "total": 200,
+    "dir": "am-unified/results/phase2-20260804T211001Z/E/run1",
+    "invariant_holds": true
+  },
+  {
+    "condition": "F",
+    "run_index": 1,
+    "W": 10,
+    "total": 200,
+    "dir": "am-unified/results/phase2-20260804T211001Z/F/run1",
+    "invariant_holds": true
+  },
+  {
+    "condition": "G",
+    "run_index": 1,
+    "W": 10,
+    "total": 200,
+    "dir": "am-unified/results/phase2-20260804T211001Z/G/run1",
+    "invariant_holds": true
+  },
+  {
+    "condition": "D",
+    "run_index": 1,
+    "W": 10,
+    "total": 200,
+    "dir": "am-unified/results/phase2-20260804T211001Z/D/run1",
+    "invariant_holds": true
+  }
+]

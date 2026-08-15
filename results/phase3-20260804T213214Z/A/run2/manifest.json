@@ -1,0 +1,323 @@
+{
+  "run_id": "Smsf6bt1z-A-r2",
+  "condition": "A",
+  "run_index": 2,
+  "harness_version": "2.0.0",
+  "schema_version": 1,
+  "git_commit_source": "9a9db0ef541d2e400effdb08e3b4a135692a2c10",
+  "source_chaincode_tree_dirty": false,
+  "git_commit_harness_host": "dc07bbadfeadb0dec4043a6ea8287aaf92450e5f",
+  "chaincode_sha256_expected": "46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5",
+  "chaincode_package_ids": {
+    "org1": "unified_1.0:c1ded1df7bc04996697612e1b160b26c9dfeb0f1d8ee9cfe1ac065c17661e36b",
+    "org2": "unified_1.0:d5341812bb1d50af53086caba4e34fba86bdab0b28284efab368e980e87ed67e",
+    "org3": "unified_1.0:e36470d8d8144e94310125acc9165477e697b6a6f3c6ed20b600c68d131a70b6",
+    "org4": "unified_1.0:ef5524c83fc91330f3d23bfeff7448cf3876458b6bfee6a75c117f89d417597c"
+  },
+  "channel_params": {
+    "config_sequence": "6",
+    "batch_timeout": "50ms",
+    "batch_size": {
+      "absolute_max_bytes": 103809024,
+      "max_message_count": 10,
+      "preferred_max_bytes": 2097152
+    },
+    "endorsement": {
+      "rule": "MAJORITY",
+      "sub_policy": "Endorsement"
+    },
+    "consenters": [
+      {
+        "host": "orderer.example.com",
+        "port": 7050
+      },
+      {
+        "host": "orderer2.example.com",
+        "port": 7050
+      },
+      {
+        "host": "orderer3.example.com",
+        "port": 7050
+      }
+    ],
+    "raft_options": {
+      "election_tick": 10,
+      "heartbeat_tick": 1,
+      "max_inflight_blocks": 10,
+      "snapshot_interval_size": 16777216,
+      "tick_interval": "100ms"
+    }
+  },
+  "condition_params": {
+    "W": 1,
+    "total": 500,
+    "warmup_count": 5,
+    "warmup_ms": 2000,
+    "read_target_key": null
+  },
+  "wall_clock_start": "2026-08-04T21:36:57.694Z",
+  "wall_clock_end": "2026-08-04T21:40:31.815Z",
+  "cooldown_observed_ms": 59999,
+  "timing": {
+    "wall_start_ns": "10197177629645051",
+    "wall_end_ns": "10197391529041719",
+    "steady_start_ns": "10197179911720621",
+    "steady_end_ns": "10197391528998338",
+    "steady_duration_ms": 211617.277717,
+    "total_duration_ms": 213899.396668,
+    "completed": 500
+  },
+  "ledger_before": {
+    "captured_at": "2026-08-04T21:36:57.697Z",
+    "peers": {
+      "org1": {
+        "height": 19985,
+        "currentBlockHash": "1vpEnOWx+7nYpJCKw02nFismye7bXfUOZlUmzkrIWHM=",
+        "previousBlockHash": "fhqvvTsIrbObw7l457rjAXVg4vhYj8bpsKkMO0aD/fY="
+      },
+      "org2": {
+        "height": 19985,
+        "currentBlockHash": "1vpEnOWx+7nYpJCKw02nFismye7bXfUOZlUmzkrIWHM=",
+        "previousBlockHash": "fhqvvTsIrbObw7l457rjAXVg4vhYj8bpsKkMO0aD/fY="
+      },
+      "org3": {
+        "height": 19985,
+        "currentBlockHash": "1vpEnOWx+7nYpJCKw02nFismye7bXfUOZlUmzkrIWHM=",
+        "previousBlockHash": "fhqvvTsIrbObw7l457rjAXVg4vhYj8bpsKkMO0aD/fY="
+      },
+      "org4": {
+        "height": 19985,
+        "currentBlockHash": "1vpEnOWx+7nYpJCKw02nFismye7bXfUOZlUmzkrIWHM=",
+        "previousBlockHash": "fhqvvTsIrbObw7l457rjAXVg4vhYj8bpsKkMO0aD/fY="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 19985
+      },
+      "orderer2.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 19985
+      },
+      "orderer3.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 19985
+      }
+    }
+  },
+  "ledger_after": {
+    "captured_at": "2026-08-04T21:40:31.827Z",
+    "peers": {
+      "org1": {
+        "height": 20485,
+        "currentBlockHash": "l7lDyABWQwaM260IcqqdFeA05+OtgncKsx9GTFo+Vns=",
+        "previousBlockHash": "9Yj03e5oaZ/Bfax3JW+mKb5mFGIxfAO360gRgvt1+dI="
+      },
+      "org2": {
+        "height": 20485,
+        "currentBlockHash": "l7lDyABWQwaM260IcqqdFeA05+OtgncKsx9GTFo+Vns=",
+        "previousBlockHash": "9Yj03e5oaZ/Bfax3JW+mKb5mFGIxfAO360gRgvt1+dI="
+      },
+      "org3": {
+        "height": 20485,
+        "currentBlockHash": "l7lDyABWQwaM260IcqqdFeA05+OtgncKsx9GTFo+Vns=",
+        "previousBlockHash": "9Yj03e5oaZ/Bfax3JW+mKb5mFGIxfAO360gRgvt1+dI="
+      },
+      "org4": {
+        "height": 20485,
+        "currentBlockHash": "l7lDyABWQwaM260IcqqdFeA05+OtgncKsx9GTFo+Vns=",
+        "previousBlockHash": "9Yj03e5oaZ/Bfax3JW+mKb5mFGIxfAO360gRgvt1+dI="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 20485
+      },
+      "orderer2.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 20485
+      },
+      "orderer3.example.com": {
+        "name": "amchannel",
+        "url": "/participation/v1/channels/amchannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 20485
+      }
+    },
+    "convergence": {
+      "converged": true,
+      "wait_ms": 469,
+      "polls": 1
+    }
+  },
+  "ledger_convergence": {
+    "converged": true,
+    "wait_ms": 469,
+    "polls": 1
+  },
+  "height_delta": {
+    "org1": 500,
+    "org2": 500,
+    "org3": 500,
+    "org4": 500
+  },
+  "peers_agree_after": {
+    "height": true,
+    "hash": true
+  },
+  "counts": {
+    "submitted": 500,
+    "committed": 500,
+    "errors_by_class": {
+      "MVCC_READ_CONFLICT": 0,
+      "PHANTOM_READ_CONFLICT": 0,
+      "ENDORSEMENT_POLICY_FAILURE": 0,
+      "CHAINCODE_REJECT": 0,
+      "ENDORSE_MISMATCH": 0,
+      "GATEWAY_DEADLINE": 0,
+      "GATEWAY_UNAVAILABLE": 0,
+      "ORDERER_UNAVAILABLE": 0,
+      "COMMIT_TIMEOUT": 0,
+      "OTHER": 0
+    },
+    "error_total": 0,
+    "invariant_holds": true,
+    "warmup_count_observed": 6,
+    "steady_count": 494
+  },
+  "suspect_low_steady_count": false,
+  "stake_before": null,
+  "stake_after": null,
+  "gateway_deadlines_ms": {
+    "evaluate": 15000,
+    "endorse": 60000,
+    "submit": 60000,
+    "commitStatus": 300000
+  },
+  "clients_n": 1,
+  "container_inventory": {
+    "D1": [
+      {
+        "name": "cc-unified",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:69ace66880c3a5b8b814fbdf66f11c168843dbd4b0cde85c0082b9247ad089f5",
+        "started_at": "2026-08-03T21:29:15.880707237Z"
+      },
+      {
+        "name": "peer0.org1.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:222c37c35011fca3b10d7dddc031804fb3b478c117173a78e2fd6535726df16a",
+        "started_at": "2026-08-03T21:32:16.818039402Z"
+      }
+    ],
+    "D2": [
+      {
+        "name": "orderer2.example.com",
+        "image_tag": "hyperledger/fabric-orderer:3.1.4",
+        "image_digest": "sha256:5cf04c3399a0b9a374840d51e09c0a0fce5ef8d8a59dc8fd24ec999d37b4c7f8",
+        "started_at": "2026-08-03T21:43:15.850842048Z"
+      },
+      {
+        "name": "cc-unified",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:69ace66880c3a5b8b814fbdf66f11c168843dbd4b0cde85c0082b9247ad089f5",
+        "started_at": "2026-08-03T21:29:25.749197581Z"
+      },
+      {
+        "name": "peer0.org2.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:222c37c35011fca3b10d7dddc031804fb3b478c117173a78e2fd6535726df16a",
+        "started_at": "2026-04-08T21:21:58.707770183Z"
+      }
+    ],
+    "D3": [
+      {
+        "name": "orderer3.example.com",
+        "image_tag": "hyperledger/fabric-orderer:3.1.4",
+        "image_digest": "sha256:5cf04c3399a0b9a374840d51e09c0a0fce5ef8d8a59dc8fd24ec999d37b4c7f8",
+        "started_at": "2026-08-03T21:43:26.957277949Z"
+      },
+      {
+        "name": "cc-unified",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:69ace66880c3a5b8b814fbdf66f11c168843dbd4b0cde85c0082b9247ad089f5",
+        "started_at": "2026-08-03T21:29:33.642795234Z"
+      },
+      {
+        "name": "peer0.org3.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:222c37c35011fca3b10d7dddc031804fb3b478c117173a78e2fd6535726df16a",
+        "started_at": "2026-08-03T21:39:03.713985447Z"
+      }
+    ],
+    "D4": [
+      {
+        "name": "cc-unified",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:69ace66880c3a5b8b814fbdf66f11c168843dbd4b0cde85c0082b9247ad089f5",
+        "started_at": "2026-08-03T21:29:40.943737499Z"
+      },
+      {
+        "name": "peer0.org4.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:222c37c35011fca3b10d7dddc031804fb3b478c117173a78e2fd6535726df16a",
+        "started_at": "2026-08-03T21:16:46.654159909Z"
+      },
+      {
+        "name": "orderer.example.com",
+        "image_tag": "hyperledger/fabric-orderer:latest",
+        "image_digest": "sha256:5cf04c3399a0b9a374840d51e09c0a0fce5ef8d8a59dc8fd24ec999d37b4c7f8",
+        "started_at": "2026-08-03T21:16:46.549482466Z"
+      }
+    ]
+  },
+  "chaincode_sha256_observed": {
+    "D1": "46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5",
+    "D2": "46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5",
+    "D3": "46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5",
+    "D4": "46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5"
+  },
+  "env_snapshot_captured_at": "2026-08-04T21:06:33.584Z",
+  "qdisc_state": {
+    "D1": {
+      "iface": "enp4s0f0",
+      "qdisc": "qdisc mq 0: root  qdisc fq_codel 0: parent :1 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64  "
+    },
+    "D2": {
+      "iface": "enp0s25",
+      "qdisc": "qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64  "
+    },
+    "D3": {
+      "iface": "eno1",
+      "qdisc": "qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64  "
+    },
+    "D4": {
+      "iface": "eno1",
+      "qdisc": "qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64  "
+    }
+  },
+  "netem_in_effect": null,
+  "endorsement_policy_in_effect": "MAJORITY",
+  "node_versions": {
+    "node": "v18.20.8",
+    "harness_host": "D1"
+  }
+}

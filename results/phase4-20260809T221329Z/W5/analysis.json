@@ -1,0 +1,366 @@
+{
+  "generated_at": "2026-08-11T23:20:34.635Z",
+  "source_root": "am-unified/results/phase4-20260809T221329Z/W5",
+  "files_read": [
+    "am-unified/results/phase4-20260809T221329Z/W5/E/run1/txs.jsonl",
+    "am-unified/results/phase4-20260809T221329Z/W5/E/run2/txs.jsonl",
+    "am-unified/results/phase4-20260809T221329Z/W5/E/run3/txs.jsonl"
+  ],
+  "note": "Computed exclusively from txs.jsonl records.",
+  "per_run": [
+    {
+      "run_id": "Smsmd5tn5-E-r1",
+      "condition": "E",
+      "run_index": 1,
+      "file": "am-unified/results/phase4-20260809T221329Z/W5/E/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 26,
+      "steady_count": 474,
+      "observed_worker_slots": 5,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 474,
+        "mean": 623.412394964135,
+        "p50": 578.128757,
+        "p95": 1267.185004,
+        "p99": 2062.803029,
+        "min": 277.112898,
+        "max": 2994.448587
+      },
+      "latency_endorse_ms": {
+        "n": 474,
+        "median": 163.8368015
+      },
+      "latency_order_commit_ms": {
+        "n": 474,
+        "median": 336.892965
+      },
+      "steady_state": {
+        "window_ms": 58930.565866000004,
+        "tps": 7.958518522738123,
+        "count": 469,
+        "W": 5,
+        "total": 500,
+        "t_start_ns": "10631642313277291",
+        "t_end_ns": "10631701243843157",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 58634.557422,
+        "tps": 7.981641212565951,
+        "retained_count": 469,
+        "dropped_drain_count": 5,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsmd5tn5-E-r2",
+      "condition": "E",
+      "run_index": 2,
+      "file": "am-unified/results/phase4-20260809T221329Z/W5/E/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 25,
+      "steady_count": 475,
+      "observed_worker_slots": 5,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 475,
+        "mean": 592.0137427136842,
+        "p50": 565.927058,
+        "p95": 1173.280793,
+        "p99": 1889.845248,
+        "min": 298.723312,
+        "max": 1918.18131
+      },
+      "latency_endorse_ms": {
+        "n": 475,
+        "median": 132.590712
+      },
+      "latency_order_commit_ms": {
+        "n": 475,
+        "median": 329.635654
+      },
+      "steady_state": {
+        "window_ms": 55757.554714,
+        "tps": 8.411416218047313,
+        "count": 469,
+        "W": 5,
+        "total": 500,
+        "t_start_ns": "10631776402539804",
+        "t_end_ns": "10631832160094518",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 55757.570951,
+        "tps": 8.411413768583271,
+        "retained_count": 470,
+        "dropped_drain_count": 5,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsmd5tn5-E-r3",
+      "condition": "E",
+      "run_index": 3,
+      "file": "am-unified/results/phase4-20260809T221329Z/W5/E/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 25,
+      "steady_count": 475,
+      "observed_worker_slots": 5,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 475,
+        "mean": 605.4344219242105,
+        "p50": 561.694106,
+        "p95": 1321.048525,
+        "p99": 2134.777419,
+        "min": 285.824709,
+        "max": 2355.690866
+      },
+      "latency_endorse_ms": {
+        "n": 475,
+        "median": 111.085768
+      },
+      "latency_order_commit_ms": {
+        "n": 475,
+        "median": 330.969156
+      },
+      "steady_state": {
+        "window_ms": 56617.689888,
+        "tps": 8.265967773072132,
+        "count": 468,
+        "W": 5,
+        "total": 500,
+        "t_start_ns": "10631910950891913",
+        "t_end_ns": "10631967568581801",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 56628.019187,
+        "tps": 8.282119112293929,
+        "retained_count": 470,
+        "dropped_drain_count": 5,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    }
+  ],
+  "per_condition": {
+    "E": {
+      "condition": "E",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 623.412394964135,
+          "p50": 578.128757,
+          "p95": 1267.185004,
+          "p99": 2062.803029,
+          "min": 277.112898,
+          "max": 2994.448587,
+          "endorse_median": 163.8368015,
+          "order_commit_median": 336.892965,
+          "steady_tps": 7.958518522738123,
+          "steady_tps_legacy_superseded": 7.981641212565951,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 592.0137427136842,
+          "p50": 565.927058,
+          "p95": 1173.280793,
+          "p99": 1889.845248,
+          "min": 298.723312,
+          "max": 1918.18131,
+          "endorse_median": 132.590712,
+          "order_commit_median": 329.635654,
+          "steady_tps": 8.411416218047313,
+          "steady_tps_legacy_superseded": 8.411413768583271,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 605.4344219242105,
+          "p50": 561.694106,
+          "p95": 1321.048525,
+          "p99": 2134.777419,
+          "min": 285.824709,
+          "max": 2355.690866,
+          "endorse_median": 111.085768,
+          "order_commit_median": 330.969156,
+          "steady_tps": 8.265967773072132,
+          "steady_tps_legacy_superseded": 8.282119112293929,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 565.927058,
+        "steady_tps": 8.265967773072132,
+        "steady_tps_legacy_superseded": 8.282119112293929,
+        "mean": 605.4344219242105,
+        "p95": 1267.185004,
+        "p99": 2062.803029,
+        "endorse_median": 132.590712,
+        "order_commit_median": 330.969156
+      },
+      "spread_across_runs": {
+        "p50_min": 561.694106,
+        "p50_max": 578.128757,
+        "p50_spread": 16.434650999999917,
+        "tps_min": 7.958518522738123,
+        "tps_max": 8.411416218047313,
+        "tps_spread": 0.4528976953091899
+      }
+    }
+  }
+}

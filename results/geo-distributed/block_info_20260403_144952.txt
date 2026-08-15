@@ -1,0 +1,7 @@
+=== ORDERER BLOCK COUNT ===
+1052
+[34m2026-04-03 20:45:28.005 UTC 2815 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [1048], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-03 20:45:28.525 UTC 281d INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [1049], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-03 20:45:28.728 UTC 2821 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [1050], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-03 20:45:29.330 UTC 282f INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [1051], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-03 20:45:29.847 UTC 2837 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [1052], there are 0 blocks in flight channel=amchannel node=1

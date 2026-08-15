@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-08-09T23:13:16.095Z",
+  "note": "blocks_produced spans the whole run; steady_window_s is a subset, so block_rate_per_s over the steady window overstates. Total-window figure reported alongside.",
+  "runs": [
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 50,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 640,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 640,
+        "org2": 640,
+        "org3": 640,
+        "org4": 640
+      },
+      "tx_per_block": 3.125,
+      "steady_window_s": 162.974206248,
+      "block_rate_per_s": 3.927001792087906,
+      "total_window_s": 177.813173602,
+      "block_rate_per_s_total_window": 3.5992833772401744,
+      "steady_tps": 10.73175958494023,
+      "p50_ms": 4620.469308,
+      "endorse_median_ms": 414.48517200000003,
+      "order_commit_median_ms": 4148.0836,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 76030,
+        "polls": 55,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 34378,
+          "at_poll": 54
+        }
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 2,
+      "W": 50,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 604,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 604,
+        "org2": 604,
+        "org3": 604,
+        "org4": 604
+      },
+      "tx_per_block": 3.3112582781456954,
+      "steady_window_s": 148.494305671,
+      "block_rate_per_s": 4.067496038118836,
+      "total_window_s": 163.549670561,
+      "block_rate_per_s_total_window": 3.693067665182015,
+      "steady_tps": 11.778229421638816,
+      "p50_ms": 4257.7875395,
+      "endorse_median_ms": 414.3621,
+      "order_commit_median_ms": 3831.8552785,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 82454,
+        "polls": 60,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 34982,
+          "at_poll": 59
+        }
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 3,
+      "W": 50,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 517,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 517,
+        "org2": 517,
+        "org3": 517,
+        "org4": 517
+      },
+      "tx_per_block": 3.8684719535783367,
+      "steady_window_s": 122.887033872,
+      "block_rate_per_s": 4.207115947956811,
+      "total_window_s": 134.70946753299998,
+      "block_rate_per_s_total_window": 3.837889121440924,
+      "steady_tps": 14.232583738832615,
+      "p50_ms": 3419.8444975,
+      "endorse_median_ms": 414.5865225,
+      "order_commit_median_ms": 2967.616602,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 79082,
+        "polls": 57,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 35499,
+          "at_poll": 56
+        }
+      }
+    }
+  ]
+}

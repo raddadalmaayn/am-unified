@@ -1,0 +1,30 @@
+CONDITION H failure classes — number provenance
+===============================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+H.ENDORSE_MISMATCH.pct_of_failures    = 58.2
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.errors_by_class_total.ENDORSE_MISMATCH / per_condition.H.error_total
+H.ENDORSE_MISMATCH.count              = 825
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.errors_by_class_total.ENDORSE_MISMATCH
+H.MVCC_READ_CONFLICT.pct_of_failures  = 41.8
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.errors_by_class_total.MVCC_READ_CONFLICT / per_condition.H.error_total
+H.MVCC_READ_CONFLICT.count            = 592
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.errors_by_class_total.MVCC_READ_CONFLICT
+H.error_total                         = 1417
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.error_total
+H.committed_total                     = 83
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.committed_total
+H.n_total                             = 1500
+                                        phase3b-20260809T210708Z/analysis.json
+                                        per_condition.H.n_total

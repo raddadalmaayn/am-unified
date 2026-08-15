@@ -1,0 +1,1131 @@
+{
+  "generated_at": "2026-08-04T21:12:53.808Z",
+  "source_root": "am-unified/results/phase2-20260804T211001Z",
+  "files_read": [
+    "am-unified/results/phase2-20260804T211001Z/A/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/B/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/C/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/D/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/E/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/F/run1/txs.jsonl",
+    "am-unified/results/phase2-20260804T211001Z/G/run1/txs.jsonl"
+  ],
+  "note": "Computed exclusively from txs.jsonl records.",
+  "per_run": [
+    {
+      "run_id": "Smsf5j9cl-A-r1",
+      "condition": "A",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/A/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 50,
+      "committed": 50,
+      "warmup_count": 5,
+      "steady_count": 45,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 45,
+        "mean": 414.6896268444443,
+        "p50": 423.992885,
+        "p95": 556.068143,
+        "p99": 667.677732,
+        "min": 312.397593,
+        "max": 667.677732
+      },
+      "latency_endorse_ms": {
+        "n": 45,
+        "median": 74.066549
+      },
+      "latency_order_commit_ms": {
+        "n": 45,
+        "median": 324.599977
+      },
+      "steady_state": {
+        "window_ms": 17865.19512,
+        "tps": 2.4069146578680076,
+        "retained_count": 44,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": true
+    },
+    {
+      "run_id": "Smsf5j9cl-B-r1",
+      "condition": "B",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/B/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 50,
+      "committed": 50,
+      "warmup_count": 5,
+      "steady_count": 45,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 45,
+        "mean": 441.71278040000016,
+        "p50": 423.469952,
+        "p95": 600.560039,
+        "p99": 890.050756,
+        "min": 313.282141,
+        "max": 890.050756
+      },
+      "latency_endorse_ms": {
+        "n": 45,
+        "median": 92.053717
+      },
+      "latency_order_commit_ms": {
+        "n": 45,
+        "median": 326.618909
+      },
+      "steady_state": {
+        "window_ms": 19114.60515,
+        "tps": 2.2495887130579835,
+        "retained_count": 44,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": true
+    },
+    {
+      "run_id": "Smsf5j9cl-C-r1",
+      "condition": "C",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/C/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 50,
+      "committed": 50,
+      "warmup_count": 5,
+      "steady_count": 45,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 45,
+        "mean": 456.2963424222222,
+        "p50": 434.233309,
+        "p95": 614.527755,
+        "p99": 937.210286,
+        "min": 322.916576,
+        "max": 937.210286
+      },
+      "latency_endorse_ms": {
+        "n": 45,
+        "median": 109.319805
+      },
+      "latency_order_commit_ms": {
+        "n": 45,
+        "median": 325.719596
+      },
+      "steady_state": {
+        "window_ms": 19768.737152,
+        "tps": 2.175151587548408,
+        "retained_count": 44,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": true
+    },
+    {
+      "run_id": "Smsf5kyg5-D-r1",
+      "condition": "D",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/D/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 200,
+      "committed": 200,
+      "warmup_count": 40,
+      "steady_count": 160,
+      "observed_worker_slots": 10,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 160,
+        "mean": 12.519389068750003,
+        "p50": 12.143031,
+        "p95": 16.943888,
+        "p99": 29.476153,
+        "min": 3.850138,
+        "max": 44.625557
+      },
+      "latency_endorse_ms": {
+        "n": 0,
+        "median": null
+      },
+      "latency_order_commit_ms": {
+        "n": 0,
+        "median": null
+      },
+      "steady_state": {
+        "window_ms": 190.808106,
+        "tps": 780.8892563505661,
+        "retained_count": 150,
+        "dropped_drain_count": 10,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf5kyg5-E-r1",
+      "condition": "E",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/E/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 200,
+      "committed": 200,
+      "warmup_count": 40,
+      "steady_count": 160,
+      "observed_worker_slots": 10,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 160,
+        "mean": 1156.86442675625,
+        "p50": 1069.622161,
+        "p95": 1804.599537,
+        "p99": 2013.401516,
+        "min": 490.779747,
+        "max": 2114.836177
+      },
+      "latency_endorse_ms": {
+        "n": 160,
+        "median": 371.8240995
+      },
+      "latency_order_commit_ms": {
+        "n": 160,
+        "median": 671.3213775
+      },
+      "steady_state": {
+        "window_ms": 17771.004558,
+        "tps": 8.384444419768293,
+        "retained_count": 150,
+        "dropped_drain_count": 10,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf5kyg5-F-r1",
+      "condition": "F",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/F/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 200,
+      "committed": 200,
+      "warmup_count": 33,
+      "steady_count": 167,
+      "observed_worker_slots": 10,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 167,
+        "mean": 644.1499915568862,
+        "p50": 607.804441,
+        "p95": 1206.702607,
+        "p99": 1242.419871,
+        "min": 321.685432,
+        "max": 1259.138304
+      },
+      "latency_endorse_ms": {
+        "n": 167,
+        "median": 210.043249
+      },
+      "latency_order_commit_ms": {
+        "n": 167,
+        "median": 369.700432
+      },
+      "steady_state": {
+        "window_ms": 10209.343299,
+        "tps": 15.28012090800004,
+        "retained_count": 157,
+        "dropped_drain_count": 10,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf5kyg5-G-r1",
+      "condition": "G",
+      "run_index": 1,
+      "file": "am-unified/results/phase2-20260804T211001Z/G/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 200,
+      "committed": 200,
+      "warmup_count": 36,
+      "steady_count": 164,
+      "observed_worker_slots": 10,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 164,
+        "mean": 1146.8945045914634,
+        "p50": 1069.721257,
+        "p95": 2042.022831,
+        "p99": 2316.672817,
+        "min": 500.807119,
+        "max": 2327.749931
+      },
+      "latency_endorse_ms": {
+        "n": 164,
+        "median": 373.3483705
+      },
+      "latency_order_commit_ms": {
+        "n": 164,
+        "median": 637.2982365
+      },
+      "steady_state": {
+        "window_ms": 17362.929431,
+        "tps": 8.811877086065431,
+        "retained_count": 154,
+        "dropped_drain_count": 10,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    }
+  ],
+  "per_condition": {
+    "A": {
+      "condition": "A",
+      "runs": 1,
+      "n_total": 50,
+      "committed_total": 50,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 50,
+          "committed": 50,
+          "mean": 414.6896268444443,
+          "p50": 423.992885,
+          "p95": 556.068143,
+          "p99": 667.677732,
+          "min": 312.397593,
+          "max": 667.677732,
+          "endorse_median": 74.066549,
+          "order_commit_median": 324.599977,
+          "steady_tps": 2.4069146578680076,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 423.992885,
+        "steady_tps": 2.4069146578680076,
+        "mean": 414.6896268444443,
+        "p95": 556.068143,
+        "p99": 667.677732,
+        "endorse_median": 74.066549,
+        "order_commit_median": 324.599977
+      },
+      "spread_across_runs": {
+        "p50_min": 423.992885,
+        "p50_max": 423.992885,
+        "p50_spread": 0,
+        "tps_min": 2.4069146578680076,
+        "tps_max": 2.4069146578680076,
+        "tps_spread": 0
+      }
+    },
+    "B": {
+      "condition": "B",
+      "runs": 1,
+      "n_total": 50,
+      "committed_total": 50,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 50,
+          "committed": 50,
+          "mean": 441.71278040000016,
+          "p50": 423.469952,
+          "p95": 600.560039,
+          "p99": 890.050756,
+          "min": 313.282141,
+          "max": 890.050756,
+          "endorse_median": 92.053717,
+          "order_commit_median": 326.618909,
+          "steady_tps": 2.2495887130579835,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 423.469952,
+        "steady_tps": 2.2495887130579835,
+        "mean": 441.71278040000016,
+        "p95": 600.560039,
+        "p99": 890.050756,
+        "endorse_median": 92.053717,
+        "order_commit_median": 326.618909
+      },
+      "spread_across_runs": {
+        "p50_min": 423.469952,
+        "p50_max": 423.469952,
+        "p50_spread": 0,
+        "tps_min": 2.2495887130579835,
+        "tps_max": 2.2495887130579835,
+        "tps_spread": 0
+      }
+    },
+    "C": {
+      "condition": "C",
+      "runs": 1,
+      "n_total": 50,
+      "committed_total": 50,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 6,
+          "wilson_upper_pct": 7.135003417431873
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 50,
+          "committed": 50,
+          "mean": 456.2963424222222,
+          "p50": 434.233309,
+          "p95": 614.527755,
+          "p99": 937.210286,
+          "min": 322.916576,
+          "max": 937.210286,
+          "endorse_median": 109.319805,
+          "order_commit_median": 325.719596,
+          "steady_tps": 2.175151587548408,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 434.233309,
+        "steady_tps": 2.175151587548408,
+        "mean": 456.2963424222222,
+        "p95": 614.527755,
+        "p99": 937.210286,
+        "endorse_median": 109.319805,
+        "order_commit_median": 325.719596
+      },
+      "spread_across_runs": {
+        "p50_min": 434.233309,
+        "p50_max": 434.233309,
+        "p50_spread": 0,
+        "tps_min": 2.175151587548408,
+        "tps_max": 2.175151587548408,
+        "tps_spread": 0
+      }
+    },
+    "D": {
+      "condition": "D",
+      "runs": 1,
+      "n_total": 200,
+      "committed_total": 200,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 200,
+          "committed": 200,
+          "mean": 12.519389068750003,
+          "p50": 12.143031,
+          "p95": 16.943888,
+          "p99": 29.476153,
+          "min": 3.850138,
+          "max": 44.625557,
+          "endorse_median": null,
+          "order_commit_median": null,
+          "steady_tps": 780.8892563505661,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 12.143031,
+        "steady_tps": 780.8892563505661,
+        "mean": 12.519389068750003,
+        "p95": 16.943888,
+        "p99": 29.476153,
+        "endorse_median": null,
+        "order_commit_median": null
+      },
+      "spread_across_runs": {
+        "p50_min": 12.143031,
+        "p50_max": 12.143031,
+        "p50_spread": 0,
+        "tps_min": 780.8892563505661,
+        "tps_max": 780.8892563505661,
+        "tps_spread": 0
+      }
+    },
+    "E": {
+      "condition": "E",
+      "runs": 1,
+      "n_total": 200,
+      "committed_total": 200,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 200,
+          "committed": 200,
+          "mean": 1156.86442675625,
+          "p50": 1069.622161,
+          "p95": 1804.599537,
+          "p99": 2013.401516,
+          "min": 490.779747,
+          "max": 2114.836177,
+          "endorse_median": 371.8240995,
+          "order_commit_median": 671.3213775,
+          "steady_tps": 8.384444419768293,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 1069.622161,
+        "steady_tps": 8.384444419768293,
+        "mean": 1156.86442675625,
+        "p95": 1804.599537,
+        "p99": 2013.401516,
+        "endorse_median": 371.8240995,
+        "order_commit_median": 671.3213775
+      },
+      "spread_across_runs": {
+        "p50_min": 1069.622161,
+        "p50_max": 1069.622161,
+        "p50_spread": 0,
+        "tps_min": 8.384444419768293,
+        "tps_max": 8.384444419768293,
+        "tps_spread": 0
+      }
+    },
+    "F": {
+      "condition": "F",
+      "runs": 1,
+      "n_total": 200,
+      "committed_total": 200,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 200,
+          "committed": 200,
+          "mean": 644.1499915568862,
+          "p50": 607.804441,
+          "p95": 1206.702607,
+          "p99": 1242.419871,
+          "min": 321.685432,
+          "max": 1259.138304,
+          "endorse_median": 210.043249,
+          "order_commit_median": 369.700432,
+          "steady_tps": 15.28012090800004,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 607.804441,
+        "steady_tps": 15.28012090800004,
+        "mean": 644.1499915568862,
+        "p95": 1206.702607,
+        "p99": 1242.419871,
+        "endorse_median": 210.043249,
+        "order_commit_median": 369.700432
+      },
+      "spread_across_runs": {
+        "p50_min": 607.804441,
+        "p50_max": 607.804441,
+        "p50_spread": 0,
+        "tps_min": 15.28012090800004,
+        "tps_max": 15.28012090800004,
+        "tps_spread": 0
+      }
+    },
+    "G": {
+      "condition": "G",
+      "runs": 1,
+      "n_total": 200,
+      "committed_total": 200,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 1.5,
+          "wilson_upper_pct": 1.8846005918320894
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 200,
+          "committed": 200,
+          "mean": 1146.8945045914634,
+          "p50": 1069.721257,
+          "p95": 2042.022831,
+          "p99": 2316.672817,
+          "min": 500.807119,
+          "max": 2327.749931,
+          "endorse_median": 373.3483705,
+          "order_commit_median": 637.2982365,
+          "steady_tps": 8.811877086065431,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 1069.721257,
+        "steady_tps": 8.811877086065431,
+        "mean": 1146.8945045914634,
+        "p95": 2042.022831,
+        "p99": 2316.672817,
+        "endorse_median": 373.3483705,
+        "order_commit_median": 637.2982365
+      },
+      "spread_across_runs": {
+        "p50_min": 1069.721257,
+        "p50_max": 1069.721257,
+        "p50_spread": 0,
+        "tps_min": 8.811877086065431,
+        "tps_max": 8.811877086065431,
+        "tps_spread": 0
+      }
+    }
+  }
+}

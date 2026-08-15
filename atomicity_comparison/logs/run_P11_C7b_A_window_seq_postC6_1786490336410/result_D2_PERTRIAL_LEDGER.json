@@ -1,0 +1,5022 @@
+{
+  "reverified_at": "2026-08-11T23:22:38.891Z",
+  "purpose": "D2 full symmetry: Design A classified per trial by the run11.js ledger-only rule",
+  "rundir": "run_P11_C7b_A_window_seq_postC6_1786490336410",
+  "n": 500,
+  "dim": "quality",
+  "rated_per_trial": true,
+  "predicate": "prov:ReadAsset(opId) AND rep:GetReputation(`${opId}-actor`,dim).totalEvents>0 — ledger only, per trial",
+  "summary_ledger": {
+    "DIVERGENT": 500
+  },
+  "summary_original": {
+    "DIVERGENT": 500
+  },
+  "divergences": 500,
+  "divergence_rate_pct": 100,
+  "wilson95_upper_pct": 99.99999999999997,
+  "disagreements": 0,
+  "disagreement_detail": [],
+  "records": [
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490336411-0-a27t1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490336769-1-nae2u",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490337139-2-1fqm7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490337509-3-f31jq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490337884-4-drkbs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490338242-5-vc3ur",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490338613-6-zrtc3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490338975-7-0ie4i",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490339349-8-neds7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490339705-9-m3znr",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490340086-10-14k4x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490340455-11-9gs2p",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490340819-12-9fue5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490341203-13-jsyza",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490341588-14-fuw0u",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490341964-15-uowq3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490342335-16-fjq9i",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490342706-17-w4cnc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490343074-18-cavg4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490343448-19-jwaq2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490343818-20-5frmk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490344195-21-7s03e",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490344583-22-i44fj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490344969-23-0jmr1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490345360-24-3lr8l",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490345744-25-ob5us",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490346129-26-3dcnb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490346505-27-u4u5m",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490346886-28-7h304",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490347253-29-rwu8f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490347619-30-gffct",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490347996-31-i3r6x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490348361-32-16uof",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490348725-33-et7pl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490349110-34-9mg2f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490349486-35-33a1a",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490349863-36-9y28t",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490350234-37-s4zt8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490350613-38-k5pdd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490351006-39-h3jp0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490351371-40-29obr",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490351754-41-msgbn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490352131-42-skcjg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490352514-43-h12jc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490352895-44-fcg6p",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490353274-45-da2n9",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490353657-46-c3qq7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490354040-47-h26a8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490354410-48-6qtej",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490354768-49-myy86",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490355135-50-k25wl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490355499-51-1iltg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490356005-52-552h1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490356375-53-52t10",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490356740-54-j5caq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490357118-55-b7a6v",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490357499-56-fjyg1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490357863-57-y3wxu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490358239-58-053gz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490358620-59-ecl5f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490358990-60-6vjlw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490359365-61-e0xip",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490359753-62-xn0gx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490360120-63-rgof1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490360486-64-7gjg4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490360858-65-pqwnw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490361232-66-axn4k",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490361588-67-jsykn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490361983-68-a9uhb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490362350-69-nl8vn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490362746-70-m053z",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490363120-71-1k9ta",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490363489-72-12pd3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490363871-73-nu2n7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490364236-74-8uvnm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490364616-75-6kow4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490364992-76-h2zq8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490365372-77-4ztdb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490365753-78-v7e0e",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490366111-79-0irl8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490366489-80-kk02q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490366852-81-nl3q0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490367211-82-kfb6y",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490367591-83-2ewyo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490367950-84-wbla4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490368325-85-8dj6b",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490368706-86-d5qh6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490369076-87-921c7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490369454-88-yecz4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490369816-89-ufywp",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490370192-90-qsak8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490370561-91-362yg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490370921-92-193vn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490371284-93-cvg6h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490371640-94-7j855",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490372009-95-3ul0n",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490372374-96-py6yn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490372725-97-25i5f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490373088-98-s4l6t",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490373453-99-as5yi",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490373803-100-vl6hb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490374169-101-o9w2z",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490374533-102-b946s",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490374897-103-e07bx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490375270-104-r2k7x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490375645-105-6d73c",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490376024-106-7qoiq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490376413-107-367bj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490376781-108-wodaw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490377160-109-mqhy3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490377527-110-dox1q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490377898-111-vcrmd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490378280-112-a28ih",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490378643-113-t0y8w",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490379017-114-lin24",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490379378-115-9ks1l",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490379740-116-i4d61",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490380101-117-mj2y9",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490380468-118-nyewi",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490380831-119-ihgsm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490381204-120-k97zo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490381565-121-hqvty",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490381940-122-5nv95",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490382299-123-fuxr6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490382678-124-dj391",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490383051-125-h5ely",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490383425-126-pfvpw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490383814-127-6q2m0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490384195-128-2eaaz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490384572-129-rjxin",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490384939-130-h4667",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490385311-131-b9wdw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490385683-132-4tnaf",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490386058-133-gta85",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490386417-134-cx2a7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490386777-135-puyw5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490387144-136-cc0hr",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490387505-137-qcdax",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490387875-138-h1t7q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490388242-139-xnkv1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490388771-140-ikms6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490389133-141-zfjqm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490389504-142-ju0jo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490389867-143-qyj0t",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490390274-144-kwuyl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490390646-145-5khnh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490391025-146-2aa60",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490391378-147-cobao",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490391763-148-zino6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490392156-149-cuamq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490392542-150-jbaqz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490392912-151-rvzzl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490393280-152-83uco",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490393645-153-vj9ua",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490394030-154-m3024",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490394407-155-0blmg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490394785-156-f3dhg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490395150-157-avh79",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490395531-158-jjh6f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490395894-159-3wwx5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490396279-160-zp4g6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490396661-161-1pw4u",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490397019-162-1njgt",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490397388-163-da4wz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490397755-164-z5us2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490398131-165-d526o",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490398508-166-d13yi",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490398866-167-ml1ld",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490399239-168-nwn03",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490399604-169-u7qiy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490399984-170-nea9k",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490400353-171-m4i2n",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490400732-172-vymgg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490401088-173-jjc82",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490401445-174-777fk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490401811-175-id4ct",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490402187-176-ds8cx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490402567-177-pomim",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490402945-178-44lhd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490403321-179-b61bn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490403705-180-bacgr",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490404076-181-jqvff",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490404457-182-5h4kj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490404825-183-zshr3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490405185-184-td5wo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490405537-185-4pqtx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490405906-186-zashy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490406282-187-6xjmj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490406662-188-8xbwh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490407030-189-1zuw1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490407390-190-c0jrj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490407760-191-kpffd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490408121-192-20fmh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490408479-193-nnjcb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490408839-194-n2fmo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490409205-195-eji13",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490409577-196-lmpi4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490409938-197-nwarz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490410302-198-9oslc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490410670-199-yiobv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490411046-200-7hxjg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490411409-201-9snis",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490411784-202-8vut0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490412146-203-ktyxn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490412512-204-n3nhg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490412880-205-xtkqw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490413247-206-pwom4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490413654-207-m17g0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490414029-208-p1k4j",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490414410-209-7xwlx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490414791-210-g1zvo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490415184-211-di53n",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490415556-212-fq957",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490415940-213-zbjin",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490416315-214-qeg3x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490416686-215-6tym0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490417067-216-wj73g",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490417428-217-42nzy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490417789-218-qtyi8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490418162-219-e4a1x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490418545-220-lg02i",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490418922-221-yfrds",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490419314-222-wfkr6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490419688-223-yon55",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490420050-224-r4o7s",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490420579-225-so8yv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490420965-226-02x8o",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490421349-227-rzx6x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490421717-228-la7s2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490422097-229-22xoe",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490422458-230-q6hta",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490422817-231-lfhjc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490423174-232-o22zv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490423531-233-8yin1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490423896-234-3bsz8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490424266-235-r0lvo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490424639-236-7e9us",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490425023-237-pqeu7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490425409-238-pcjg4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490425797-239-2mqra",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490426156-240-4d6wb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490426531-241-itiau",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490426890-242-frprm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490427265-243-x0mf9",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490427646-244-urglu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490428023-245-6ey8e",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490428391-246-icgzx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490428760-247-8ey5q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490429134-248-jk7oe",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490429524-249-uql50",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490429910-250-l3bth",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490430273-251-q5rle",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490430648-252-r11hb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490431031-253-metix",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490431415-254-321zq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490431801-255-bucyl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490432175-256-5ss82",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490432548-257-jtjut",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490432920-258-foadz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490433291-259-4e5br",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490433682-260-rwf14",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490434042-261-shi8f",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490434410-262-647qi",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490434783-263-c37n3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490435120-264-ijis4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490435480-265-11h5j",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490435862-266-0cb1a",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490436243-267-wktzq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490436613-268-q7m7l",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490436985-269-xmbb3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490437354-270-6citj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490437731-271-bph1l",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490438104-272-k2nmw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490438484-273-xkd1x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490438848-274-no5id",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490439214-275-yzctl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490439580-276-cnpgx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490439962-277-cc6n9",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490440345-278-a25x8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490440712-279-b168u",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490441093-280-a1qu8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490441462-281-xwgt6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490441833-282-2qx2p",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490442225-283-z2yzq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490442620-284-fxbzs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490442981-285-hfy1h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490443352-286-es1dk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490443743-287-ara15",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490444107-288-58xvs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490444471-289-yj4qu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490444855-290-tlo1b",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490445223-291-ubtzc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490445588-292-16mrq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490445969-293-k91p4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490446335-294-nrhlx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490446711-295-ig98i",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490447070-296-ahxii",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490447444-297-qjth1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490447814-298-266z3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490448190-299-llr8i",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490448558-300-qqy0e",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490448916-301-fz7g2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490449272-302-0qpp7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490449636-303-hibk5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490450018-304-fypt3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490450397-305-8kh2j",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490450779-306-nijbl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490451151-307-a4ims",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490451517-308-43rak",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490451884-309-oqgum",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490452245-310-zj1i2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490452610-311-x2fuu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490452956-312-tte8d",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490453459-313-a91rj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490453833-314-s3qqk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490454199-315-ra3mm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490454569-316-iwvq5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490454935-317-j9i12",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490455308-318-pu47b",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490455669-319-o7a23",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490456037-320-ncckm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490456412-321-agt3z",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490456791-322-rrasx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490457164-323-yyx9h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490457545-324-cgfzs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490457915-325-cvh6h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490458284-326-28q4t",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490458669-327-33l5d",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490459044-328-nu2fs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490459401-329-wv1zk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490459775-330-os2hj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490460149-331-a15ei",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490460525-332-4ytwy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490460906-333-sxjq6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490461272-334-4eb4e",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490461642-335-if4ad",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490462012-336-l3mir",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490462373-337-mhh2x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490462739-338-bbk50",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490463121-339-33iek",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490463483-340-zt2ie",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490463846-341-zrzyb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490464213-342-zhbbh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490464582-343-s534t",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490464949-344-zan93",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490465310-345-hjq0o",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490465684-346-9wftd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490466078-347-n3u71",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490466457-348-5wv83",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490466825-349-sof7r",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490467189-350-mw8xa",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490467552-351-la7hl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490467905-352-z7he2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490468277-353-02hsx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490468661-354-28oa4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490469040-355-h2g5g",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490469413-356-jm2wa",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490469796-357-ts46d",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490470180-358-ppo09",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490470541-359-43knt",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490470914-360-o8kyo",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490471297-361-odiji",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490471686-362-ntw9x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490472059-363-ag81s",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490472436-364-2vakd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490472803-365-l1erh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490473163-366-wtca2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490473527-367-w7m6r",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490473905-368-2gawh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490474273-369-f3fto",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490474652-370-amd5j",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490475026-371-53hgt",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490475392-372-kbbwl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490475767-373-p7ojz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490476132-374-tnkmw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490476502-375-mrtub",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490476871-376-26zdj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490477236-377-ddtcg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490477603-378-hzcpw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490477968-379-41tw7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490478337-380-n3cky",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490478697-381-au5xp",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490479060-382-1fq1z",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490479431-383-cgl3x",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490479793-384-4c1b3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490480161-385-whyqm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490480530-386-s7tlh",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490480907-387-o8wx2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490481268-388-o93hl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490481627-389-o1hzu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490481996-390-jfu6a",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490482354-391-e5wjz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490482718-392-fwgap",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490483085-393-e2u1c",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490483445-394-0pxzx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490483812-395-3gzd6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490484205-396-5ubd2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490484602-397-9ytdz",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490485114-398-nb86o",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490485484-399-y3egc",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490485873-400-po4p0",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490486239-401-bcqiv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490486606-402-bzx3a",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490486980-403-l7ff1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490487335-404-m3ika",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490487713-405-g2rs3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490488088-406-uxgge",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490488453-407-qt4jy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490488843-408-fa3d3",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490489228-409-5phw6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490489599-410-346e8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490489974-411-y1rdw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490490354-412-vwuv4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490490719-413-5k8wj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490491077-414-v9k5o",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490491431-415-0r4hn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490491819-416-50z7q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490492191-417-bewy5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490492554-418-ouv4s",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490492909-419-jsglb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490493283-420-jzucj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490493649-421-zk4v7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490494033-422-tpp0j",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490494386-423-qzgox",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490494775-424-21m4h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490495135-425-s5152",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490495500-426-e8qne",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490495854-427-eeqie",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490496201-428-io9ul",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490496556-429-taohw",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490496918-430-nopkm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490497265-431-74voy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490497617-432-754wl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490497973-433-zmerq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490498326-434-gn4np",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490498688-435-fghvm",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490499039-436-vzn8l",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490499394-437-50r9c",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490499748-438-7q5xs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490500093-439-vwypg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490500450-440-iiizj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490500816-441-mn0ov",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490501158-442-7nxjj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490501509-443-gymqd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490501852-444-qesx7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490502215-445-tohx2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490502560-446-x1bfk",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490502914-447-49i70",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490503264-448-bhdvf",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490503613-449-k81ep",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490503959-450-nnqx4",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490504311-451-yih6b",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490504676-452-8tmgr",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490505025-453-7zvr7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490505382-454-phgut",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490505739-455-hyfav",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490506091-456-vyysu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490506446-457-lm264",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490506800-458-qykqv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490507139-459-n1s88",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490507489-460-woxjj",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490507844-461-re0pl",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490508200-462-stryx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490508551-463-wrmlv",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490508899-464-abket",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490509242-465-4n56m",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490509604-466-47gah",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490509961-467-hzc1h",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490510315-468-abrf1",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490510669-469-wr167",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490511016-470-8l9b6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490511392-471-hmojn",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490511733-472-zzszg",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490512083-473-rt7fq",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490512427-474-q67o5",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490512786-475-35vur",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490513138-476-oraiu",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490513498-477-k7v56",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490513852-478-limg7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490514352-479-nge17",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490514708-480-gax3z",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490515053-481-bi3cs",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490515416-482-6jb5k",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490515770-483-7cql8",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490516118-484-mb7a6",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490516478-485-na3h2",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490516834-486-c7cha",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490517182-487-5mhsy",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490517555-488-bn7p7",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490517908-489-fbeom",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490518260-490-vulek",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490518606-491-4w86q",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490518959-492-7n6ju",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490519317-493-oz9es",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490519670-494-of0wb",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490520032-495-dzzgd",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490520380-496-q0e0u",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490520737-497-e23gx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490521076-498-sam15",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    },
+    {
+      "opId": "P11_C7b_A_window_seq_postC6-1786490521436-499-trwqx",
+      "killed": true,
+      "provPresent": true,
+      "repPresent": false,
+      "totalEvents": 0,
+      "cls_ledger": "DIVERGENT",
+      "cls_original": "DIVERGENT",
+      "agrees": true
+    }
+  ]
+}

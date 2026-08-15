@@ -1,0 +1,153 @@
+TABLE 8 (distributed sequential, W=1) — number provenance
+=========================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+T8.A.steady_tps         = 2.32
+                          phase3-20260804T213214Z/A/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T8.A.steady_count       = 494
+                          phase3-20260804T213214Z/A/*/txs.jsonl
+                          computeSteady().count
+T8.A.steady_duration_s  = 213.015
+                          phase3-20260804T213214Z/A/*/txs.jsonl
+                          computeSteady().duration_s
+T8.A.mean_ms            = 431.1
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.median_across_runs.mean
+T8.A.p50_ms             = 402.3
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.median_across_runs.p50
+T8.A.p95_ms             = 679.8
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.median_across_runs.p95
+T8.A.committed          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.committed_total
+T8.A.submitted          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.n_total
+T8.A.p50_min            = 401.6
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.spread_across_runs.p50_min
+T8.A.p50_max            = 421.9
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.spread_across_runs.p50_max
+T8.A.tps_min            = 2.28
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.spread_across_runs.tps_min
+T8.A.tps_max            = 2.34
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.A.spread_across_runs.tps_max
+T8.B.steady_tps         = 2.27
+                          phase3-20260804T213214Z/B/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T8.B.steady_count       = 495
+                          phase3-20260804T213214Z/B/*/txs.jsonl
+                          computeSteady().count
+T8.B.steady_duration_s  = 217.911
+                          phase3-20260804T213214Z/B/*/txs.jsonl
+                          computeSteady().duration_s
+T8.B.mean_ms            = 440.1
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.median_across_runs.mean
+T8.B.p50_ms             = 422.1
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.median_across_runs.p50
+T8.B.p95_ms             = 680.3
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.median_across_runs.p95
+T8.B.committed          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.committed_total
+T8.B.submitted          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.n_total
+T8.B.p50_min            = 411.2
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.spread_across_runs.p50_min
+T8.B.p50_max            = 423.0
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.spread_across_runs.p50_max
+T8.B.tps_min            = 2.25
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.spread_across_runs.tps_min
+T8.B.tps_max            = 2.28
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.B.spread_across_runs.tps_max
+T8.C.steady_tps         = 2.26
+                          phase3-20260804T213214Z/C/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T8.C.steady_count       = 494
+                          phase3-20260804T213214Z/C/*/txs.jsonl
+                          computeSteady().count
+T8.C.steady_duration_s  = 218.599
+                          phase3-20260804T213214Z/C/*/txs.jsonl
+                          computeSteady().duration_s
+T8.C.mean_ms            = 442.4
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.median_across_runs.mean
+T8.C.p50_ms             = 412.3
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.median_across_runs.p50
+T8.C.p95_ms             = 689.9
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.median_across_runs.p95
+T8.C.committed          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.committed_total
+T8.C.submitted          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.n_total
+T8.C.p50_min            = 402.7
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.spread_across_runs.p50_min
+T8.C.p50_max            = 413.3
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.spread_across_runs.p50_max
+T8.C.tps_min            = 2.24
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.spread_across_runs.tps_min
+T8.C.tps_max            = 2.30
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.C.spread_across_runs.tps_max
+T8.D.steady_tps         = 251.59
+                          phase3-20260804T213214Z/D/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T8.D.steady_count       = 400
+                          phase3-20260804T213214Z/D/*/txs.jsonl
+                          computeSteady().count
+T8.D.steady_duration_s  = 1.590
+                          phase3-20260804T213214Z/D/*/txs.jsonl
+                          computeSteady().duration_s
+T8.D.mean_ms            = 4.0
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.median_across_runs.mean
+T8.D.p50_ms             = 3.9
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.median_across_runs.p50
+T8.D.p95_ms             = 4.8
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.median_across_runs.p95
+T8.D.committed          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.committed_total
+T8.D.submitted          = 1500
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.n_total
+T8.D.p50_min            = 3.8
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.spread_across_runs.p50_min
+T8.D.p50_max            = 3.9
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.spread_across_runs.p50_max
+T8.D.tps_min            = 249.95
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.spread_across_runs.tps_min
+T8.D.tps_max            = 255.58
+                          phase3-20260804T213214Z/analysis.json
+                          per_condition.D.spread_across_runs.tps_max

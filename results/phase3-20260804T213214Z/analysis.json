@@ -1,0 +1,1761 @@
+{
+  "generated_at": "2026-08-11T04:08:12.526Z",
+  "source_root": "am-unified/results/phase3-20260804T213214Z",
+  "files_read": [
+    "am-unified/results/phase3-20260804T213214Z/A/run1/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/A/run2/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/A/run3/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/B/run1/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/B/run2/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/B/run3/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/C/run1/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/C/run2/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/C/run3/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/D/run1/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/D/run2/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/D/run3/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/E/run1/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/E/run2/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/E/run3/txs.jsonl",
+    "am-unified/results/phase3-20260804T213214Z/F/run1/txs.jsonl"
+  ],
+  "note": "Computed exclusively from txs.jsonl records.",
+  "per_run": [
+    {
+      "run_id": "Smsf6bt1z-A-r1",
+      "condition": "A",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/A/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 5,
+      "steady_count": 495,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 495,
+        "mean": 438.4607619252526,
+        "p50": 421.941521,
+        "p95": 679.789483,
+        "p99": 1077.272116,
+        "min": 300.83403,
+        "max": 1171.342382
+      },
+      "latency_endorse_ms": {
+        "n": 495,
+        "median": 85.177157
+      },
+      "latency_order_commit_ms": {
+        "n": 495,
+        "median": 323.808764
+      },
+      "steady_state": {
+        "window_ms": 215848.757003,
+        "tps": 2.284006666728908,
+        "retained_count": 494,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-A-r2",
+      "condition": "A",
+      "run_index": 2,
+      "file": "am-unified/results/phase3-20260804T213214Z/A/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 6,
+      "steady_count": 494,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 494,
+        "mean": 428.24087972064785,
+        "p50": 402.298526,
+        "p95": 625.416564,
+        "p99": 890.067482,
+        "min": 302.617447,
+        "max": 1201.481457
+      },
+      "latency_endorse_ms": {
+        "n": 494,
+        "median": 70.0404755
+      },
+      "latency_order_commit_ms": {
+        "n": 494,
+        "median": 323.542153
+      },
+      "steady_state": {
+        "window_ms": 210370.637207,
+        "tps": 2.3387294278900863,
+        "retained_count": 493,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-A-r3",
+      "condition": "A",
+      "run_index": 3,
+      "file": "am-unified/results/phase3-20260804T213214Z/A/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 6,
+      "steady_count": 494,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 494,
+        "mean": 431.080225840081,
+        "p50": 401.574094,
+        "p95": 699.612822,
+        "p99": 1000.492452,
+        "min": 310.156299,
+        "max": 1036.957957
+      },
+      "latency_endorse_ms": {
+        "n": 494,
+        "median": 72.36845149999999
+      },
+      "latency_order_commit_ms": {
+        "n": 494,
+        "median": 323.38797
+      },
+      "steady_state": {
+        "window_ms": 212246.549497,
+        "tps": 2.3180588856025395,
+        "retained_count": 493,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-B-r1",
+      "condition": "B",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/B/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 5,
+      "steady_count": 495,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 495,
+        "mean": 439.19867253535375,
+        "p50": 422.061083,
+        "p95": 668.70073,
+        "p99": 967.895157,
+        "min": 311.072775,
+        "max": 1181.012489
+      },
+      "latency_endorse_ms": {
+        "n": 495,
+        "median": 84.761121
+      },
+      "latency_order_commit_ms": {
+        "n": 495,
+        "median": 324.43959
+      },
+      "steady_state": {
+        "window_ms": 216692.175539,
+        "tps": 2.2751167584787595,
+        "retained_count": 494,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-B-r2",
+      "condition": "B",
+      "run_index": 2,
+      "file": "am-unified/results/phase3-20260804T213214Z/B/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 5,
+      "steady_count": 495,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 495,
+        "mean": 440.09232992121247,
+        "p50": 411.174824,
+        "p95": 680.256625,
+        "p99": 1012.531753,
+        "min": 299.91944,
+        "max": 1613.53858
+      },
+      "latency_endorse_ms": {
+        "n": 495,
+        "median": 79.423327
+      },
+      "latency_order_commit_ms": {
+        "n": 495,
+        "median": 325.142584
+      },
+      "steady_state": {
+        "window_ms": 217184.726316,
+        "tps": 2.269957046991848,
+        "retained_count": 494,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-B-r3",
+      "condition": "B",
+      "run_index": 3,
+      "file": "am-unified/results/phase3-20260804T213214Z/B/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 5,
+      "steady_count": 495,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 495,
+        "mean": 444.79317354343436,
+        "p50": 423.030253,
+        "p95": 712.574759,
+        "p99": 1012.063938,
+        "min": 311.998292,
+        "max": 1179.181741
+      },
+      "latency_endorse_ms": {
+        "n": 495,
+        "median": 87.031003
+      },
+      "latency_order_commit_ms": {
+        "n": 495,
+        "median": 326.075111
+      },
+      "steady_state": {
+        "window_ms": 219568.815844,
+        "tps": 2.2453097362890926,
+        "retained_count": 494,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-C-r1",
+      "condition": "C",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/C/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 6,
+      "steady_count": 494,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 494,
+        "mean": 442.36267751619437,
+        "p50": 412.311466,
+        "p95": 689.702392,
+        "p99": 902.960807,
+        "min": 311.446218,
+        "max": 1100.464908
+      },
+      "latency_endorse_ms": {
+        "n": 494,
+        "median": 84.101643
+      },
+      "latency_order_commit_ms": {
+        "n": 494,
+        "median": 320.15401199999997
+      },
+      "steady_state": {
+        "window_ms": 217451.793016,
+        "tps": 2.2625704445849237,
+        "retained_count": 493,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-C-r2",
+      "condition": "C",
+      "run_index": 2,
+      "file": "am-unified/results/phase3-20260804T213214Z/C/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 6,
+      "steady_count": 494,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 494,
+        "mean": 446.34256045951423,
+        "p50": 413.268698,
+        "p95": 725.079468,
+        "p99": 1069.425648,
+        "min": 300.935888,
+        "max": 1622.933
+      },
+      "latency_endorse_ms": {
+        "n": 494,
+        "median": 92.2079775
+      },
+      "latency_order_commit_ms": {
+        "n": 494,
+        "median": 320.383154
+      },
+      "steady_state": {
+        "window_ms": 219924.206158,
+        "tps": 2.2371343682219904,
+        "retained_count": 493,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-C-r3",
+      "condition": "C",
+      "run_index": 3,
+      "file": "am-unified/results/phase3-20260804T213214Z/C/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 6,
+      "steady_count": 494,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 494,
+        "mean": 435.68954369433203,
+        "p50": 402.71159,
+        "p95": 689.899765,
+        "p99": 879.318488,
+        "min": 290.585974,
+        "max": 1358.106087
+      },
+      "latency_endorse_ms": {
+        "n": 494,
+        "median": 76.6509935
+      },
+      "latency_order_commit_ms": {
+        "n": 494,
+        "median": 319.85786199999995
+      },
+      "steady_state": {
+        "window_ms": 214241.077992,
+        "tps": 2.2964783626526177,
+        "retained_count": 493,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-D-r1",
+      "condition": "D",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/D/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 100,
+      "steady_count": 400,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 400,
+        "mean": 3.9595032825000036,
+        "p50": 3.859006,
+        "p95": 4.77781,
+        "p99": 5.854965,
+        "min": 3.291016,
+        "max": 6.082844
+      },
+      "latency_endorse_ms": {
+        "n": 0,
+        "median": null
+      },
+      "latency_order_commit_ms": {
+        "n": 0,
+        "median": null
+      },
+      "steady_state": {
+        "window_ms": 1582.282063,
+        "tps": 251.5354305700677,
+        "retained_count": 399,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-D-r2",
+      "condition": "D",
+      "run_index": 2,
+      "file": "am-unified/results/phase3-20260804T213214Z/D/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 100,
+      "steady_count": 400,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 400,
+        "mean": 3.9038159299999995,
+        "p50": 3.831003,
+        "p95": 4.599984,
+        "p99": 5.595228,
+        "min": 3.357474,
+        "max": 6.109454
+      },
+      "latency_endorse_ms": {
+        "n": 0,
+        "median": null
+      },
+      "latency_order_commit_ms": {
+        "n": 0,
+        "median": null
+      },
+      "steady_state": {
+        "window_ms": 1557.245811,
+        "tps": 255.57943209005686,
+        "retained_count": 399,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf6bt1z-D-r3",
+      "condition": "D",
+      "run_index": 3,
+      "file": "am-unified/results/phase3-20260804T213214Z/D/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 100,
+      "steady_count": 400,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 400,
+        "mean": 3.9905632100000004,
+        "p50": 3.91524,
+        "p95": 4.955222,
+        "p99": 5.585512,
+        "min": 3.384357,
+        "max": 6.606298
+      },
+      "latency_endorse_ms": {
+        "n": 0,
+        "median": null
+      },
+      "latency_order_commit_ms": {
+        "n": 0,
+        "median": null
+      },
+      "steady_state": {
+        "window_ms": 1592.336095,
+        "tps": 249.9472324025915,
+        "retained_count": 399,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf7wmfq-E-r1",
+      "condition": "E",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/E/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 2000,
+      "committed": 2000,
+      "warmup_count": 100,
+      "steady_count": 1900,
+      "observed_worker_slots": 20,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 1900,
+        "mean": 1789.7104746226303,
+        "p50": 1616.100522,
+        "p95": 3131.863725,
+        "p99": 3691.504455,
+        "min": 299.128167,
+        "max": 4433.656251
+      },
+      "latency_endorse_ms": {
+        "n": 1900,
+        "median": 380.97953600000005
+      },
+      "latency_order_commit_ms": {
+        "n": 1900,
+        "median": 1190.926793
+      },
+      "steady_state": {
+        "window_ms": 169263.642286,
+        "tps": 11.101025445411997,
+        "retained_count": 1880,
+        "dropped_drain_count": 20,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf7wmfq-E-r2",
+      "condition": "E",
+      "run_index": 2,
+      "file": "am-unified/results/phase3-20260804T213214Z/E/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 2000,
+      "committed": 2000,
+      "warmup_count": 100,
+      "steady_count": 1900,
+      "observed_worker_slots": 20,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 1900,
+        "mean": 1789.6461315100023,
+        "p50": 1777.532046,
+        "p95": 2536.690674,
+        "p99": 2765.682389,
+        "min": 746.382893,
+        "max": 3417.386727
+      },
+      "latency_endorse_ms": {
+        "n": 1900,
+        "median": 366.37782
+      },
+      "latency_order_commit_ms": {
+        "n": 1900,
+        "median": 1311.6715075
+      },
+      "steady_state": {
+        "window_ms": 168897.767679,
+        "tps": 11.125073029805511,
+        "retained_count": 1880,
+        "dropped_drain_count": 20,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf7wmfq-E-r3",
+      "condition": "E",
+      "run_index": 3,
+      "file": "am-unified/results/phase3-20260804T213214Z/E/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 2000,
+      "committed": 2000,
+      "warmup_count": 100,
+      "steady_count": 1900,
+      "observed_worker_slots": 20,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 1900,
+        "mean": 1844.4904821905295,
+        "p50": 1791.145227,
+        "p95": 2815.621356,
+        "p99": 3151.718171,
+        "min": 489.522876,
+        "max": 3768.651597
+      },
+      "latency_endorse_ms": {
+        "n": 1900,
+        "median": 384.106718
+      },
+      "latency_order_commit_ms": {
+        "n": 1900,
+        "median": 1330.5406755
+      },
+      "steady_state": {
+        "window_ms": 174029.83773,
+        "tps": 10.796999092277439,
+        "retained_count": 1880,
+        "dropped_drain_count": 20,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smsf7wmfq-F-r1",
+      "condition": "F",
+      "run_index": 1,
+      "file": "am-unified/results/phase3-20260804T213214Z/F/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 2000,
+      "committed": 2000,
+      "warmup_count": 100,
+      "steady_count": 1900,
+      "observed_worker_slots": 20,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 1900,
+        "mean": 1865.2694618405255,
+        "p50": 1801.305368,
+        "p95": 2608.405281,
+        "p99": 3017.7213,
+        "min": 716.518298,
+        "max": 3846.943377
+      },
+      "latency_endorse_ms": {
+        "n": 1900,
+        "median": 388.7321875
+      },
+      "latency_order_commit_ms": {
+        "n": 1900,
+        "median": 1384.5541945
+      },
+      "steady_state": {
+        "window_ms": 175767.726925,
+        "tps": 10.690244636330583,
+        "retained_count": 1880,
+        "dropped_drain_count": 20,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded"
+      },
+      "suspect_low_steady_count": false
+    }
+  ],
+  "per_condition": {
+    "A": {
+      "condition": "A",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 438.4607619252526,
+          "p50": 421.941521,
+          "p95": 679.789483,
+          "p99": 1077.272116,
+          "min": 300.83403,
+          "max": 1171.342382,
+          "endorse_median": 85.177157,
+          "order_commit_median": 323.808764,
+          "steady_tps": 2.284006666728908,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 428.24087972064785,
+          "p50": 402.298526,
+          "p95": 625.416564,
+          "p99": 890.067482,
+          "min": 302.617447,
+          "max": 1201.481457,
+          "endorse_median": 70.0404755,
+          "order_commit_median": 323.542153,
+          "steady_tps": 2.3387294278900863,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 431.080225840081,
+          "p50": 401.574094,
+          "p95": 699.612822,
+          "p99": 1000.492452,
+          "min": 310.156299,
+          "max": 1036.957957,
+          "endorse_median": 72.36845149999999,
+          "order_commit_median": 323.38797,
+          "steady_tps": 2.3180588856025395,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 402.298526,
+        "steady_tps": 2.3180588856025395,
+        "mean": 431.080225840081,
+        "p95": 679.789483,
+        "p99": 1000.492452,
+        "endorse_median": 72.36845149999999,
+        "order_commit_median": 323.542153
+      },
+      "spread_across_runs": {
+        "p50_min": 401.574094,
+        "p50_max": 421.941521,
+        "p50_spread": 20.36742700000002,
+        "tps_min": 2.284006666728908,
+        "tps_max": 2.3387294278900863,
+        "tps_spread": 0.05472276116117847
+      }
+    },
+    "B": {
+      "condition": "B",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 439.19867253535375,
+          "p50": 422.061083,
+          "p95": 668.70073,
+          "p99": 967.895157,
+          "min": 311.072775,
+          "max": 1181.012489,
+          "endorse_median": 84.761121,
+          "order_commit_median": 324.43959,
+          "steady_tps": 2.2751167584787595,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 440.09232992121247,
+          "p50": 411.174824,
+          "p95": 680.256625,
+          "p99": 1012.531753,
+          "min": 299.91944,
+          "max": 1613.53858,
+          "endorse_median": 79.423327,
+          "order_commit_median": 325.142584,
+          "steady_tps": 2.269957046991848,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 444.79317354343436,
+          "p50": 423.030253,
+          "p95": 712.574759,
+          "p99": 1012.063938,
+          "min": 311.998292,
+          "max": 1179.181741,
+          "endorse_median": 87.031003,
+          "order_commit_median": 326.075111,
+          "steady_tps": 2.2453097362890926,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 422.061083,
+        "steady_tps": 2.269957046991848,
+        "mean": 440.09232992121247,
+        "p95": 680.256625,
+        "p99": 1012.063938,
+        "endorse_median": 84.761121,
+        "order_commit_median": 325.142584
+      },
+      "spread_across_runs": {
+        "p50_min": 411.174824,
+        "p50_max": 423.030253,
+        "p50_spread": 11.855429000000015,
+        "tps_min": 2.2453097362890926,
+        "tps_max": 2.2751167584787595,
+        "tps_spread": 0.02980702218966691
+      }
+    },
+    "C": {
+      "condition": "C",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 442.36267751619437,
+          "p50": 412.311466,
+          "p95": 689.702392,
+          "p99": 902.960807,
+          "min": 311.446218,
+          "max": 1100.464908,
+          "endorse_median": 84.101643,
+          "order_commit_median": 320.15401199999997,
+          "steady_tps": 2.2625704445849237,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 446.34256045951423,
+          "p50": 413.268698,
+          "p95": 725.079468,
+          "p99": 1069.425648,
+          "min": 300.935888,
+          "max": 1622.933,
+          "endorse_median": 92.2079775,
+          "order_commit_median": 320.383154,
+          "steady_tps": 2.2371343682219904,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 435.68954369433203,
+          "p50": 402.71159,
+          "p95": 689.899765,
+          "p99": 879.318488,
+          "min": 290.585974,
+          "max": 1358.106087,
+          "endorse_median": 76.6509935,
+          "order_commit_median": 319.85786199999995,
+          "steady_tps": 2.2964783626526177,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 412.311466,
+        "steady_tps": 2.2625704445849237,
+        "mean": 442.36267751619437,
+        "p95": 689.899765,
+        "p99": 902.960807,
+        "endorse_median": 84.101643,
+        "order_commit_median": 320.15401199999997
+      },
+      "spread_across_runs": {
+        "p50_min": 402.71159,
+        "p50_max": 413.268698,
+        "p50_spread": 10.557107999999971,
+        "tps_min": 2.2371343682219904,
+        "tps_max": 2.2964783626526177,
+        "tps_spread": 0.05934399443062732
+      }
+    },
+    "D": {
+      "condition": "D",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 3.9595032825000036,
+          "p50": 3.859006,
+          "p95": 4.77781,
+          "p99": 5.854965,
+          "min": 3.291016,
+          "max": 6.082844,
+          "endorse_median": null,
+          "order_commit_median": null,
+          "steady_tps": 251.5354305700677,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 3.9038159299999995,
+          "p50": 3.831003,
+          "p95": 4.599984,
+          "p99": 5.595228,
+          "min": 3.357474,
+          "max": 6.109454,
+          "endorse_median": null,
+          "order_commit_median": null,
+          "steady_tps": 255.57943209005686,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 3.9905632100000004,
+          "p50": 3.91524,
+          "p95": 4.955222,
+          "p99": 5.585512,
+          "min": 3.384357,
+          "max": 6.606298,
+          "endorse_median": null,
+          "order_commit_median": null,
+          "steady_tps": 249.9472324025915,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 3.859006,
+        "steady_tps": 251.5354305700677,
+        "mean": 3.9595032825000036,
+        "p95": 4.77781,
+        "p99": 5.595228,
+        "endorse_median": null,
+        "order_commit_median": null
+      },
+      "spread_across_runs": {
+        "p50_min": 3.831003,
+        "p50_max": 3.91524,
+        "p50_spread": 0.0842369999999999,
+        "tps_min": 249.9472324025915,
+        "tps_max": 255.57943209005686,
+        "tps_spread": 5.632199687465345
+      }
+    },
+    "E": {
+      "condition": "E",
+      "runs": 3,
+      "n_total": 6000,
+      "committed_total": 6000,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.05,
+          "wilson_upper_pct": 0.06398569875660942
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 2000,
+          "committed": 2000,
+          "mean": 1789.7104746226303,
+          "p50": 1616.100522,
+          "p95": 3131.863725,
+          "p99": 3691.504455,
+          "min": 299.128167,
+          "max": 4433.656251,
+          "endorse_median": 380.97953600000005,
+          "order_commit_median": 1190.926793,
+          "steady_tps": 11.101025445411997,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 2000,
+          "committed": 2000,
+          "mean": 1789.6461315100023,
+          "p50": 1777.532046,
+          "p95": 2536.690674,
+          "p99": 2765.682389,
+          "min": 746.382893,
+          "max": 3417.386727,
+          "endorse_median": 366.37782,
+          "order_commit_median": 1311.6715075,
+          "steady_tps": 11.125073029805511,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 2000,
+          "committed": 2000,
+          "mean": 1844.4904821905295,
+          "p50": 1791.145227,
+          "p95": 2815.621356,
+          "p99": 3151.718171,
+          "min": 489.522876,
+          "max": 3768.651597,
+          "endorse_median": 384.106718,
+          "order_commit_median": 1330.5406755,
+          "steady_tps": 10.796999092277439,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 1777.532046,
+        "steady_tps": 11.101025445411997,
+        "mean": 1789.7104746226303,
+        "p95": 2815.621356,
+        "p99": 3151.718171,
+        "endorse_median": 380.97953600000005,
+        "order_commit_median": 1311.6715075
+      },
+      "spread_across_runs": {
+        "p50_min": 1616.100522,
+        "p50_max": 1791.145227,
+        "p50_spread": 175.04470500000002,
+        "tps_min": 10.796999092277439,
+        "tps_max": 11.125073029805511,
+        "tps_spread": 0.3280739375280728
+      }
+    },
+    "F": {
+      "condition": "F",
+      "runs": 1,
+      "n_total": 2000,
+      "committed_total": 2000,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.15,
+          "wilson_upper_pct": 0.19171176005129348
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 2000,
+          "committed": 2000,
+          "mean": 1865.2694618405255,
+          "p50": 1801.305368,
+          "p95": 2608.405281,
+          "p99": 3017.7213,
+          "min": 716.518298,
+          "max": 3846.943377,
+          "endorse_median": 388.7321875,
+          "order_commit_median": 1384.5541945,
+          "steady_tps": 10.690244636330583,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 1801.305368,
+        "steady_tps": 10.690244636330583,
+        "mean": 1865.2694618405255,
+        "p95": 2608.405281,
+        "p99": 3017.7213,
+        "endorse_median": 388.7321875,
+        "order_commit_median": 1384.5541945
+      },
+      "spread_across_runs": {
+        "p50_min": 1801.305368,
+        "p50_max": 1801.305368,
+        "p50_spread": 0,
+        "tps_min": 10.690244636330583,
+        "tps_max": 10.690244636330583,
+        "tps_spread": 0
+      }
+    }
+  }
+}

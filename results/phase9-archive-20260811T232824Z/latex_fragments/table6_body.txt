@@ -1,0 +1,105 @@
+TABLE 6 (single-host sequential, W=1, n=500/run) — number provenance
+====================================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+T6.A.steady_tps         = 20.48
+                          phase8-20260810T040300Z/A/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T6.A.steady_count       = 460
+                          phase8-20260810T040300Z/A/*/txs.jsonl
+                          computeSteady().count
+T6.A.steady_duration_s  = 22.462
+                          phase8-20260810T040300Z/A/*/txs.jsonl
+                          computeSteady().duration_s
+T6.A.mean_ms            = 48.6
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.A.median_across_runs.mean
+T6.A.p50_ms             = 47.3
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.A.median_across_runs.p50
+T6.A.p95_ms             = 60.3
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.A.median_across_runs.p95
+T6.A.committed          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.A.committed_total
+T6.A.submitted          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.A.n_total
+T6.B.steady_tps         = 19.57
+                          phase8-20260810T040300Z/B/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T6.B.steady_count       = 458
+                          phase8-20260810T040300Z/B/*/txs.jsonl
+                          computeSteady().count
+T6.B.steady_duration_s  = 23.357
+                          phase8-20260810T040300Z/B/*/txs.jsonl
+                          computeSteady().duration_s
+T6.B.mean_ms            = 50.9
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.B.median_across_runs.mean
+T6.B.p50_ms             = 48.8
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.B.median_across_runs.p50
+T6.B.p95_ms             = 62.5
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.B.median_across_runs.p95
+T6.B.committed          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.B.committed_total
+T6.B.submitted          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.B.n_total
+T6.C.steady_tps         = 20.11
+                          phase8-20260810T040300Z/C/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T6.C.steady_count       = 460
+                          phase8-20260810T040300Z/C/*/txs.jsonl
+                          computeSteady().count
+T6.C.steady_duration_s  = 22.874
+                          phase8-20260810T040300Z/C/*/txs.jsonl
+                          computeSteady().duration_s
+T6.C.mean_ms            = 49.5
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.C.median_across_runs.mean
+T6.C.p50_ms             = 50.1
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.C.median_across_runs.p50
+T6.C.p95_ms             = 53.4
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.C.median_across_runs.p95
+T6.C.committed          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.C.committed_total
+T6.C.submitted          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.C.n_total
+T6.D.steady_tps         = 131.11
+                          phase8-20260810T040300Z/D/*/txs.jsonl
+                          steady.js computeSteady() median across runs   [E1 definition]
+T6.D.steady_count       = 400
+                          phase8-20260810T040300Z/D/*/txs.jsonl
+                          computeSteady().count
+T6.D.steady_duration_s  = 3.051
+                          phase8-20260810T040300Z/D/*/txs.jsonl
+                          computeSteady().duration_s
+T6.D.mean_ms            = 7.6
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.D.median_across_runs.mean
+T6.D.p50_ms             = 7.6
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.D.median_across_runs.p50
+T6.D.p95_ms             = 9.0
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.D.median_across_runs.p95
+T6.D.committed          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.D.committed_total
+T6.D.submitted          = 1500
+                          phase8-20260810T040300Z/analysis.json
+                          per_condition.D.n_total

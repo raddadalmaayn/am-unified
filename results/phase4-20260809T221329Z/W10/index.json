@@ -1,0 +1,29 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 10,
+    "total": 500,
+    "dir": "am-unified/results/phase4-20260809T221329Z/W10/E/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmdd4g5"
+  },
+  {
+    "condition": "E",
+    "run_index": 2,
+    "W": 10,
+    "total": 500,
+    "dir": "am-unified/results/phase4-20260809T221329Z/W10/E/run2",
+    "invariant_holds": true,
+    "session_id": "Smsmdd4g5"
+  },
+  {
+    "condition": "E",
+    "run_index": 3,
+    "W": 10,
+    "total": 500,
+    "dir": "am-unified/results/phase4-20260809T221329Z/W10/E/run3",
+    "invariant_holds": true,
+    "session_id": "Smsmdd4g5"
+  }
+]

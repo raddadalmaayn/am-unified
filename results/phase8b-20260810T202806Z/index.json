@@ -1,0 +1,110 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/E/run1",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "E",
+    "run_index": 2,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/E/run2",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "E",
+    "run_index": 3,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/E/run3",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "F",
+    "run_index": 1,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/F/run1",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "F",
+    "run_index": 2,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/F/run2",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "F",
+    "run_index": 3,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/F/run3",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "G",
+    "run_index": 1,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/G/run1",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "G",
+    "run_index": 2,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/G/run2",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "G",
+    "run_index": 3,
+    "W": 100,
+    "total": 2000,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/G/run3",
+    "invariant_holds": true,
+    "session_id": "Smsnooiqx"
+  },
+  {
+    "condition": "H",
+    "run_index": 1,
+    "W": 100,
+    "total": 500,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/H/run1",
+    "invariant_holds": true,
+    "session_id": "Smsnp2rwr"
+  },
+  {
+    "condition": "H",
+    "run_index": 2,
+    "W": 100,
+    "total": 500,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/H/run2",
+    "invariant_holds": true,
+    "session_id": "Smsnp2rwr"
+  },
+  {
+    "condition": "H",
+    "run_index": 3,
+    "W": 100,
+    "total": 500,
+    "dir": "am-unified/results/phase8b-20260810T202806Z/H/run3",
+    "invariant_holds": true,
+    "session_id": "Smsnp2rwr"
+  }
+]

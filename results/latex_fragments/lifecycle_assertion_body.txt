@@ -1,0 +1,73 @@
+SECTION 5 lifecycle assertion — number provenance
+==================================================
+
+Source: am-unified/results/phase13-lifecycle-20260813T032245Z/lifecycle_assertion.json
+run_id LCA-msqydday  channel mychannel  chaincode unified
+started 2026-08-13T03:22:46.833Z  finished 2026-08-13T03:23:09.472Z
+
+Every submission goes through IntegrationContract:RecordProvenanceWithReputation
+(the bridge path). Rejection phase and class come from the gateway error: the
+chaincode message is read from e.details[].message, since the gateway top-level
+message is generic. LIFECYCLE_ASSERTION means the chaincode returned
+"invalid lifecycle transition: ...".
+
+L.PRINT_JOB_on_absent_asset.n                 = 100
+                                                conditions.PRINT_JOB_on_absent_asset.n
+L.PRINT_JOB_on_absent_asset.rejected          = 100
+                                                conditions.PRINT_JOB_on_absent_asset.rejected
+L.PRINT_JOB_on_absent_asset.endorse_phase     = 100
+                                                conditions.PRINT_JOB_on_absent_asset.by_phase.endorse
+L.PRINT_JOB_on_absent_asset.lifecycle_assertion= 100
+                                                conditions.PRINT_JOB_on_absent_asset.by_error_class.LIFECYCLE_ASSERTION
+L.PRINT_JOB_on_absent_asset.prov_written      = 0
+                                                conditions.PRINT_JOB_on_absent_asset.ledger_walk.provenance_events_written
+L.PRINT_JOB_on_absent_asset.acc_incremented   = 0
+                                                conditions.PRINT_JOB_on_absent_asset.ledger_walk.accumulators_incremented
+L.PRINT_JOB_on_absent_asset.link_written      = 0
+                                                conditions.PRINT_JOB_on_absent_asset.ledger_walk.link_entries_written
+L.INSPECTION_on_material_certified.n          = 100
+                                                conditions.INSPECTION_on_material_certified.n
+L.INSPECTION_on_material_certified.rejected   = 100
+                                                conditions.INSPECTION_on_material_certified.rejected
+L.INSPECTION_on_material_certified.endorse_phase= 100
+                                                conditions.INSPECTION_on_material_certified.by_phase.endorse
+L.INSPECTION_on_material_certified.lifecycle_assertion= 100
+                                                conditions.INSPECTION_on_material_certified.by_error_class.LIFECYCLE_ASSERTION
+L.INSPECTION_on_material_certified.prov_written= 0
+                                                conditions.INSPECTION_on_material_certified.ledger_walk.provenance_events_written
+L.INSPECTION_on_material_certified.acc_incremented= 0
+                                                conditions.INSPECTION_on_material_certified.ledger_walk.accumulators_incremented
+L.INSPECTION_on_material_certified.link_written= 0
+                                                conditions.INSPECTION_on_material_certified.ledger_walk.link_entries_written
+L.CERTIFICATION_on_material_certified.n       = 100
+                                                conditions.CERTIFICATION_on_material_certified.n
+L.CERTIFICATION_on_material_certified.rejected= 100
+                                                conditions.CERTIFICATION_on_material_certified.rejected
+L.CERTIFICATION_on_material_certified.endorse_phase= 100
+                                                conditions.CERTIFICATION_on_material_certified.by_phase.endorse
+L.CERTIFICATION_on_material_certified.lifecycle_assertion= 100
+                                                conditions.CERTIFICATION_on_material_certified.by_error_class.LIFECYCLE_ASSERTION
+L.CERTIFICATION_on_material_certified.prov_written= 0
+                                                conditions.CERTIFICATION_on_material_certified.ledger_walk.provenance_events_written
+L.CERTIFICATION_on_material_certified.acc_incremented= 0
+                                                conditions.CERTIFICATION_on_material_certified.ledger_walk.accumulators_incremented
+L.CERTIFICATION_on_material_certified.link_written= 0
+                                                conditions.CERTIFICATION_on_material_certified.ledger_walk.link_entries_written
+L.total_n                                     = 300
+                                                sum of conditions.*.n
+L.total_rejected                              = 300
+                                                sum of conditions.*.rejected
+L.total_ledger_writes                         = 0
+                                                sum of all three ledger_walk counters
+L.control_n                                   = 100
+                                                control.n
+L.control_both                                = 100
+                                                control.both_events_on_ledger
+
+Representative chaincode rejection messages (one per condition):
+  PRINT_JOB_on_absent_asset:
+    chaincode response 500, invalid lifecycle transition: PRINT_JOB requires stage MATERIAL_CERTIFIED, asset does not exist
+  INSPECTION_on_material_certified:
+    chaincode response 500, invalid lifecycle transition: INSPECTION requires stage PRINT_COMPLETE, current stage is MATERIAL_CERTIFIED
+  CERTIFICATION_on_material_certified:
+    chaincode response 500, invalid lifecycle transition: CERTIFICATION requires stage INSPECTION_PASSED, current stage is MATERIAL_CERTIFIED

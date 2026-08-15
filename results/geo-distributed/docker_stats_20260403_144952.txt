@@ -1,0 +1,18 @@
+=== DOCKER RESOURCE USAGE ===
+--- D1 ---
+NAME                     CPU %     MEM USAGE / LIMIT     NET I/O
+cc-unified               0.00%     22.78MiB / 7.633GiB   0B / 0B
+peer0.org1.example.com   4.81%     141.6MiB / 7.633GiB   0B / 0B
+--- D2 ---
+NAME                     CPU %     MEM USAGE / LIMIT     NET I/O
+cc-unified               0.00%     18.48MiB / 15.54GiB   0B / 0B
+peer0.org2.example.com   2.30%     120.9MiB / 15.54GiB   0B / 0B
+--- D3 ---
+NAME                     CPU %     MEM USAGE / LIMIT     NET I/O
+cc-unified               0.00%     23.99MiB / 15.45GiB   0B / 0B
+peer0.org3.example.com   4.51%     123.6MiB / 15.45GiB   0B / 0B
+--- D4 ---
+NAME                     CPU %     MEM USAGE / LIMIT     NET I/O
+cc-unified               0.00%     24.18MiB / 15.45GiB   0B / 0B
+peer0.org4.example.com   5.42%     123.4MiB / 15.45GiB   0B / 0B
+orderer.example.com      0.42%     71.39MiB / 15.45GiB   0B / 0B

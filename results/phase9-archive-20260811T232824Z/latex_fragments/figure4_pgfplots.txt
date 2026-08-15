@@ -1,0 +1,84 @@
+FIGURE 4 (Phase 4 concurrency sweep, two panels) — number provenance
+====================================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+F4.W1.steady_tps          = 2.32
+                            phase4-20260809T221329Z/W1/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W1.tx_per_block        = 1.00
+                            phase4-20260809T221329Z/W1/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W1.block_rate_per_s    = 2.52
+                            phase4-20260809T221329Z/W1/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W5.steady_tps          = 8.27
+                            phase4-20260809T221329Z/W5/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W5.tx_per_block        = 2.86
+                            phase4-20260809T221329Z/W5/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W5.block_rate_per_s    = 3.10
+                            phase4-20260809T221329Z/W5/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W10.steady_tps         = 13.66
+                            phase4-20260809T221329Z/W10/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W10.tx_per_block       = 4.10
+                            phase4-20260809T221329Z/W10/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W10.block_rate_per_s   = 3.83
+                            phase4-20260809T221329Z/W10/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W20.steady_tps         = 12.73
+                            phase4-20260809T221329Z/W20/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W20.tx_per_block       = 3.55
+                            phase4-20260809T221329Z/W20/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W20.block_rate_per_s   = 4.32
+                            phase4-20260809T221329Z/W20/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W50.steady_tps         = 11.75
+                            phase4-20260809T221329Z/W50/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W50.tx_per_block       = 3.31
+                            phase4-20260809T221329Z/W50/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W50.block_rate_per_s   = 4.07
+                            phase4-20260809T221329Z/W50/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W100.steady_tps        = 12.47
+                            phase4-20260809T221329Z/W100/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W100.tx_per_block      = 3.58
+                            phase4-20260809T221329Z/W100/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W100.block_rate_per_s  = 4.11
+                            phase4-20260809T221329Z/W100/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W200.steady_tps        = 13.24
+                            phase4-20260809T221329Z/W200/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W200.tx_per_block      = 3.99
+                            phase4-20260809T221329Z/W200/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W200.block_rate_per_s  = 4.31
+                            phase4-20260809T221329Z/W200/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.W400.steady_tps        = 17.44
+                            phase4-20260809T221329Z/W400/E/*/txs.jsonl
+                            steady.js computeSteady() median across runs   [E1 definition]
+F4.W400.tx_per_block      = 4.94
+                            phase4-20260809T221329Z/W400/occupancy.json
+                            runs.tx_per_block (median of 3)   [from manifest height_delta]
+F4.W400.block_rate_per_s  = 5.87
+                            phase4-20260809T221329Z/W400/occupancy.json
+                            runs.block_rate_per_s (median of 3)   [from manifest height_delta]
+F4.max_message_count      = 10
+                            phase3b-20260809T210708Z/E/run1/manifest.json
+                            channel_params.batch_size.max_message_count

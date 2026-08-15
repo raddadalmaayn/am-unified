@@ -1,0 +1,100 @@
+[34m2026-04-03 20:49:07.304 UTC 9a53 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5d1732820] Closing: EOF
+[34m2026-04-03 20:49:07.304 UTC 9a54 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5d1732820] loopyWriter exiting with error: transport closed by client
+[34m2026-04-03 20:49:07.904 UTC 9a55 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:09.904Z grpc.peer_address=D2:35048 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=171.14µs
+[34m2026-04-03 20:49:07.907 UTC 9a56 INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer f50864c13a6ff3eed5c6734c1f8f3bc2948b5b7068d59b0a28e9cc3426454e2f (D2:35048) probed us
+[34m2026-04-03 20:49:07.907 UTC 9a57 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:49:17.905Z grpc.peer_address=D2:35048 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=1.856797ms
+[34m2026-04-03 20:49:07.908 UTC 9a58 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cf9bc340] Closing: EOF
+[34m2026-04-03 20:49:07.908 UTC 9a59 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cf9bc340] loopyWriter exiting with error: transport closed by client
+[34m2026-04-03 20:49:31.176 UTC 9a5a INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.org2.example.com:7051"
+[34m2026-04-03 20:49:31.176 UTC 9a5b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel created
+[34m2026-04-03 20:49:31.176 UTC 9a5c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.org2.example.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-04-03 20:49:31.176 UTC 9a5d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel authority set to "peer0.org2.example.com:7051"
+[34m2026-04-03 20:49:31.176 UTC 9a5e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.org2.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org2.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-04-03 20:49:31.176 UTC 9a5f INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel switches to new LB policy "pick_first"
+[34m2026-04-03 20:49:31.177 UTC 9a60 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x37d5cd0b2fc0] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.org2.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org2.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-04-03 20:49:31.177 UTC 9a61 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:31.177 UTC 9a62 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel created
+[34m2026-04-03 20:49:31.177 UTC 9a63 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel exiting idle mode
+[34m2026-04-03 20:49:31.177 UTC 9a64 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:31.177 UTC 9a65 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel picks a new address "peer0.org2.example.com:7051" to connect
+[34m2026-04-03 20:49:31.184 UTC 9a66 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel Connectivity change to READY
+[34m2026-04-03 20:49:31.184 UTC 9a67 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x37d5cd0b2fc0] SubConn 0x37d5d0edfea0 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-04-03 20:49:31.184 UTC 9a68 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel Connectivity change to READY
+[34m2026-04-03 20:49:31.187 UTC 9a69 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:31.188 UTC 9a6a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Closing the name resolver
+[34m2026-04-03 20:49:31.188 UTC 9a6b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]ccBalancerWrapper: closing
+[34m2026-04-03 20:49:31.188 UTC 9a6c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:31.188 UTC 9a6d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520 SubChannel #521]Subchannel deleted
+[34m2026-04-03 20:49:31.188 UTC 9a6e INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x37d5cd1c6248] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:31.188 UTC 9a6f INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x37d5cd1c6248] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:31.188 UTC 9a70 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #520]Channel deleted
+[33m2026-04-03 20:49:31.188 UTC 9a71 WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.org2.example.com:7051, InternalEndpoint: peer0.org2.example.com:7051, PKI-ID: <nil>, Metadata:  : peer0.org2.example.com:7051 isn't in our organization, cannot be a bootstrap peer
+[34m2026-04-03 20:49:31.722 UTC 9a72 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:33.722Z grpc.peer_address=D3:53282 grpc.peer_subject="CN=peer0.org3.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=141.611µs
+[34m2026-04-03 20:49:31.725 UTC 9a73 INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer a984ade0f45fc7536123ae5b8519e8f1829f7d7e1eef2d50fa5a3b756bd8a817 (D3:53282) probed us
+[34m2026-04-03 20:49:31.725 UTC 9a74 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:49:41.723Z grpc.peer_address=D3:53282 grpc.peer_subject="CN=peer0.org3.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=2.487467ms
+[34m2026-04-03 20:49:31.726 UTC 9a75 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cd42eb60] Closing: EOF
+[34m2026-04-03 20:49:31.726 UTC 9a76 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cd42eb60] loopyWriter exiting with error: transport closed by client
+[34m2026-04-03 20:49:32.314 UTC 9a77 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:34.314Z grpc.peer_address=D4:50816 grpc.peer_subject="CN=peer0.org4.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=167.272µs
+[34m2026-04-03 20:49:32.318 UTC 9a78 INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer 3c035f4a5fd57e9811b7e540edc01cc5de9607fe294fd77405c8e22b5bc4b041 (D4:50816) probed us
+[34m2026-04-03 20:49:32.318 UTC 9a79 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:49:42.315Z grpc.peer_address=D4:50816 grpc.peer_subject="CN=peer0.org4.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=2.883606ms
+[34m2026-04-03 20:49:32.320 UTC 9a7a INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5d17329c0] Closing: EOF
+[34m2026-04-03 20:49:32.320 UTC 9a7b INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5d17329c0] loopyWriter exiting with error: transport closed by client
+[34m2026-04-03 20:49:32.917 UTC 9a7c INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:34.916Z grpc.peer_address=D2:39504 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=156.091µs
+[34m2026-04-03 20:49:32.919 UTC 9a7d INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer f50864c13a6ff3eed5c6734c1f8f3bc2948b5b7068d59b0a28e9cc3426454e2f (D2:39504) probed us
+[34m2026-04-03 20:49:32.919 UTC 9a7e INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:49:42.918Z grpc.peer_address=D2:39504 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=1.773025ms
+[34m2026-04-03 20:49:32.920 UTC 9a7f INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cd42ed00] Closing: EOF
+[34m2026-04-03 20:49:32.920 UTC 9a80 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x37d5cd42ed00] loopyWriter exiting with error: transport closed by client

@@ -1,0 +1,87 @@
+╔══════════════════════════════════════════════════════╗
+║  Geo-Distributed AM Benchmark — 4-Org (amchannel)   ║
+╚══════════════════════════════════════════════════════╝
+  Peer:    localhost:7051  |  Channel: amchannel
+  Users:   Admin, User1
+  Seq runs: 50  |  Conc runs: 200  |  Concurrency: 20
+
+[Setup] InitConfig...
+  ✓ Already initialized
+[Setup] Staking users...
+  ✓ Staked Admin
+  ✓ Staked User1
+
+[Test 1] Sequential provenance writes (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Provenance sequential: Mean=374ms  P50=357ms  P95=446ms  P99=702ms  σ=68ms
+  Failures: 0/50
+[Test 2] Sequential reputation writes (50 runs)...
+  NOTE: chaincode uses time.Now() — occasional endorsement-mismatch possible
+
+  Run 4 error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+  10/50  20/50  30/50  40/50  50/50  Reputation sequential: Mean=396ms  P50=378ms  P95=489ms  P99=1090ms  σ=110ms
+  Failures: 1/50
+[Test 3] Sequential bridge (integrated) writes (50 runs)...
+
+  Run 5 error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+  10/50  20/50  30/50  40/50
+  Run 48 error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+  50/50  Bridge sequential: Mean=383ms  P50=370ms  P95=520ms  P99=601ms  σ=52ms
+  Failures: 2/50
+[Test 4] Sequential read latency — GetPartTrustReport (50 reads)...
+  Read (GetPartTrustReport): Mean=6ms  P50=6ms  P95=8ms  P99=35ms  σ=4ms
+[Test 5] Cross-org endorsement baseline (50 runs)...
+  10/50  20/50  30/50  40/50  50/50  Cross-org endorsement: Mean=370ms  P50=356ms  P95=468ms  P99=834ms  σ=75ms
+  Failures: 0/50
+[Test 6] Concurrent provenance throughput (200 txs, c=20)...
+  → 25.54 TPS  MVCC: 0.0%  Failures: 0/200
+[Test 7] Concurrent reputation throughput (200 txs, c=20)...
+  Each tx targets unique actorID — no MVCC conflicts expected
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+
+  Error: 10 ABORTED: failed to collect enough transaction endorsements, see attached details for more info
+  → 28.15 TPS  MVCC: 0.0%  Failures: 11/200
+[Test 8] Concurrent bridge throughput (200 txs, c=20)...
+  → 30.61 TPS  MVCC: 0.0%  Failures: 0/200
+[Test 9] High-contention reputation (same actor, 200 txs, c=20)...
+  → 1.56 TPS  MVCC: 95.0%  Failures: 190/200
+
+
+╔═══════════════════════════════════════════════════════════════════╗
+║               GEO-DISTRIBUTED BENCHMARK RESULTS                  ║
+╚═══════════════════════════════════════════════════════════════════╝
+| Test                          | Count | TPS    | Mean    | P95     | MVCC% | Fail |
+|-------------------------------|-------|--------|---------|---------|-------|------|
+| provenance_sequential         |    50 |   2.68 |   374ms |   446ms |   N/A |    0 |
+| reputation_sequential         |    50 |   2.52 |   396ms |   489ms |   N/A |    1 |
+| bridge_sequential             |    50 |   2.60 |   383ms |   520ms |   N/A |    2 |
+| read_latency                  |    50 |    N/A |     6ms |     8ms |   N/A |    0 |
+| cross_org_endorsement         |    50 |   2.71 |   370ms |   468ms |   N/A |    0 |
+| concurrent_provenance         |   200 |  25.54 |     N/A |     N/A |  0.0% |    0 |
+| concurrent_reputation         |   200 |  28.15 |     N/A |     N/A |  0.0% |   11 |
+| concurrent_bridge             |   200 |  30.61 |     N/A |     N/A |  0.0% |    0 |
+| high_contention_reputation    |   200 |   1.56 |     N/A |     N/A | 95.0% |  190 |
+
+✅ Results saved:
+   JSON: am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T20-36-10-456Z.json
+   CSV:  am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T20-36-10-456Z.csv
+
+Total benchmark time: 2.2 min

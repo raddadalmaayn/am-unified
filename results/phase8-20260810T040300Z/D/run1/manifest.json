@@ -1,0 +1,253 @@
+{
+  "run_id": "Smsmphpdn-D-r1",
+  "condition": "D",
+  "run_index": 1,
+  "harness_version": "2.1.0",
+  "schema_version": 1,
+  "git_commit_source": "9a9db0ef541d2e400effdb08e3b4a135692a2c10",
+  "source_chaincode_tree_dirty": false,
+  "git_commit_harness_host": "9a9db0ef541d2e400effdb08e3b4a135692a2c10",
+  "chaincode_sha256_expected": "41f333d6ffcab44b5d2c3f50fb2797ddd21a6093d9c0a17a9836033623029cbe",
+  "chaincode_package_ids": {
+    "org1": "unified_1.0:e41a6a4fdeb3050ef7bd45952b4772e5baf0474c553c2928b619916caa2a6153",
+    "org2": "unified_1.0:e41a6a4fdeb3050ef7bd45952b4772e5baf0474c553c2928b619916caa2a6153"
+  },
+  "channel_params": {
+    "error": "ERROR: Command failed: bash -lc export PATH=$HOME/fabric-tools/bin:$PATH; cd /tmp && rm -f _m.pb _m.json && source /tmp/pe.sh 1 7051 >/dev/null 2>&1; peer channel fetch config /tmp/_m.pb -o orderer.example.com:7050 --ordererTLSHostnameOverride orderer.example.com -c mychannel --tls --cafile $ORDERER"
+  },
+  "condition_params": {
+    "W": 1,
+    "total": 500,
+    "warmup_count": 5,
+    "warmup_ms": 2000,
+    "read_target_key": "Smsmphpdn-READTARGET"
+  },
+  "wall_clock_start": "2026-08-10T04:16:01.199Z",
+  "wall_clock_end": "2026-08-10T04:16:05.282Z",
+  "cooldown_observed_ms": 60002,
+  "timing": {
+    "wall_start_ns": "98357392225163",
+    "wall_end_ns": "98361300476124",
+    "steady_start_ns": "98358178347810",
+    "steady_end_ns": "98361300439875",
+    "steady_duration_ms": 3122.092065,
+    "total_duration_ms": 3908.250961,
+    "completed": 500
+  },
+  "ledger_before": {
+    "captured_at": "2026-08-10T04:16:01.207Z",
+    "peers": {
+      "org1": {
+        "height": 4531,
+        "currentBlockHash": "FYzPyRnpR+dVINgMHEKP/QELO0jzV+HloxIgFnkctdQ=",
+        "previousBlockHash": "UgWmABXY57n3O62rzdYa4s3AyRzU9TXn6B3d1B+ZTKs="
+      },
+      "org2": {
+        "height": 4531,
+        "currentBlockHash": "FYzPyRnpR+dVINgMHEKP/QELO0jzV+HloxIgFnkctdQ=",
+        "previousBlockHash": "UgWmABXY57n3O62rzdYa4s3AyRzU9TXn6B3d1B+ZTKs="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "mychannel",
+        "url": "/participation/v1/channels/mychannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 4531
+      }
+    }
+  },
+  "ledger_after": {
+    "captured_at": "2026-08-10T04:16:05.289Z",
+    "peers": {
+      "org1": {
+        "height": 4531,
+        "currentBlockHash": "FYzPyRnpR+dVINgMHEKP/QELO0jzV+HloxIgFnkctdQ=",
+        "previousBlockHash": "UgWmABXY57n3O62rzdYa4s3AyRzU9TXn6B3d1B+ZTKs="
+      },
+      "org2": {
+        "height": 4531,
+        "currentBlockHash": "FYzPyRnpR+dVINgMHEKP/QELO0jzV+HloxIgFnkctdQ=",
+        "previousBlockHash": "UgWmABXY57n3O62rzdYa4s3AyRzU9TXn6B3d1B+ZTKs="
+      }
+    },
+    "orderers": {
+      "orderer.example.com": {
+        "name": "mychannel",
+        "url": "/participation/v1/channels/mychannel",
+        "consensusRelation": "consenter",
+        "status": "active",
+        "height": 4531
+      }
+    },
+    "convergence": {
+      "converged": true,
+      "wait_ms": 114,
+      "polls": 1,
+      "timeout_ms": 900000,
+      "poll_ms": 1000,
+      "laggards_last_poll": null
+    }
+  },
+  "ledger_convergence": {
+    "converged": true,
+    "wait_ms": 114,
+    "polls": 1,
+    "timeout_ms": 900000,
+    "poll_ms": 1000,
+    "laggards_last_poll": null
+  },
+  "height_delta": {
+    "org1": 0,
+    "org2": 0
+  },
+  "peers_agree_after": {
+    "height": true,
+    "hash": true
+  },
+  "counts": {
+    "submitted": 500,
+    "committed": 500,
+    "errors_by_class": {
+      "MVCC_READ_CONFLICT": 0,
+      "PHANTOM_READ_CONFLICT": 0,
+      "ENDORSEMENT_POLICY_FAILURE": 0,
+      "CHAINCODE_REJECT": 0,
+      "ENDORSE_MISMATCH": 0,
+      "GATEWAY_DEADLINE": 0,
+      "GATEWAY_UNAVAILABLE": 0,
+      "ORDERER_UNAVAILABLE": 0,
+      "COMMIT_TIMEOUT": 0,
+      "OTHER": 0
+    },
+    "error_total": 0,
+    "invariant_holds": true,
+    "warmup_count_observed": 100,
+    "steady_count": 400
+  },
+  "suspect_low_steady_count": false,
+  "stake_before": null,
+  "stake_after": null,
+  "state_keys_before": {
+    "activeActors": 3002,
+    "totalRatings": 3002,
+    "linkedEvents": 1502,
+    "totalDisputes": 0,
+    "totalAssets_DEFECTIVE_ALWAYS_ZERO": 0,
+    "counted_keys": 7506
+  },
+  "state_keys_after": {
+    "activeActors": 3002,
+    "totalRatings": 3002,
+    "linkedEvents": 1502,
+    "totalDisputes": 0,
+    "totalAssets_DEFECTIVE_ALWAYS_ZERO": 0,
+    "counted_keys": 7506
+  },
+  "resource_coverage": "FULL",
+  "gateway_deadlines_ms": {
+    "evaluate": 15000,
+    "endorse": 60000,
+    "submit": 60000,
+    "commitStatus": 300000
+  },
+  "clients_n": 1,
+  "container_inventory": {
+    "L1": [
+      {
+        "name": "peer0org2_unified_ccaas",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:242e80b3871e5c3b7e2170c8d2a556734dbd580d87e5318ec1434f629618945b",
+        "started_at": "2026-08-10T03:57:20.814553871Z"
+      },
+      {
+        "name": "peer0org1_unified_ccaas",
+        "image_tag": "unified_ccaas_image:latest",
+        "image_digest": "sha256:242e80b3871e5c3b7e2170c8d2a556734dbd580d87e5318ec1434f629618945b",
+        "started_at": "2026-08-10T03:57:20.617706087Z"
+      },
+      {
+        "name": "peer0.org1.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:d0c8e53735626da30d66cdc8b81406d45458583d3779be4a1a2aac1eba84e01c",
+        "started_at": "2026-08-10T03:56:23.390718915Z"
+      },
+      {
+        "name": "orderer.example.com",
+        "image_tag": "hyperledger/fabric-orderer:latest",
+        "image_digest": "sha256:ac3b801a6da5c056e967e9738b0a998df5f9b159df6986196406a757cd03c075",
+        "started_at": "2026-08-10T03:56:23.389331217Z"
+      },
+      {
+        "name": "peer0.org2.example.com",
+        "image_tag": "hyperledger/fabric-peer:latest",
+        "image_digest": "sha256:d0c8e53735626da30d66cdc8b81406d45458583d3779be4a1a2aac1eba84e01c",
+        "started_at": "2026-08-10T03:56:23.386185427Z"
+      },
+      {
+        "name": "ca_orderer",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-10T03:56:16.995336167Z"
+      },
+      {
+        "name": "ca_org1",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-10T03:56:16.998324377Z"
+      },
+      {
+        "name": "ca_org2",
+        "image_tag": "hyperledger/fabric-ca:latest",
+        "image_digest": "sha256:09cb0b50ebdb4298e0d69c17d314eb8e96826eeafe2b6a7d14a06b7b6e47fb52",
+        "started_at": "2026-08-10T03:56:17.000073781Z"
+      }
+    ]
+  },
+  "chaincode_sha256_observed": {
+    "L1": "41f333d6ffcab44b5d2c3f50fb2797ddd21a6093d9c0a17a9836033623029cbe"
+  },
+  "env_snapshot_captured_at": "2026-08-10T04:03:00.330Z",
+  "qdisc_state": {
+    "L1": {
+      "iface": "lo",
+      "qdisc": "qdisc noqueue 0: root refcnt 2  "
+    }
+  },
+  "netem_in_effect": null,
+  "endorsement_policy_in_effect": "MAJORITY",
+  "node_versions": {
+    "node": "v18.19.1",
+    "harness_host": "zenbook"
+  },
+  "resource_coverage_detail": {
+    "L1": {
+      "ticks_in_window": 2,
+      "expected_ticks": 2.0,
+      "verdict": "FULL"
+    }
+  },
+  "channel_params_verified_external": {
+    "_source": "independent peer channel fetch + configtxlator decode, taken immediately before the first Phase 8 run and archived as channel_config_verified.json. Added post-hoc because bench.js decodedChannelParams() uses lab-only paths (fabric-tools, /tmp/pe.sh) and returned an error string on this testbed. The original error is left in channel_params and NOT overwritten.",
+    "config_sequence": "3",
+    "batch_timeout": "10ms",
+    "batch_size": {
+      "absolute_max_bytes": 103809024,
+      "max_message_count": 100,
+      "preferred_max_bytes": 2097152
+    },
+    "consensus_type": "etcdraft",
+    "raft_options": {
+      "election_tick": 10,
+      "heartbeat_tick": 1,
+      "max_inflight_blocks": 10,
+      "snapshot_interval_size": 16777216,
+      "tick_interval": "100ms"
+    },
+    "endorsement": {
+      "rule": "MAJORITY",
+      "sub_policy": "Endorsement"
+    }
+  }
+}

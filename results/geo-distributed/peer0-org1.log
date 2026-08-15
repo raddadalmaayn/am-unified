@@ -1,0 +1,30 @@
+[34m2026-04-02 20:48:04.849 UTC 116d INFO[0m [endorser] [34;1mcallChaincode[0m -> finished chaincode: unified duration: 0ms channel=amchannel txID=29f3ac8b
+[34m2026-04-02 20:48:04.849 UTC 116e INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=D1:33560 grpc.code=OK grpc.call_duration=1.420095ms
+[34m2026-04-02 20:48:04.917 UTC 116f INFO[0m [gossip.privdata] [34;1mStoreBlock[0m -> Received block [232] from buffer channel=amchannel
+[34m2026-04-02 20:48:04.922 UTC 1170 INFO[0m [committer.txvalidator] [34;1mValidate[0m -> [amchannel] Validated block [232] in 4ms
+[34m2026-04-02 20:48:05.174 UTC 1171 INFO[0m [kvledger] [34;1mcommit[0m -> [amchannel] Committed block [232] with 1 transaction(s) in 252ms (state_validation=0ms block_and_pvtdata_commit=152ms state_commit=44ms) commitHash=[baa537529ebb0033e163176beb2057e800213eb57790dfef987ee423395ced3a]
+[34m2026-04-02 20:48:05.176 UTC 1172 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.request_deadline=2026-04-02T20:48:34.855Z grpc.peer_address=D1:33570 error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=320.456831ms
+[34m2026-04-02 20:48:05.183 UTC 1173 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca686d6c0] Closing: EOF
+[34m2026-04-02 20:48:05.183 UTC 1174 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca40e6820] Closing: EOF
+[34m2026-04-02 20:48:05.183 UTC 1175 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca686d6c0] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:05.183 UTC 1176 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca40e6820] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:05.326 UTC 1177 INFO[0m [endorser] [34;1mcallChaincode[0m -> finished chaincode: unified duration: 1ms channel=amchannel txID=96daed26
+[34m2026-04-02 20:48:05.326 UTC 1178 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=D1:33582 grpc.code=OK grpc.call_duration=3.049173ms
+[34m2026-04-02 20:48:05.393 UTC 1179 INFO[0m [gossip.privdata] [34;1mStoreBlock[0m -> Received block [233] from buffer channel=amchannel
+[34m2026-04-02 20:48:05.399 UTC 117a INFO[0m [committer.txvalidator] [34;1mValidate[0m -> [amchannel] Validated block [233] in 6ms
+[34m2026-04-02 20:48:05.653 UTC 117b INFO[0m [kvledger] [34;1mcommit[0m -> [amchannel] Committed block [233] with 1 transaction(s) in 253ms (state_validation=0ms block_and_pvtdata_commit=152ms state_commit=44ms) commitHash=[533895675d4bb7f823a6dd12afa3d8d69c71c56b1287f2b4bae2d23880125304]
+[34m2026-04-02 20:48:05.654 UTC 117c INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.request_deadline=2026-04-02T20:48:35.331Z grpc.peer_address=D1:33598 error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=323.088626ms
+[34m2026-04-02 20:48:05.660 UTC 117d INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca7ce7860] Closing: EOF
+[34m2026-04-02 20:48:05.660 UTC 117e INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6b4b520] Closing: EOF
+[34m2026-04-02 20:48:05.660 UTC 117f INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca7ce7860] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:05.660 UTC 1180 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6b4b520] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:05.736 UTC 1181 INFO[0m [endorser] [34;1mcallChaincode[0m -> finished chaincode: unified duration: 1ms channel=amchannel txID=82fd9940
+[34m2026-04-02 20:48:05.736 UTC 1182 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=D1:33608 grpc.code=OK grpc.call_duration=1.9953ms
+[34m2026-04-02 20:48:05.805 UTC 1183 INFO[0m [gossip.privdata] [34;1mStoreBlock[0m -> Received block [234] from buffer channel=amchannel
+[34m2026-04-02 20:48:05.810 UTC 1184 INFO[0m [committer.txvalidator] [34;1mValidate[0m -> [amchannel] Validated block [234] in 4ms
+[34m2026-04-02 20:48:06.076 UTC 1185 INFO[0m [kvledger] [34;1mcommit[0m -> [amchannel] Committed block [234] with 1 transaction(s) in 266ms (state_validation=0ms block_and_pvtdata_commit=154ms state_commit=55ms) commitHash=[f1b44f7770b82f071e7c4e2c34c20d879c74c040c85208d17d855eab5ee4a252]
+[34m2026-04-02 20:48:06.077 UTC 1186 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.request_deadline=2026-04-02T20:48:35.743Z grpc.peer_address=D1:33622 error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=334.38827ms
+[34m2026-04-02 20:48:06.083 UTC 1187 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6121ba0] Closing: EOF
+[34m2026-04-02 20:48:06.083 UTC 1188 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6121d40] Closing: EOF
+[34m2026-04-02 20:48:06.083 UTC 1189 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6121d40] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:06.083 UTC 118a INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x263ca6121ba0] loopyWriter exiting with error: transport closed by client

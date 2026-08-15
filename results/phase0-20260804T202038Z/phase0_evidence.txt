@@ -1,0 +1,44 @@
+# Phase 0 raw evidence — captured 2026-08-04T20:29:36Z
+
+## 0a repo
+root=am-unified branch=main HEAD=9a9db0ef541d2e400effdb08e3b4a135692a2c10
+ M scripts/deploy.sh
+?? Paper/
+?? results/geo-distributed/
+?? results/phase0-20260804T202038Z/
+?? results/post-time-fix-20260420-143353/
+
+## versions
+peer/orderer images: fabric-peer sha256:222c37c35011..., fabric-orderer sha256:5cf04c3399a0...
+peer binary v3.1.4, orderer binary v3.1.4, peer CLI on D1 v2.5.15
+
+## chaincode
+binary sha256 (all 4 nodes) = 46ae8a9f2cfcac4cf967ddcd0bf47e381f3f3377b8647b52c94dd39cb40ecff5
+binary md5 = d1bda4727696177d2b0389eb1121649b
+image = sha256:69ace66880c3a5b8b814fbdf66f11c168843dbd4b0cde85c0082b9247ad089f5
+
+## 0b heights
+all four peers: height=17664 hash=Kp3DAYVCPR5S+kNnfsbgL+8+h4jBFz/bNPi74EUv7qI=
+
+## 0d osnadmin
+orderer.example.com / orderer2 / orderer3 : consensusRelation=consenter status=active height=17664
+
+## 0i ping matrix (100 pkt, -i 0.2), min/avg/max/mdev ms
+D1->D2 0.285/0.359/0.445/0.030    D1->D3 0.232/0.635/0.956/0.197    D1->D4 0.242/0.427/0.943/0.169
+D2->D1 0.217/0.350/0.550/0.061    D2->D3 0.157/0.499/0.780/0.187    D2->D4 0.152/0.371/0.764/0.188
+D3->D1 0.247/0.520/0.732/0.125    D3->D2 0.153/0.290/0.573/0.085    D3->D4 0.155/0.527/1.107/0.279
+D4->D1 0.186/0.436/0.803/0.146    D4->D2 0.171/0.282/0.555/0.061    D4->D3 0.171/0.531/1.094/0.258
+all pairs 0% packet loss
+
+## 0i interfaces / MTU / qdisc
+D1 enp4s0f0 mtu1500 D1/23 ; D2 enp0s25 mtu1500 D2/23 ; D3 eno1 mtu1500 D3/23 ; D4 eno1 mtu1500 D4/23
+qdisc on all four: default only (mq+fq_codel / fq_codel). NO netem present.
+
+## 0j
+D1 results dir am-unified/results on /dev/sda2 ext4, 834G avail, 60.6M inodes free, NOT tmpfs
+laptop am-unified/results on /dev/nvme0n1p2 ext4, 70G avail
+
+## 0k state baseline (pre-Phase-3)
+peer production dir: D1 471M, D2 471M, D3 470M, D4 470M
+stateLeveldb: D1 29M, D2/D3/D4 28M ; chains: 434M each ; 20 files in stateLeveldb each
+GetSupplyChainMetrics: totalAssets=0 activeActors=32047 totalRatings=33146 totalDisputes=0 linkedEvents=16299

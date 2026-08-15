@@ -1,0 +1,129 @@
+PHASE 4 throughput, three definitions side by side (E3) — number provenance
+===========================================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+P4.W1.tps_manifest         = 2.32
+                             phase4-20260809T221329Z/W1/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W1.tps_prev_analyze     = 2.32
+                             phase4-20260809T221329Z/W1/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W1.tps_corrected        = 2.32
+                             phase4-20260809T221329Z/W1/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W1.steady_count         = 94
+                             phase4-20260809T221329Z/W1/E/*/txs.jsonl
+                             computeSteady().count
+P4.W1.steady_duration_s    = 40.537
+                             phase4-20260809T221329Z/W1/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W5.tps_manifest         = 8.39
+                             phase4-20260809T221329Z/W5/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W5.tps_prev_analyze     = 8.28
+                             phase4-20260809T221329Z/W5/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W5.tps_corrected        = 8.27
+                             phase4-20260809T221329Z/W5/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W5.steady_count         = 469
+                             phase4-20260809T221329Z/W5/E/*/txs.jsonl
+                             computeSteady().count
+P4.W5.steady_duration_s    = 56.618
+                             phase4-20260809T221329Z/W5/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W10.tps_manifest        = 13.93
+                             phase4-20260809T221329Z/W10/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W10.tps_prev_analyze    = 13.79
+                             phase4-20260809T221329Z/W10/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W10.tps_corrected       = 13.66
+                             phase4-20260809T221329Z/W10/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W10.steady_count        = 438
+                             phase4-20260809T221329Z/W10/E/*/txs.jsonl
+                             computeSteady().count
+P4.W10.steady_duration_s   = 32.294
+                             phase4-20260809T221329Z/W10/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W20.tps_manifest        = 13.30
+                             phase4-20260809T221329Z/W20/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W20.tps_prev_analyze    = 12.76
+                             phase4-20260809T221329Z/W20/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W20.tps_corrected       = 12.73
+                             phase4-20260809T221329Z/W20/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W20.steady_count        = 414
+                             phase4-20260809T221329Z/W20/E/*/txs.jsonl
+                             computeSteady().count
+P4.W20.steady_duration_s   = 33.452
+                             phase4-20260809T221329Z/W20/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W50.tps_manifest        = 12.10
+                             phase4-20260809T221329Z/W50/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W50.tps_prev_analyze    = 11.78
+                             phase4-20260809T221329Z/W50/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W50.tps_corrected       = 11.75
+                             phase4-20260809T221329Z/W50/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W50.steady_count        = 1747
+                             phase4-20260809T221329Z/W50/E/*/txs.jsonl
+                             computeSteady().count
+P4.W50.steady_duration_s   = 148.712
+                             phase4-20260809T221329Z/W50/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W100.tps_manifest       = 13.25
+                             phase4-20260809T221329Z/W100/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W100.tps_prev_analyze   = 12.48
+                             phase4-20260809T221329Z/W100/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W100.tps_corrected      = 12.47
+                             phase4-20260809T221329Z/W100/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W100.steady_count       = 1695
+                             phase4-20260809T221329Z/W100/E/*/txs.jsonl
+                             computeSteady().count
+P4.W100.steady_duration_s  = 135.589
+                             phase4-20260809T221329Z/W100/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W200.tps_manifest       = 15.05
+                             phase4-20260809T221329Z/W200/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W200.tps_prev_analyze   = 13.25
+                             phase4-20260809T221329Z/W200/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W200.tps_corrected      = 13.24
+                             phase4-20260809T221329Z/W200/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W200.steady_count       = 1531
+                             phase4-20260809T221329Z/W200/E/*/txs.jsonl
+                             computeSteady().count
+P4.W200.steady_duration_s  = 115.633
+                             phase4-20260809T221329Z/W200/E/*/txs.jsonl
+                             computeSteady().duration_s
+P4.W400.tps_manifest       = 23.34
+                             phase4-20260809T221329Z/W400/E/*/manifest.json
+                             counts.steady_count / timing.steady_duration_ms   [superseded]
+P4.W400.tps_prev_analyze   = 17.05
+                             phase4-20260809T221329Z/W400/analysis.json
+                             per_condition.E.median_across_runs.steady_tps   [superseded]
+P4.W400.tps_corrected      = 17.44
+                             phase4-20260809T221329Z/W400/E/*/txs.jsonl
+                             steady.js computeSteady()   [E1, reported]
+P4.W400.steady_count       = 1184
+                             phase4-20260809T221329Z/W400/E/*/txs.jsonl
+                             computeSteady().count
+P4.W400.steady_duration_s  = 68.002
+                             phase4-20260809T221329Z/W400/E/*/txs.jsonl
+                             computeSteady().duration_s

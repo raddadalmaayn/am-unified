@@ -1,0 +1,10 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 20,
+    "total": 1000,
+    "dir": "am-unified/results/probe-20260804T212237Z/clients1/E/run1",
+    "invariant_holds": true
+  }
+]

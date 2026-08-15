@@ -1,0 +1,105 @@
+TABLE 9 (distributed concurrent, W=20) — number provenance
+==========================================================
+
+Every number in the companion fragment, with its source.
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY
+occupancy.json <- occupancy.js, computed from run manifests (height_delta);
+                  NOT derivable from txs.jsonl
+manifest.json  <- written by bench.js at run completion
+
+T9.E.steady_tps                     = 11.68
+                                      phase3b-20260809T210708Z/E/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+T9.E.steady_count                   = 1872
+                                      phase3b-20260809T210708Z/E/*/txs.jsonl
+                                      computeSteady().count
+T9.E.steady_duration_s              = 159.990
+                                      phase3b-20260809T210708Z/E/*/txs.jsonl
+                                      computeSteady().duration_s
+T9.E.total_window_tps               = 11.97
+                                      phase3b-20260809T210708Z/E/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T9.E.mvcc_rate_pct                  = 0.00
+                                      phase3b-20260809T210708Z/analysis.json
+                                      per_condition.E.errors_by_class_total.MVCC_READ_CONFLICT / per_condition.E.n_total
+T9.E.tx_per_block                   = 3.29
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=E].tx_per_block (median of 3)   [from manifest height_delta]
+T9.E.block_rate_per_s               = 3.63
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=E].block_rate_per_s_total_window (median of 3)   [TOTAL-window basis, to match tx_per_block (whole-run)]
+T9.E.block_rate_steady_NOT_EMITTED  = 3.79
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=E].block_rate_per_s   [steady-window basis; not emitted, would not close the identity]
+T9.F.steady_tps                     = 11.93
+                                      phase3b-20260809T210708Z/F/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+T9.F.steady_count                   = 1879
+                                      phase3b-20260809T210708Z/F/*/txs.jsonl
+                                      computeSteady().count
+T9.F.steady_duration_s              = 157.446
+                                      phase3b-20260809T210708Z/F/*/txs.jsonl
+                                      computeSteady().duration_s
+T9.F.total_window_tps               = 12.17
+                                      phase3b-20260809T210708Z/F/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T9.F.mvcc_rate_pct                  = 0.00
+                                      phase3b-20260809T210708Z/analysis.json
+                                      per_condition.F.errors_by_class_total.MVCC_READ_CONFLICT / per_condition.F.n_total
+T9.F.tx_per_block                   = 3.40
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=F].tx_per_block (median of 3)   [from manifest height_delta]
+T9.F.block_rate_per_s               = 3.57
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=F].block_rate_per_s_total_window (median of 3)   [TOTAL-window basis, to match tx_per_block (whole-run)]
+T9.F.block_rate_steady_NOT_EMITTED  = 3.72
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=F].block_rate_per_s   [steady-window basis; not emitted, would not close the identity]
+T9.G.steady_tps                     = 12.16
+                                      phase3b-20260809T210708Z/G/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+T9.G.steady_count                   = 1875
+                                      phase3b-20260809T210708Z/G/*/txs.jsonl
+                                      computeSteady().count
+T9.G.steady_duration_s              = 154.241
+                                      phase3b-20260809T210708Z/G/*/txs.jsonl
+                                      computeSteady().duration_s
+T9.G.total_window_tps               = 12.52
+                                      phase3b-20260809T210708Z/G/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T9.G.mvcc_rate_pct                  = 0.00
+                                      phase3b-20260809T210708Z/analysis.json
+                                      per_condition.G.errors_by_class_total.MVCC_READ_CONFLICT / per_condition.G.n_total
+T9.G.tx_per_block                   = 3.48
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=G].tx_per_block (median of 3)   [from manifest height_delta]
+T9.G.block_rate_per_s               = 3.54
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=G].block_rate_per_s_total_window (median of 3)   [TOTAL-window basis, to match tx_per_block (whole-run)]
+T9.G.block_rate_steady_NOT_EMITTED  = 3.71
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=G].block_rate_per_s   [steady-window basis; not emitted, would not close the identity]
+T9.H.steady_tps                     = 2.35
+                                      phase3b-20260809T210708Z/H/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+T9.H.steady_count                   = 23
+                                      phase3b-20260809T210708Z/H/*/txs.jsonl
+                                      computeSteady().count
+T9.H.steady_duration_s              = 8.865
+                                      phase3b-20260809T210708Z/H/*/txs.jsonl
+                                      computeSteady().duration_s
+T9.H.total_window_tps               = 2.43
+                                      phase3b-20260809T210708Z/H/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2: whole-run basis]
+T9.H.mvcc_rate_pct                  = 39.47
+                                      phase3b-20260809T210708Z/analysis.json
+                                      per_condition.H.errors_by_class_total.MVCC_READ_CONFLICT / per_condition.H.n_total
+T9.H.tx_per_block                   = 0.74
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=H].tx_per_block (median of 3)   [from manifest height_delta]
+T9.H.block_rate_per_s               = 2.99
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=H].block_rate_per_s_total_window (median of 3)   [TOTAL-window basis, to match tx_per_block (whole-run)]
+T9.H.block_rate_steady_NOT_EMITTED  = 33.99
+                                      phase3b-20260809T210708Z/occupancy.json
+                                      runs[condition=H].block_rate_per_s   [artifact for H, see PHASE_3B_REPORT section 4; not emitted]

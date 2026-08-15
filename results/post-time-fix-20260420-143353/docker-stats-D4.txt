@@ -1,0 +1,4 @@
+NAME                     CPU %     MEM USAGE / LIMIT
+cc-unified               0.00%     25.82MiB / 15.45GiB
+peer0.org4.example.com   0.77%     267.3MiB / 15.45GiB
+orderer.example.com      0.36%     186MiB / 15.45GiB

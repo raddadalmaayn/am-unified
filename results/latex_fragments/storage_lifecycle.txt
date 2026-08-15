@@ -1,0 +1,74 @@
+SECTION 5.4 storage footprint — number provenance
+==================================================
+
+Measured against the live single-host ledger at 2026-08-12T04:10:16.044Z
+channel=mychannel chaincode=unified sample asset=P11_C1_calib-1786420116549-0-hzn6w
+
+Sizes are the serialised JSON value as the chaincode returns it. They exclude
+the key and any LevelDB framing, so they are the payload size, not the
+on-disk size.
+
+S.event.MATERIAL_CERTIFICATION_bytes    = 487.00
+                                          live ledger query
+                                          median serialised JSON of 6 ProvenanceEvent records of type MATERIAL_CERTIFICATION
+S.event.PRINT_COMPLETION_bytes          = 433.00
+                                          live ledger query
+                                          median serialised JSON of 6 ProvenanceEvent records of type PRINT_COMPLETION
+S.event.DELIVERY_bytes                  = 429.00
+                                          live ledger query
+                                          median serialised JSON of 6 ProvenanceEvent records of type DELIVERY
+S.event.mean_bytes                      = 449.67
+                                          (derived)
+                                          mean of the 3 measured event-type medians
+S.rating_bytes                          = 472.00
+                                          live ledger query
+                                          GetPartTrustReport().linkedRatings[0]
+S.accumulator_bytes                     = 247.00
+                                          live ledger query
+                                          ReputationContract:GetReputation(P11_C1_calib-1786420116549-0-hzn6w-actor, quality)
+S.asset_bytes                           = 195.00
+                                          live ledger query
+                                          ProvenanceContract:ReadAsset
+S.link_bytes_CARRIED_FORWARD            = 251.00
+                                          NOT MEASURABLE via any read-only API
+                                          carried from the 2026-06 accounting; PROV_REP_LINK has no standalone query
+S.lifecycle.events_bytes                = 3147.67
+                                          (derived)
+                                          7 x S.event.mean_bytes
+S.lifecycle.ratings_bytes               = 2832.00
+                                          (derived)
+                                          6 x S.rating_bytes
+S.lifecycle.accumulators_bytes          = 988.00
+                                          (derived)
+                                          4 x S.accumulator_bytes
+S.lifecycle.links_bytes_CARRIED         = 1506.00
+                                          (derived)
+                                          6 x S.link_bytes_CARRIED_FORWARD
+S.lifecycle.measured_subtotal_bytes     = 7162.67
+                                          (derived)
+                                          events+ratings+accumulators+asset, all measured
+S.lifecycle.total_bytes                 = 8668.67
+                                          (derived)
+                                          measured subtotal + carried-forward link entries
+S.projection_1M_GB                      = 8.67
+                                          (derived)
+                                          S.lifecycle.total_bytes x 1e6, decimal GB
+S.table2_six_events_bytes               = 2698.00
+                                          (derived)
+                                          6 x S.event.mean_bytes, for Table 2 total row
+S.naive_six_events_bytes                = 7200000.00
+                                          Table 2 naive column
+                                          sum of the six naive per-event sizes, ~7.2 MB
+S.reduction_events_x                    = 2668.64
+                                          (derived)
+                                          S.naive_six_events_bytes / S.table2_six_events_bytes
+S.reduction_lifecycle_x                 = 830.58
+                                          (derived)
+                                          S.naive_six_events_bytes / S.lifecycle.total_bytes
+
+NOT MEASURED:
+  PROV_REP_LINK is written under key PROV_REP_LINK:<assetID>:<txID>. No
+  read-only query on any of the three contracts returns it standalone, and
+  GetPartTrustReport surfaces only the joined linkedRatings view. Its size
+  is therefore carried forward from the 2026-06 accounting at 251 B and is
+  labelled as such in the manuscript. No substitute was computed.

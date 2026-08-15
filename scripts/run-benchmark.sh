@@ -16,8 +16,11 @@ echo ""
 echo "=== Collecting peer logs ==="
 RESULTS_DIR=~/am-unified/results/geo-distributed
 mkdir -p $RESULTS_DIR
-for ip in 10.12.11.48 10.12.10.136 10.12.10.92 10.12.10.126; do
-    ssh -i ~/.ssh/id_fabric -o StrictHostKeyChecking=no iot-lab@$ip \
+# Host addresses and SSH login for the four nodes; set these for your deployment.
+FABRIC_SSH_USER="${FABRIC_SSH_USER:?set FABRIC_SSH_USER to the SSH login on the four nodes}"
+SSH_KEY="${SSH_KEY:-$HOME/.ssh/id_fabric}"
+for ip in "${D1_HOST:?set D1_HOST}" "${D2_HOST:?set D2_HOST}" "${D3_HOST:?set D3_HOST}" "${D4_HOST:?set D4_HOST}"; do
+    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no "$FABRIC_SSH_USER@$ip" \
         "sudo docker logs \$(sudo docker ps --format '{{.Names}}' | head -1) 2>&1 | tail -30" \
         > $RESULTS_DIR/logs_${ip}.txt 2>/dev/null || echo "  (could not collect logs from $ip)"
 done

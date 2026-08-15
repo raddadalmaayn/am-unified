@@ -1,0 +1,11 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 400,
+    "total": 2000,
+    "dir": "am-unified/results/phase4-20260809T221329Z/probe_W400_clients1/E/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmfwfvu"
+  }
+]

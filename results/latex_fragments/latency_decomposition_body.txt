@@ -1,0 +1,49 @@
+SECTION 5.2 latency decomposition — number provenance
+======================================================
+
+Source: am-unified/results/phase8-20260810T040300Z/analysis.json
+computed by analyze.js from txs.jsonl only. The harness timestamps three phase
+boundaries per transaction from a monotonic clock, so endorsement and
+order+commit are measured, not inferred from the total.
+
+D.A.endorse_median_ms           = 12.32
+                                  phase8/analysis.json
+                                  per_condition.A.median_across_runs.endorse_median
+D.A.order_commit_median_ms      = 34.96
+                                  phase8/analysis.json
+                                  per_condition.A.median_across_runs.order_commit_median
+D.A.p50_total_ms                = 47.33
+                                  phase8/analysis.json
+                                  per_condition.A.median_across_runs.p50
+D.A.sum_check_ms                = 47.29
+                                  (derived)
+                                  endorse_median + order_commit_median, to be compared against p50
+D.B.endorse_median_ms           = 14.12
+                                  phase8/analysis.json
+                                  per_condition.B.median_across_runs.endorse_median
+D.B.order_commit_median_ms      = 34.34
+                                  phase8/analysis.json
+                                  per_condition.B.median_across_runs.order_commit_median
+D.B.p50_total_ms                = 48.81
+                                  phase8/analysis.json
+                                  per_condition.B.median_across_runs.p50
+D.B.sum_check_ms                = 48.46
+                                  (derived)
+                                  endorse_median + order_commit_median, to be compared against p50
+D.C.endorse_median_ms           = 16.40
+                                  phase8/analysis.json
+                                  per_condition.C.median_across_runs.endorse_median
+D.C.order_commit_median_ms      = 33.67
+                                  phase8/analysis.json
+                                  per_condition.C.median_across_runs.order_commit_median
+D.C.p50_total_ms                = 50.08
+                                  phase8/analysis.json
+                                  per_condition.C.median_across_runs.p50
+D.C.sum_check_ms                = 50.07
+                                  (derived)
+                                  endorse_median + order_commit_median, to be compared against p50
+
+Closure check (endorse + order_commit vs measured P50):
+  Provenance write         12.32 + 34.96 = 47.29  vs P50 47.33
+  Reputation write         14.12 + 34.34 = 48.46  vs P50 48.81
+  Bridge write (atomic)    16.40 + 33.67 = 50.07  vs P50 50.08

@@ -1,0 +1,11 @@
+[
+  {
+    "condition": "A",
+    "run_index": 1,
+    "W": 1,
+    "total": 500,
+    "dir": "am-unified/results/phase8d-seqcheck-20260810T205432Z/A/run1",
+    "invariant_holds": true,
+    "session_id": "Smsnpmfim"
+  }
+]

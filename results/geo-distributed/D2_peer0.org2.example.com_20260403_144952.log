@@ -1,0 +1,100 @@
+[34m2026-04-03 20:49:07.914 UTC 3f81 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354 SubChannel #355]Subchannel Connectivity change to READY
+[34m2026-04-03 20:49:07.914 UTC 3f82 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x2490ccded830] SubConn 0x2490cd7a3450 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-04-03 20:49:07.914 UTC 3f83 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354]Channel Connectivity change to READY
+[34m2026-04-03 20:49:07.917 UTC 3f84 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354]Channel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:07.917 UTC 3f85 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354]Closing the name resolver
+[34m2026-04-03 20:49:07.917 UTC 3f86 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354]ccBalancerWrapper: closing
+[34m2026-04-03 20:49:07.918 UTC 3f87 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354 SubChannel #355]Subchannel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:07.918 UTC 3f88 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354 SubChannel #355]Subchannel deleted
+[34m2026-04-03 20:49:07.918 UTC 3f89 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x2490ccdf4248] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:07.918 UTC 3f8a INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x2490ccdf4248] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:07.918 UTC 3f8b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #354]Channel deleted
+[33m2026-04-03 20:49:07.918 UTC 3f8c WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: <nil>, Metadata:  : peer0.org1.example.com:7051 isn't in our organization, cannot be a bootstrap peer
+[34m2026-04-03 20:49:31.195 UTC 3f8d INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:33.195Z grpc.peer_address=D1:41228 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=99.537µs
+[34m2026-04-03 20:49:31.197 UTC 3f8e INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer 9fa3f0b9f38c2b1cd38e8c1181eedbdc72e8f71def837811c773a6676bdda191 (D1:41228) probed us
+[34m2026-04-03 20:49:31.197 UTC 3f8f INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:49:41.196Z grpc.peer_address=D1:41228 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=1.210294ms
+[34m2026-04-03 20:49:31.199 UTC 3f90 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x2490cd04a1a0] Closing: EOF
+[34m2026-04-03 20:49:31.199 UTC 3f91 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x2490cd04a1a0] loopyWriter exiting with error: transport closed by client
+[34m2026-04-03 20:49:32.919 UTC 3f92 INFO[0m [grpc] [34;1mInfof[0m -> [core] original dial target is: "peer0.org1.example.com:7051"
+[34m2026-04-03 20:49:32.919 UTC 3f93 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel created
+[34m2026-04-03 20:49:32.919 UTC 3f94 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]parsed dial target is: resolver.Target{URL:url.URL{Scheme:"passthrough", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/peer0.org1.example.com:7051", Fragment:"", RawQuery:"", RawPath:"", RawFragment:"", ForceQuery:false, OmitHost:false}}
+[34m2026-04-03 20:49:32.919 UTC 3f95 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel authority set to "peer0.org1.example.com:7051"
+[34m2026-04-03 20:49:32.919 UTC 3f96 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Resolver state updated: {
+  "Addresses": [
+    {
+      "Addr": "peer0.org1.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org1.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+} (resolver returned new addresses)
+[34m2026-04-03 20:49:32.919 UTC 3f97 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel switches to new LB policy "pick_first"
+[34m2026-04-03 20:49:32.919 UTC 3f98 INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x2490cb71ad80] Received new config {
+  "shuffleAddressList": false
+}, resolver state {
+  "Addresses": [
+    {
+      "Addr": "peer0.org1.example.com:7051",
+      "ServerName": "",
+      "Attributes": null,
+      "BalancerAttributes": null,
+      "Metadata": null
+    }
+  ],
+  "Endpoints": [
+    {
+      "Addresses": [
+        {
+          "Addr": "peer0.org1.example.com:7051",
+          "ServerName": "",
+          "Attributes": null,
+          "BalancerAttributes": null,
+          "Metadata": null
+        }
+      ],
+      "Attributes": null
+    }
+  ],
+  "ServiceConfig": null,
+  "Attributes": null
+}
+[34m2026-04-03 20:49:32.919 UTC 3f99 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:32.919 UTC 3f9a INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel created
+[34m2026-04-03 20:49:32.919 UTC 3f9b INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel exiting idle mode
+[34m2026-04-03 20:49:32.920 UTC 3f9c INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel Connectivity change to CONNECTING
+[34m2026-04-03 20:49:32.920 UTC 3f9d INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel picks a new address "peer0.org1.example.com:7051" to connect
+[34m2026-04-03 20:49:32.926 UTC 3f9e INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel Connectivity change to READY
+[34m2026-04-03 20:49:32.926 UTC 3f9f INFO[0m [grpc] [34;1mInfof[0m -> [pick-first-leaf-lb] [pick-first-leaf-lb 0x2490cb71ad80] SubConn 0x2490cee0dc20 reported connectivity state READY and the health listener is disabled. Transitioning SubConn to READY.
+[34m2026-04-03 20:49:32.926 UTC 3fa0 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel Connectivity change to READY
+[34m2026-04-03 20:49:32.930 UTC 3fa1 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:32.930 UTC 3fa2 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Closing the name resolver
+[34m2026-04-03 20:49:32.930 UTC 3fa3 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]ccBalancerWrapper: closing
+[34m2026-04-03 20:49:32.930 UTC 3fa4 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel Connectivity change to SHUTDOWN
+[34m2026-04-03 20:49:32.930 UTC 3fa5 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358 SubChannel #359]Subchannel deleted
+[34m2026-04-03 20:49:32.930 UTC 3fa6 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x2490ccdf4488] Closing: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:32.930 UTC 3fa7 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [client-transport 0x2490ccdf4488] loopyWriter exiting with error: rpc error: code = Canceled desc = grpc: the client connection is closing
+[34m2026-04-03 20:49:32.930 UTC 3fa8 INFO[0m [grpc] [34;1mAddTraceEvent[0m -> [core] [Channel #358]Channel deleted
+[33m2026-04-03 20:49:32.930 UTC 3fa9 WARN[0m [gossip.discovery] [33;1mfunc1[0m -> Could not connect to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: <nil>, Metadata:  : peer0.org1.example.com:7051 isn't in our organization, cannot be a bootstrap peer
+[34m2026-04-03 20:49:56.209 UTC 3faa INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2026-04-03T20:49:58.209Z grpc.peer_address=D1:36570 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=137.177µs
+[34m2026-04-03 20:49:56.211 UTC 3fab INFO[0m [gossip.comm] [34;1mGossipStream[0m -> Peer 9fa3f0b9f38c2b1cd38e8c1181eedbdc72e8f71def837811c773a6676bdda191 (D1:36570) probed us
+[34m2026-04-03 20:49:56.211 UTC 3fac INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2026-04-03T20:50:06.21Z grpc.peer_address=D1:36570 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=1.320478ms
+[34m2026-04-03 20:49:56.213 UTC 3fad INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x2490cd1cc340] Closing: EOF
+[34m2026-04-03 20:49:56.213 UTC 3fae INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x2490cd1cc340] loopyWriter exiting with error: transport closed by client

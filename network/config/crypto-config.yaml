@@ -1,3 +1,7 @@
+# NOTE: the IP addresses in the SANS entries below are RFC 5737
+# documentation PLACEHOLDER addresses (192.0.2.11-.14 for D1-D4).
+# Replace them with your own node addresses before running cryptogen,
+# or peers reached by IP will fail TLS hostname verification.
 OrdererOrgs:
   - Name: Orderer
     Domain: example.com
@@ -7,7 +11,7 @@ OrdererOrgs:
         SANS:
           - localhost
           - orderer.example.com
-          - 10.12.10.126
+          - 192.0.2.14
 
 PeerOrgs:
   - Name: Org1
@@ -18,7 +22,7 @@ PeerOrgs:
       SANS:
         - localhost
         - peer0.org1.example.com
-        - 10.12.11.48
+        - 192.0.2.11
     Users:
       Count: 1
 
@@ -30,7 +34,7 @@ PeerOrgs:
       SANS:
         - localhost
         - peer0.org2.example.com
-        - 10.12.10.136
+        - 192.0.2.12
     Users:
       Count: 1
 
@@ -42,7 +46,7 @@ PeerOrgs:
       SANS:
         - localhost
         - peer0.org3.example.com
-        - 10.12.10.92
+        - 192.0.2.13
     Users:
       Count: 1
 
@@ -54,6 +58,6 @@ PeerOrgs:
       SANS:
         - localhost
         - peer0.org4.example.com
-        - 10.12.10.126
+        - 192.0.2.14
     Users:
       Count: 1

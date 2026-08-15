@@ -1,0 +1,30 @@
+[34m2026-04-02 20:48:04.034 UTC 0870 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [230], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-02 20:48:04.037 UTC 0871 INFO[0m [orderer.consensus.etcdraft] [34;1mwriteBlock[0m -> Writing block [230] (Raft index: 232) to ledger channel=amchannel node=1
+[34m2026-04-02 20:48:04.324 UTC 0872 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebf0004e0] Closing: EOF
+[34m2026-04-02 20:48:04.325 UTC 0873 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebf0004e0] loopyWriter exiting with error: transport closed by client
+[33m2026-04-02 20:48:04.325 UTC 0874 WARN[0m [orderer.common.broadcast] [33;1mHandle[0m -> Error reading from D1:55316: rpc error: code = Canceled desc = context canceled
+[34m2026-04-02 20:48:04.325 UTC 0875 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=D1:55316 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=353.105207ms
+[34m2026-04-02 20:48:04.457 UTC 0876 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [231], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-02 20:48:04.459 UTC 0877 INFO[0m [orderer.consensus.etcdraft] [34;1mwriteBlock[0m -> Writing block [231] (Raft index: 233) to ledger channel=amchannel node=1
+[34m2026-04-02 20:48:04.718 UTC 0878 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6d8d00] Closing: EOF
+[33m2026-04-02 20:48:04.718 UTC 0879 WARN[0m [orderer.common.broadcast] [33;1mHandle[0m -> Error reading from D1:55318: rpc error: code = Canceled desc = context canceled
+[34m2026-04-02 20:48:04.718 UTC 087a INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=D1:55318 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=322.499273ms
+[34m2026-04-02 20:48:04.718 UTC 087b INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6d8d00] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:04.910 UTC 087c INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [232], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-02 20:48:04.913 UTC 087d INFO[0m [orderer.consensus.etcdraft] [34;1mwriteBlock[0m -> Writing block [232] (Raft index: 234) to ledger channel=amchannel node=1
+[34m2026-04-02 20:48:05.184 UTC 087e INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6c1040] Closing: EOF
+[33m2026-04-02 20:48:05.185 UTC 087f WARN[0m [orderer.common.broadcast] [33;1mHandle[0m -> Error reading from D1:55324: rpc error: code = Canceled desc = context canceled
+[34m2026-04-02 20:48:05.185 UTC 0881 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6c1040] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:05.185 UTC 0880 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=D1:55324 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=336.539003ms
+[34m2026-04-02 20:48:05.385 UTC 0882 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [233], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-02 20:48:05.388 UTC 0883 INFO[0m [orderer.consensus.etcdraft] [34;1mwriteBlock[0m -> Writing block [233] (Raft index: 235) to ledger channel=amchannel node=1
+[34m2026-04-02 20:48:05.662 UTC 0884 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6d8ea0] Closing: EOF
+[34m2026-04-02 20:48:05.662 UTC 0885 INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebe6d8ea0] loopyWriter exiting with error: transport closed by client
+[33m2026-04-02 20:48:05.662 UTC 0886 WARN[0m [orderer.common.broadcast] [33;1mHandle[0m -> Error reading from D1:55330: rpc error: code = Canceled desc = context canceled
+[34m2026-04-02 20:48:05.662 UTC 0887 INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=D1:55330 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=339.347158ms
+[34m2026-04-02 20:48:05.797 UTC 0888 INFO[0m [orderer.consensus.etcdraft] [34;1mpropose[0m -> Created block [234], there are 0 blocks in flight channel=amchannel node=1
+[34m2026-04-02 20:48:05.800 UTC 0889 INFO[0m [orderer.consensus.etcdraft] [34;1mwriteBlock[0m -> Writing block [234] (Raft index: 236) to ledger channel=amchannel node=1
+[34m2026-04-02 20:48:06.084 UTC 088a INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebf000680] Closing: EOF
+[33m2026-04-02 20:48:06.085 UTC 088b WARN[0m [orderer.common.broadcast] [33;1mHandle[0m -> Error reading from D1:55336: rpc error: code = Canceled desc = context canceled
+[34m2026-04-02 20:48:06.085 UTC 088c INFO[0m [grpc] [34;1mInfof[0m -> [transport] [server-transport 0x1f2ebf000680] loopyWriter exiting with error: transport closed by client
+[34m2026-04-02 20:48:06.085 UTC 088d INFO[0m [comm.grpc.server] [34;1mfunc1[0m -> streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=D1:55336 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=350.121259ms

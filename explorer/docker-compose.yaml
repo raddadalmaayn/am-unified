@@ -44,7 +44,7 @@ services:
     volumes:
       - ./config.json:/opt/explorer/app/platform/fabric/config.json
       - ./connection-profile:/opt/explorer/app/platform/fabric/connection-profile
-      - /home/raddad/fabric-samples/test-network/organizations:/tmp/crypto
+      - ${FABRIC_ORGANIZATIONS_DIR:?set FABRIC_ORGANIZATIONS_DIR to the test-network organizations directory}:/tmp/crypto
     ports:
       - 8080:8080
     depends_on:

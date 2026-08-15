@@ -1,6 +1,6 @@
 # Unified Blockchain Provenance & Reputation System for Additive Manufacturing
 
-A Hyperledger Fabric v3.1.0 implementation combining **provenance tracking** and **Bayesian reputation scoring** for additive manufacturing supply chains in a single atomic smart-contract system.
+A Hyperledger Fabric implementation combining **provenance tracking** and **Bayesian reputation scoring** for additive manufacturing supply chains in a single atomic smart-contract system. The single-host testbed runs Fabric v3.1.0; the distributed four-organization evaluation runs Fabric v3.1.4.
 
 ## Overview
 
@@ -10,17 +10,17 @@ Traditional blockchain supply-chain solutions address provenance *or* reputation
 |---|---|
 | `ProvenanceContract` | Lightweight AM lifecycle event recording with off-chain SHA-256 artefact integrity |
 | `ReputationContract` | Multi-dimensional Bayesian (Beta distribution) reputation engine with stake-based incentives |
-| `IntegrationContract` | Automated provenance-to-reputation bridge — converts verified events into trust signals atomically |
+| `IntegrationContract` | Atomic provenance-to-reputation bridge — co-commits a provenance event, the reputation update submitted with it, and their link entry in one Fabric transaction |
 
 ## Key Features
 
 - **Atomic provenance + reputation** — one Fabric transaction records a lifecycle event *and* updates the Bayesian reputation accumulator
 - **Reputation gates** — block actors below a trust threshold from participating in critical lifecycle steps
-- **Five reputation dimensions** — quality, delivery, compliance, warranty, sustainability
+- **Runtime-configurable reputation dimensions** — `InitConfig` seeds quality, delivery, compliance and warranty; `AddDimension` and `UpdateConfig` change the set at runtime (admin-restricted)
 - **Wilson confidence intervals** — uncertainty quantification on every score
 - **Temporal decay** — exponential time-decay toward an uninformative prior (λ = 0.98/day)
 - **Stake-backed ratings** — economic skin-in-the-game deters dishonest ratings; slash mechanism penalises bad actors
-- **Lightweight on-chain footprint** — ~337 B per provenance event; bulk artefacts stored off-chain (S3/MinIO) with SHA-256 binding
+- **Lightweight on-chain footprint** — measured mean 450 B per provenance-event value in world state (429–487 B across three sampled event types); bulk artefacts stored off-chain (S3/MinIO) with SHA-256 binding
 
 ## Repository Structure
 
@@ -39,16 +39,27 @@ am-unified/
 │       └── vendor/            # Vendored Go dependencies
 ├── client-tests/
 │   ├── performance_test.js    # 9 performance benchmarks
-│   └── security_test.js       # 9 adversarial attack scenarios
+│   ├── security_test.js       # 9 adversarial attack scenarios
+│   ├── bench.js               # Closed-loop benchmark driver
+│   ├── analyze.js / steady.js / occupancy.js   # Analysis from txs.jsonl and manifests
+│   ├── lifecycle_assertion_test.js             # Lifecycle predecessor enforcement test
+│   └── emit_latex*.js         # Paper fragment emitters (number provenance)
+├── atomicity_comparison/      # Fault-injection harness and results (atomicity study)
 ├── scripts/
 │   ├── deploy.sh              # Full CCAAS deployment pipeline
 │   └── enroll_users.sh        # fabric-ca-client identity provisioning
 └── results/
     ├── performance/           # Benchmark output (JSON + CSV)
-    └── security/              # Security test output (JSON + TXT)
+    ├── security/              # Security test output (JSON + TXT)
+    ├── phase3*/ phase4/ phase8/ phase12*/ phase13*/
+    │                          # Runs behind the figures reported in the paper
+    ├── phase2*/ phase6*/ phase8b-d*/ probe*/
+    │                          # Superseded process record; NOT reported results
+    ├── geo-distributed/       # Four-organization LAN logs and baselines
+    └── latex_fragments/       # Emitted paper fragments with number provenance
 ```
 
-## Performance Results (Fabric v3.1.0, LevelDB, BatchTimeout=10 ms)
+## Performance Results (single-host, Fabric v3.1.0, LevelDB, BatchTimeout=10 ms — earlier run; see the paper for the figures reported there)
 
 | Metric | Result |
 |---|---|
@@ -80,6 +91,11 @@ Zero attacks fully succeeded.
 - Go 1.21+
 - Node.js 18+
 - Hyperledger Fabric v3.1.0 binaries (`fabric-samples/bin` on PATH)
+
+> **Before running `cryptogen`:** `network/config/crypto-config.yaml` carries
+> RFC 5737 documentation addresses (`192.0.2.11`–`.14`) as TLS SANs, not real
+> node addresses. Substitute your own node addresses first, or peers reached by
+> IP will fail TLS hostname verification. See the note at the top of that file.
 
 ### Quick Start
 

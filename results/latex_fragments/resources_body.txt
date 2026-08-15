@@ -1,0 +1,153 @@
+SECTION 5.5.3 resource utilisation — number provenance
+========================================================
+
+Source: the per-node resource samplers, read from cgroup v2 every 2 s.
+  phase3b: am-unified/results/phase3b-20260809T210708Z/resources.csv  (12 run windows from manifests)
+  phase4: am-unified/results/phase4-20260809T221329Z/resources.csv  (26 run windows from manifests)
+
+Rows classified: 37656. Load = timestamp inside a run's
+[wall_clock_start, wall_clock_end]; idle = every other sample.
+CPU% is normalised so that 100% = one saturated core.
+
+R.client.idle_cpu_median              = 0.00
+                                        resources.csv
+                                        median cpu_pct, samples outside every run window (n=1466)
+R.client.idle_mem_median_mb           = 117.31
+                                        resources.csv
+                                        median mem_used_mb, idle (n=1469)
+R.client.load_cpu_median              = 9.90
+                                        resources.csv
+                                        median cpu_pct, samples inside a run window (n=1654)
+R.client.load_cpu_p95                 = 17.00
+                                        resources.csv
+                                        p95 cpu_pct under load
+R.client.load_cpu_peak                = 56.10
+                                        resources.csv
+                                        max cpu_pct under load
+R.client.load_mem_median_mb           = 121.82
+                                        resources.csv
+                                        median mem_used_mb under load (n=1655)
+R.client.load_mem_p95_mb              = 130.18
+                                        resources.csv
+                                        p95 mem_used_mb under load
+R.client.load_mem_peak_mb             = 168.18
+                                        resources.csv
+                                        max mem_used_mb under load
+R.chaincode.idle_cpu_median           = 0.00
+                                        resources.csv
+                                        median cpu_pct, samples outside every run window (n=5923)
+R.chaincode.idle_mem_median_mb        = 25.42
+                                        resources.csv
+                                        median mem_used_mb, idle (n=5931)
+R.chaincode.load_cpu_median           = 1.65
+                                        resources.csv
+                                        median cpu_pct, samples inside a run window (n=6625)
+R.chaincode.load_cpu_p95              = 5.32
+                                        resources.csv
+                                        p95 cpu_pct under load
+R.chaincode.load_cpu_peak             = 53.63
+                                        resources.csv
+                                        max cpu_pct under load
+R.chaincode.load_mem_median_mb        = 26.35
+                                        resources.csv
+                                        median mem_used_mb under load (n=6625)
+R.chaincode.load_mem_p95_mb           = 28.67
+                                        resources.csv
+                                        p95 mem_used_mb under load
+R.chaincode.load_mem_peak_mb          = 33.63
+                                        resources.csv
+                                        max mem_used_mb under load
+R.peer.idle_cpu_median                = 5.69
+                                        resources.csv
+                                        median cpu_pct, samples outside every run window (n=5923)
+R.peer.idle_mem_median_mb             = 489.77
+                                        resources.csv
+                                        median mem_used_mb, idle (n=5931)
+R.peer.load_cpu_median                = 16.25
+                                        resources.csv
+                                        median cpu_pct, samples inside a run window (n=6625)
+R.peer.load_cpu_p95                   = 30.45
+                                        resources.csv
+                                        p95 cpu_pct under load
+R.peer.load_cpu_peak                  = 69.89
+                                        resources.csv
+                                        max cpu_pct under load
+R.peer.load_mem_median_mb             = 497.10
+                                        resources.csv
+                                        median mem_used_mb under load (n=6625)
+R.peer.load_mem_p95_mb                = 780.44
+                                        resources.csv
+                                        p95 mem_used_mb under load
+R.peer.load_mem_peak_mb               = 837.71
+                                        resources.csv
+                                        max mem_used_mb under load
+R.follower.idle_cpu_median            = 1.40
+                                        resources.csv
+                                        median cpu_pct, samples outside every run window (n=2964)
+R.follower.idle_mem_median_mb         = 381.25
+                                        resources.csv
+                                        median mem_used_mb, idle (n=2968)
+R.follower.load_cpu_median            = 2.56
+                                        resources.csv
+                                        median cpu_pct, samples inside a run window (n=3312)
+R.follower.load_cpu_p95               = 3.65
+                                        resources.csv
+                                        p95 cpu_pct under load
+R.follower.load_cpu_peak              = 6.08
+                                        resources.csv
+                                        max cpu_pct under load
+R.follower.load_mem_median_mb         = 381.13
+                                        resources.csv
+                                        median mem_used_mb under load (n=3312)
+R.follower.load_mem_p95_mb            = 507.34
+                                        resources.csv
+                                        p95 mem_used_mb under load
+R.follower.load_mem_peak_mb           = 528.59
+                                        resources.csv
+                                        max mem_used_mb under load
+R.leader.idle_cpu_median              = 1.87
+                                        resources.csv
+                                        median cpu_pct, samples outside every run window (n=1480)
+R.leader.idle_mem_median_mb           = 965.34
+                                        resources.csv
+                                        median mem_used_mb, idle (n=1482)
+R.leader.load_cpu_median              = 6.56
+                                        resources.csv
+                                        median cpu_pct, samples inside a run window (n=1658)
+R.leader.load_cpu_p95                 = 11.57
+                                        resources.csv
+                                        p95 cpu_pct under load
+R.leader.load_cpu_peak                = 28.75
+                                        resources.csv
+                                        max cpu_pct under load
+R.leader.load_mem_median_mb           = 967.14
+                                        resources.csv
+                                        median mem_used_mb under load (n=1658)
+R.leader.load_mem_p95_mb              = 1085.44
+                                        resources.csv
+                                        p95 mem_used_mb under load
+R.leader.load_mem_peak_mb             = 1106.98
+                                        resources.csv
+                                        max mem_used_mb under load
+R.leader.drift.phase3b.first_decile_med_mb= 867.83
+                                        resources.csv
+                                        median mem_used_mb, first 10% of phase3b samples
+R.leader.drift.phase3b.last_decile_med_mb= 951.19
+                                        resources.csv
+                                        median mem_used_mb, last 10% of phase3b samples
+R.leader.drift.phase3b.span_min       = 50.36
+                                        resources.csv
+                                        session span in minutes (1437 samples)
+R.leader.drift.phase4.first_decile_med_mb= 919.50
+                                        resources.csv
+                                        median mem_used_mb, first 10% of phase4 samples
+R.leader.drift.phase4.last_decile_med_mb= 1085.23
+                                        resources.csv
+                                        median mem_used_mb, last 10% of phase4 samples
+R.leader.drift.phase4.span_min        = 59.65
+                                        resources.csv
+                                        session span in minutes (1703 samples)
+
+Raft leader memory drift, reported as an observation not a diagnosis:
+  phase3b: 868 MB -> 951 MB over 50 min (min 798, max 995, n=1437)
+  phase4: 920 MB -> 1085 MB over 60 min (min 904, max 1107, n=1703)

@@ -6,10 +6,18 @@ SSH_KEY="$HOME/.ssh/id_fabric"
 SSH="ssh -i $SSH_KEY -o StrictHostKeyChecking=no"
 SCP="scp -i $SSH_KEY -o StrictHostKeyChecking=no"
 
-D1="iot-lab@10.12.11.48"
-D2="iot-lab@10.12.10.136"
-D3="iot-lab@10.12.10.92"
-D4="iot-lab@10.12.10.126"
+# Host addresses and SSH login for the four nodes. Set these for your
+# deployment, e.g. FABRIC_SSH_USER=ubuntu D1_HOST=192.0.2.11 ./deploy-4org.sh
+FABRIC_SSH_USER="${FABRIC_SSH_USER:?set FABRIC_SSH_USER to the SSH login on the four nodes}"
+D1_HOST="${D1_HOST:?set D1_HOST to the D1 (Manufacturer, Org1) address}"
+D2_HOST="${D2_HOST:?set D2_HOST to the D2 (Supplier, Org2) address}"
+D3_HOST="${D3_HOST:?set D3_HOST to the D3 (Logistics, Org3) address}"
+D4_HOST="${D4_HOST:?set D4_HOST to the D4 (Regulator, Org4) address}"
+
+D1="$FABRIC_SSH_USER@$D1_HOST"
+D2="$FABRIC_SSH_USER@$D2_HOST"
+D3="$FABRIC_SSH_USER@$D3_HOST"
+D4="$FABRIC_SSH_USER@$D4_HOST"
 ALL_DESKTOPS="$D1 $D2 $D3 $D4"
 
 # Laptop-side paths
@@ -319,8 +327,8 @@ for org_num in 2 3 4; do
 done
 
 # Start CCAAS containers (one per machine, each on port 9999)
-for machine_ip in 10.12.11.48 10.12.10.136 10.12.10.92 10.12.10.126; do
-    ssh -i ~/.ssh/id_fabric -o StrictHostKeyChecking=no iot-lab@$machine_ip \
+for machine_ip in "$D1_HOST" "$D2_HOST" "$D3_HOST" "$D4_HOST"; do
+    ssh -i "$SSH_KEY" -o StrictHostKeyChecking=no "$FABRIC_SSH_USER@$machine_ip" \
         "sudo docker run -d --name cc-unified --network host \
          -e CHAINCODE_SERVER_ADDRESS=0.0.0.0:9999 \
          -e CHAINCODE_ID=$CC_PACKAGE_ID \

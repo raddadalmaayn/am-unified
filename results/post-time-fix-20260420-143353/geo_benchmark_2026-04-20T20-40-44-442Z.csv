@@ -1,0 +1,10 @@
+test_name,txn_count,total_ms,tps,mean_ms,p50_ms,p95_ms,p99_ms,mvcc_rate,failures
+provenance_sequential,50,18266,2.74,365,346,612,701,,0
+reputation_sequential,50,17861,2.80,357,356,421,524,,0
+bridge_sequential,50,18315,2.73,366,357,480,634,,0
+read_latency,50,354,,7,7,9,12,,0
+cross_org_endorsement,50,18180,2.75,364,346,512,635,,0
+concurrent_provenance,200,6082,32.88,,,,,0.0,0
+concurrent_reputation,200,6898,28.27,,,,,0.0,5
+concurrent_bridge,200,7195,27.80,,,,,0.0,0
+high_contention_reputation,200,6670,1.50,,,,,95.0,190

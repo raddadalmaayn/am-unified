@@ -1,0 +1,150 @@
+PHASE 12 (single-host BatchTimeout probe) — number provenance
+==============================================================
+
+Every number in the companion fragment, with its source. Paths are relative to
+am-unified/results/phase12-20260812T032452Z/
+
+analysis.json  <- analyze.js, computed from txs.jsonl ONLY (steady_state = E1/steady.js)
+occupancy.json <- occupancy.js, computed from run manifests (height_delta)
+manifest.json  <- written by bench.js at run completion
+
+P12.bt10.A.mean_ms                  = 40.084
+                                      bt10ms/seq/A/analysis.json
+                                      per_condition.A.median_across_runs.mean
+P12.bt10.A.p50_ms                   = 40.854
+                                      bt10ms/seq/A/analysis.json
+                                      per_condition.A.median_across_runs.p50
+P12.bt10.A.steady_tps               = 24.900
+                                      bt10ms/seq/A/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+P12.bt10.A.total_window_tps         = 25.260
+                                      bt10ms/seq/A/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2 basis]
+P12.bt10.A.tx_per_block             = 1.000
+                                      bt10ms/seq/A/occupancy.json
+                                      runs[condition=A].tx_per_block (median of 3)   [from manifest height_delta]
+P12.bt10.A.block_rate_per_s         = 28.163
+                                      bt10ms/seq/A/occupancy.json
+                                      runs[condition=A].block_rate_per_s (median of 3)   [from manifest height_delta]
+P12.bt10.A.counted_keys_at_measurement= 79421.000
+                                      bt10ms/seq/A/run1/manifest.json
+                                      state_keys_before.counted_keys
+P12.bt10.A.ledger_height_at_measurement= 20926.000
+                                      bt10ms/seq/A/run1/manifest.json
+                                      ledger_before.peers.org1.height
+P12.bt10.A.committed                = 1500.000
+                                      bt10ms/seq/A/analysis.json
+                                      per_condition.A.committed_total
+P12.bt10.A.submitted                = 1500.000
+                                      bt10ms/seq/A/analysis.json
+                                      per_condition.A.n_total
+P12.bt50.A.mean_ms                  = 76.631
+                                      bt50ms/seq/A/analysis.json
+                                      per_condition.A.median_across_runs.mean
+P12.bt50.A.p50_ms                   = 76.586
+                                      bt50ms/seq/A/analysis.json
+                                      per_condition.A.median_across_runs.p50
+P12.bt50.A.steady_tps               = 13.035
+                                      bt50ms/seq/A/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+P12.bt50.A.total_window_tps         = 13.060
+                                      bt50ms/seq/A/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2 basis]
+P12.bt50.A.tx_per_block             = 1.000
+                                      bt50ms/seq/A/occupancy.json
+                                      runs[condition=A].tx_per_block (median of 3)   [from manifest height_delta]
+P12.bt50.A.block_rate_per_s         = 13.811
+                                      bt50ms/seq/A/occupancy.json
+                                      runs[condition=A].block_rate_per_s (median of 3)   [from manifest height_delta]
+P12.bt50.A.counted_keys_at_measurement= 79427.000
+                                      bt50ms/seq/A/run1/manifest.json
+                                      state_keys_before.counted_keys
+P12.bt50.A.ledger_height_at_measurement= 23219.000
+                                      bt50ms/seq/A/run1/manifest.json
+                                      ledger_before.peers.org1.height
+P12.bt50.A.committed                = 1500.000
+                                      bt50ms/seq/A/analysis.json
+                                      per_condition.A.committed_total
+P12.bt50.A.submitted                = 1500.000
+                                      bt50ms/seq/A/analysis.json
+                                      per_condition.A.n_total
+P12.bt10.E.mean_ms                  = 228.354
+                                      bt10ms/conc/E/analysis.json
+                                      per_condition.E.median_across_runs.mean
+P12.bt10.E.p50_ms                   = 227.289
+                                      bt10ms/conc/E/analysis.json
+                                      per_condition.E.median_across_runs.p50
+P12.bt10.E.steady_tps               = 427.791
+                                      bt10ms/conc/E/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+P12.bt10.E.total_window_tps         = 432.983
+                                      bt10ms/conc/E/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2 basis]
+P12.bt10.E.tx_per_block             = 7.813
+                                      bt10ms/conc/E/occupancy.json
+                                      runs[condition=E].tx_per_block (median of 3)   [from manifest height_delta]
+P12.bt10.E.block_rate_per_s         = 71.973
+                                      bt10ms/conc/E/occupancy.json
+                                      runs[condition=E].block_rate_per_s (median of 3)   [from manifest height_delta]
+P12.bt10.E.counted_keys_at_measurement= 79424.000
+                                      bt10ms/conc/E/run1/manifest.json
+                                      state_keys_before.counted_keys
+P12.bt10.E.ledger_height_at_measurement= 22429.000
+                                      bt10ms/conc/E/run1/manifest.json
+                                      ledger_before.peers.org1.height
+P12.bt10.E.committed                = 6000.000
+                                      bt10ms/conc/E/analysis.json
+                                      per_condition.E.committed_total
+P12.bt10.E.submitted                = 6000.000
+                                      bt10ms/conc/E/analysis.json
+                                      per_condition.E.n_total
+P12.bt50.E.mean_ms                  = 234.209
+                                      bt50ms/conc/E/analysis.json
+                                      per_condition.E.median_across_runs.mean
+P12.bt50.E.p50_ms                   = 231.916
+                                      bt50ms/conc/E/analysis.json
+                                      per_condition.E.median_across_runs.p50
+P12.bt50.E.steady_tps               = 416.666
+                                      bt50ms/conc/E/*/txs.jsonl
+                                      steady.js computeSteady() median across runs   [E1 definition]
+P12.bt50.E.total_window_tps         = 423.273
+                                      bt50ms/conc/E/*/txs.jsonl
+                                      steady.js computeTotalWindow() median across runs   [E2 basis]
+P12.bt50.E.tx_per_block             = 24.390
+                                      bt50ms/conc/E/occupancy.json
+                                      runs[condition=E].tx_per_block (median of 3)   [from manifest height_delta]
+P12.bt50.E.block_rate_per_s         = 23.251
+                                      bt50ms/conc/E/occupancy.json
+                                      runs[condition=E].block_rate_per_s (median of 3)   [from manifest height_delta]
+P12.bt50.E.counted_keys_at_measurement= 79430.000
+                                      bt50ms/conc/E/run1/manifest.json
+                                      state_keys_before.counted_keys
+P12.bt50.E.ledger_height_at_measurement= 24722.000
+                                      bt50ms/conc/E/run1/manifest.json
+                                      ledger_before.peers.org1.height
+P12.bt50.E.committed                = 6000.000
+                                      bt50ms/conc/E/analysis.json
+                                      per_condition.E.committed_total
+P12.bt50.E.submitted                = 6000.000
+                                      bt50ms/conc/E/analysis.json
+                                      per_condition.E.n_total
+P12.seq_latency_delta_pct           = -47.692
+                                      (derived)
+                                      (P12.bt10.A.mean_ms - P12.bt50.A.mean_ms) / P12.bt50.A.mean_ms   [negative = 10ms is faster]
+P12.conc_tps_delta_pct              = 2.670
+                                      (derived)
+                                      (P12.bt10.E.steady_tps - P12.bt50.E.steady_tps) / P12.bt50.E.steady_tps
+P12.bt10.E.tpb_x_br                 = 562.290
+                                      (derived)
+                                      P12.bt10.E.tx_per_block * P12.bt10.E.block_rate_per_s
+P12.bt50.E.tpb_x_br                 = 567.105
+                                      (derived)
+                                      P12.bt50.E.tx_per_block * P12.bt50.E.block_rate_per_s
+
+Sanity: throughput is conserved across the two settings because the change in
+block occupancy is compensated by the change in block rate:
+  10ms: 7.81 tx/block x 71.97 blocks/s = 562.3
+  50ms: 24.39 tx/block x 23.25 blocks/s = 567.1
+These products exceed the measured steady TPS because blocks_produced counts
+every block in the run, including warm-up and drain, whereas steady TPS excludes
+both. The comparison of interest is 10ms against 50ms, not the absolute product.

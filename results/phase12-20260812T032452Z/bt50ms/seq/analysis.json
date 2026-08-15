@@ -1,0 +1,366 @@
+{
+  "generated_at": "2026-08-12T03:39:39.607Z",
+  "source_root": "am-unified/results/phase12-20260812T032452Z/bt50ms/seq",
+  "files_read": [
+    "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run1/txs.jsonl",
+    "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run2/txs.jsonl",
+    "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run3/txs.jsonl"
+  ],
+  "note": "Computed exclusively from txs.jsonl records.",
+  "per_run": [
+    {
+      "run_id": "Smspja3sf-A-r1",
+      "condition": "A",
+      "run_index": 1,
+      "file": "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run1/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 23,
+      "steady_count": 477,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 477,
+        "mean": 92.99674638784067,
+        "p50": 90.751302,
+        "p95": 104.215809,
+        "p99": 109.55588,
+        "min": 71.600761,
+        "max": 112.205418
+      },
+      "latency_endorse_ms": {
+        "n": 477,
+        "median": 11.747429
+      },
+      "latency_order_commit_ms": {
+        "n": 477,
+        "median": 78.945222
+      },
+      "steady_state": {
+        "window_ms": 44447.01833,
+        "tps": 10.731878490891788,
+        "count": 477,
+        "W": 1,
+        "total": 500,
+        "t_start_ns": "27971778194901",
+        "t_end_ns": "28016225213231",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 44283.453665,
+        "tps": 10.726353992019876,
+        "retained_count": 476,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smspja3sf-A-r2",
+      "condition": "A",
+      "run_index": 2,
+      "file": "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run2/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 27,
+      "steady_count": 473,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 473,
+        "mean": 76.58238023678652,
+        "p50": 76.471773,
+        "p95": 79.990574,
+        "p99": 83.440713,
+        "min": 72.000042,
+        "max": 85.974259
+      },
+      "latency_endorse_ms": {
+        "n": 473,
+        "median": 6.768601
+      },
+      "latency_order_commit_ms": {
+        "n": 473,
+        "median": 69.663248
+      },
+      "steady_state": {
+        "window_ms": 36263.861743,
+        "tps": 13.043288201133269,
+        "count": 473,
+        "W": 1,
+        "total": 500,
+        "t_start_ns": "28079120790165",
+        "t_end_ns": "28115384651908",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 36111.45055,
+        "tps": 13.04295432131291,
+        "retained_count": 472,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    },
+    {
+      "run_id": "Smspja3sf-A-r3",
+      "condition": "A",
+      "run_index": 3,
+      "file": "am-unified/results/phase12-20260812T032452Z/bt50ms/seq/A/run3/txs.jsonl",
+      "malformed_lines": 0,
+      "submitted": 500,
+      "committed": 500,
+      "warmup_count": 26,
+      "steady_count": 474,
+      "observed_worker_slots": 1,
+      "errors_by_class": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "unclassified": 0,
+      "error_total": 0,
+      "invariant_holds": true,
+      "latency_total_ms": {
+        "n": 474,
+        "mean": 76.63094866877644,
+        "p50": 76.586317,
+        "p95": 79.784452,
+        "p99": 83.324146,
+        "min": 70.929226,
+        "max": 85.114539
+      },
+      "latency_endorse_ms": {
+        "n": 474,
+        "median": 6.727952
+      },
+      "latency_order_commit_ms": {
+        "n": 474,
+        "median": 69.9762905
+      },
+      "steady_state": {
+        "window_ms": 36363.121594,
+        "tps": 13.035184528222988,
+        "count": 474,
+        "W": 1,
+        "total": 500,
+        "t_start_ns": "28178186851892",
+        "t_end_ns": "28214549973486",
+        "definition": "E1 (steady.js): interval during which exactly W transactions were in flight throughout"
+      },
+      "steady_state_legacy_superseded": {
+        "window_ms": 36202.998462,
+        "tps": 13.037594123465452,
+        "retained_count": 473,
+        "dropped_drain_count": 1,
+        "drain_rule": "trailing `observed_worker_slots` completions excluded",
+        "status": "SUPERSEDED by E1 — not a reported result, not a source of any paper number"
+      },
+      "suspect_low_steady_count": false
+    }
+  ],
+  "per_condition": {
+    "A": {
+      "condition": "A",
+      "runs": 3,
+      "n_total": 1500,
+      "committed_total": 1500,
+      "error_total": 0,
+      "errors_by_class_total": {
+        "MVCC_READ_CONFLICT": 0,
+        "PHANTOM_READ_CONFLICT": 0,
+        "ENDORSEMENT_POLICY_FAILURE": 0,
+        "CHAINCODE_REJECT": 0,
+        "ENDORSE_MISMATCH": 0,
+        "GATEWAY_DEADLINE": 0,
+        "GATEWAY_UNAVAILABLE": 0,
+        "ORDERER_UNAVAILABLE": 0,
+        "COMMIT_TIMEOUT": 0,
+        "OTHER": 0
+      },
+      "zero_event_upper_bounds": {
+        "MVCC_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "PHANTOM_READ_CONFLICT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSEMENT_POLICY_FAILURE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "CHAINCODE_REJECT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ENDORSE_MISMATCH": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_DEADLINE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "GATEWAY_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "ORDERER_UNAVAILABLE": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "COMMIT_TIMEOUT": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        },
+        "OTHER": {
+          "rule_of_three_upper_pct": 0.2,
+          "wilson_upper_pct": 0.2554524359480413
+        }
+      },
+      "invariant_holds_all_runs": true,
+      "per_run": [
+        {
+          "run_index": 1,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 92.99674638784067,
+          "p50": 90.751302,
+          "p95": 104.215809,
+          "p99": 109.55588,
+          "min": 71.600761,
+          "max": 112.205418,
+          "endorse_median": 11.747429,
+          "order_commit_median": 78.945222,
+          "steady_tps": 10.731878490891788,
+          "steady_tps_legacy_superseded": 10.726353992019876,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 2,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 76.58238023678652,
+          "p50": 76.471773,
+          "p95": 79.990574,
+          "p99": 83.440713,
+          "min": 72.000042,
+          "max": 85.974259,
+          "endorse_median": 6.768601,
+          "order_commit_median": 69.663248,
+          "steady_tps": 13.043288201133269,
+          "steady_tps_legacy_superseded": 13.04295432131291,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        },
+        {
+          "run_index": 3,
+          "submitted": 500,
+          "committed": 500,
+          "mean": 76.63094866877644,
+          "p50": 76.586317,
+          "p95": 79.784452,
+          "p99": 83.324146,
+          "min": 70.929226,
+          "max": 85.114539,
+          "endorse_median": 6.727952,
+          "order_commit_median": 69.9762905,
+          "steady_tps": 13.035184528222988,
+          "steady_tps_legacy_superseded": 13.037594123465452,
+          "errors_by_class": {
+            "MVCC_READ_CONFLICT": 0,
+            "PHANTOM_READ_CONFLICT": 0,
+            "ENDORSEMENT_POLICY_FAILURE": 0,
+            "CHAINCODE_REJECT": 0,
+            "ENDORSE_MISMATCH": 0,
+            "GATEWAY_DEADLINE": 0,
+            "GATEWAY_UNAVAILABLE": 0,
+            "ORDERER_UNAVAILABLE": 0,
+            "COMMIT_TIMEOUT": 0,
+            "OTHER": 0
+          }
+        }
+      ],
+      "median_across_runs": {
+        "p50": 76.586317,
+        "steady_tps": 13.035184528222988,
+        "steady_tps_legacy_superseded": 13.037594123465452,
+        "mean": 76.63094866877644,
+        "p95": 79.990574,
+        "p99": 83.440713,
+        "endorse_median": 6.768601,
+        "order_commit_median": 69.9762905
+      },
+      "spread_across_runs": {
+        "p50_min": 76.471773,
+        "p50_max": 90.751302,
+        "p50_spread": 14.279528999999997,
+        "tps_min": 10.731878490891788,
+        "tps_max": 13.043288201133269,
+        "tps_spread": 2.311409710241481
+      }
+    }
+  }
+}

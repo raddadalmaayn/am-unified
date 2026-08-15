@@ -53,7 +53,7 @@
 | high_contention_reputation    |  2000 |   1.51 |     N/A |     N/A | 95.0% | 1900 |
 
 ✅ Results saved:
-   JSON: /home/iot-lab/am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T23-06-08-151Z.json
-   CSV:  /home/iot-lab/am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T23-06-08-151Z.csv
+   JSON: am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T23-06-08-151Z.json
+   CSV:  am-unified/results/geo-distributed-v2/geo_benchmark_2026-04-20T23-06-08-151Z.csv
 
 Total benchmark time: 15.0 min

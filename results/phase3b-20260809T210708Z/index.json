@@ -1,0 +1,110 @@
+[
+  {
+    "condition": "E",
+    "run_index": 1,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/E/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "E",
+    "run_index": 2,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/E/run2",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "E",
+    "run_index": 3,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/E/run3",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "F",
+    "run_index": 1,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/F/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "F",
+    "run_index": 2,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/F/run2",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "F",
+    "run_index": 3,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/F/run3",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "G",
+    "run_index": 1,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/G/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "G",
+    "run_index": 2,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/G/run2",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "G",
+    "run_index": 3,
+    "W": 20,
+    "total": 2000,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/G/run3",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "H",
+    "run_index": 1,
+    "W": 20,
+    "total": 500,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/H/run1",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "H",
+    "run_index": 2,
+    "W": 20,
+    "total": 500,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/H/run2",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  },
+  {
+    "condition": "H",
+    "run_index": 3,
+    "W": 20,
+    "total": 500,
+    "dir": "am-unified/results/phase3b-20260809T210708Z/H/run3",
+    "invariant_holds": true,
+    "session_id": "Smsmamz0x"
+  }
+]

@@ -1,0 +1,462 @@
+{
+  "generated_at": "2026-08-09T22:08:18.202Z",
+  "note": "blocks_produced spans the whole run; steady_window_s is a subset, so block_rate_per_s over the steady window overstates. Total-window figure reported alongside.",
+  "runs": [
+    {
+      "condition": "E",
+      "run_index": 1,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 576,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 576,
+        "org2": 576,
+        "org3": 576,
+        "org4": 576
+      },
+      "tx_per_block": 3.4722222222222223,
+      "steady_window_s": 149.467267604,
+      "block_rate_per_s": 3.853686557822545,
+      "total_window_s": 156.9276696,
+      "block_rate_per_s_total_window": 3.670480811116308,
+      "steady_tps": 12.571314309285698,
+      "p50_ms": 1504.443546,
+      "endorse_median_ms": 394.585094,
+      "order_commit_median_ms": 1019.2710285,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 84538,
+        "polls": 59,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 27208,
+          "at_poll": 58
+        }
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 2,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 661,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 661,
+        "org2": 661,
+        "org3": 661,
+        "org4": 661
+      },
+      "tx_per_block": 3.02571860816944,
+      "steady_window_s": 178.824109538,
+      "block_rate_per_s": 3.6963695874550853,
+      "total_window_s": 185.017940997,
+      "block_rate_per_s_total_window": 3.5726265055058515,
+      "steady_tps": 10.507531701706665,
+      "p50_ms": 1780.9077905,
+      "endorse_median_ms": 401.54701750000004,
+      "order_commit_median_ms": 1306.9153615,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 93329,
+        "polls": 66,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 27869,
+          "at_poll": 65
+        }
+      }
+    },
+    {
+      "condition": "E",
+      "run_index": 3,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 608,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 608,
+        "org2": 608,
+        "org3": 608,
+        "org4": 608
+      },
+      "tx_per_block": 3.289473684210526,
+      "steady_window_s": 160.541302368,
+      "block_rate_per_s": 3.78718741552448,
+      "total_window_s": 167.389264128,
+      "block_rate_per_s_total_window": 3.6322520632809026,
+      "steady_tps": 11.70415321343832,
+      "p50_ms": 1605.0741315,
+      "endorse_median_ms": 394.6406865,
+      "order_commit_median_ms": 1227.0868810000002,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 89951,
+        "polls": 64,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 28477,
+          "at_poll": 63
+        }
+      }
+    },
+    {
+      "condition": "F",
+      "run_index": 1,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 588,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 588,
+        "org2": 588,
+        "org3": 588,
+        "org4": 588
+      },
+      "tx_per_block": 3.401360544217687,
+      "steady_window_s": 157.46009964,
+      "block_rate_per_s": 3.7342793593065196,
+      "total_window_s": 164.58568359100002,
+      "block_rate_per_s_total_window": 3.57260721085071,
+      "steady_tps": 11.933181830164882,
+      "p50_ms": 1596.7824074999999,
+      "endorse_median_ms": 402.4316095,
+      "order_commit_median_ms": 1162.4286185,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 89831,
+        "polls": 65,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 29067,
+          "at_poll": 64
+        }
+      }
+    },
+    {
+      "condition": "F",
+      "run_index": 2,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 552,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 552,
+        "org2": 552,
+        "org3": 552,
+        "org4": 552
+      },
+      "tx_per_block": 3.6231884057971016,
+      "steady_window_s": 150.060857484,
+      "block_rate_per_s": 3.6785075685633486,
+      "total_window_s": 155.89176743000002,
+      "block_rate_per_s_total_window": 3.540918222303588,
+      "steady_tps": 12.521586451685746,
+      "p50_ms": 1541.7489190000001,
+      "endorse_median_ms": 442.38464799999997,
+      "order_commit_median_ms": 996.5316045,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 85636,
+        "polls": 61,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 29621,
+          "at_poll": 60
+        }
+      }
+    },
+    {
+      "condition": "F",
+      "run_index": 3,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 624,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 624,
+        "org2": 624,
+        "org3": 624,
+        "org4": 624
+      },
+      "tx_per_block": 3.2051282051282053,
+      "steady_window_s": 167.898648479,
+      "block_rate_per_s": 3.7165278318368777,
+      "total_window_s": 174.57179736,
+      "block_rate_per_s_total_window": 3.574460533926876,
+      "steady_tps": 11.191275314137009,
+      "p50_ms": 1778.7307325,
+      "endorse_median_ms": 406.7678935,
+      "order_commit_median_ms": 1282.0302185,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 92456,
+        "polls": 66,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 30247,
+          "at_poll": 65
+        }
+      }
+    },
+    {
+      "condition": "G",
+      "run_index": 1,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 563,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 563,
+        "org2": 563,
+        "org3": 563,
+        "org4": 563
+      },
+      "tx_per_block": 3.552397868561279,
+      "steady_window_s": 151.92310436900001,
+      "block_rate_per_s": 3.705822115328499,
+      "total_window_s": 158.862983391,
+      "block_rate_per_s_total_window": 3.543934452082658,
+      "steady_tps": 12.368099031442718,
+      "p50_ms": 1560.7901375000001,
+      "endorse_median_ms": 451.170985,
+      "order_commit_median_ms": 1054.5444069999999,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 82476,
+        "polls": 60,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 30810,
+          "at_poll": 59
+        }
+      }
+    },
+    {
+      "condition": "G",
+      "run_index": 2,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 610,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 610,
+        "org2": 610,
+        "org3": 610,
+        "org4": 610
+      },
+      "tx_per_block": 3.278688524590164,
+      "steady_window_s": 169.491000967,
+      "block_rate_per_s": 3.5990111364010846,
+      "total_window_s": 177.205735235,
+      "block_rate_per_s_total_window": 3.442326509303174,
+      "steady_tps": 11.08613430376662,
+      "p50_ms": 1701.093625,
+      "endorse_median_ms": 427.962054,
+      "order_commit_median_ms": 1241.1488755,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 80690,
+        "polls": 57,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 31420,
+          "at_poll": 56
+        }
+      }
+    },
+    {
+      "condition": "G",
+      "run_index": 3,
+      "W": 20,
+      "n": 2000,
+      "committed": 2000,
+      "blocks_produced": 574,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 574,
+        "org2": 574,
+        "org3": 574,
+        "org4": 574
+      },
+      "tx_per_block": 3.484320557491289,
+      "steady_window_s": 154.745205952,
+      "block_rate_per_s": 3.7093233129176717,
+      "total_window_s": 160.07701168,
+      "block_rate_per_s_total_window": 3.585774084460345,
+      "steady_tps": 12.142540949429103,
+      "p50_ms": 1556.0516955,
+      "endorse_median_ms": 423.46149249999996,
+      "order_commit_median_ms": 1115.0358395,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 84530,
+        "polls": 61,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 31994,
+          "at_poll": 60
+        }
+      }
+    },
+    {
+      "condition": "H",
+      "run_index": 1,
+      "W": 20,
+      "n": 500,
+      "committed": 27,
+      "blocks_produced": 34,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 34,
+        "org2": 34,
+        "org3": 34,
+        "org4": 34
+      },
+      "tx_per_block": 0.7941176470588235,
+      "steady_window_s": 0.668589046,
+      "block_rate_per_s": 50.8533608251787,
+      "total_window_s": 11.476564191,
+      "block_rate_per_s_total_window": 2.9625591278148415,
+      "steady_tps": 2.9913741661869824,
+      "p50_ms": 497.465393,
+      "endorse_median_ms": 184.641795,
+      "order_commit_median_ms": 316.431425,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 1745,
+        "polls": 2,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 32030,
+          "at_poll": 1
+        }
+      }
+    },
+    {
+      "condition": "H",
+      "run_index": 2,
+      "W": 20,
+      "n": 500,
+      "committed": 28,
+      "blocks_produced": 38,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 38,
+        "org2": 38,
+        "org3": 38,
+        "org4": 38
+      },
+      "tx_per_block": 0.7368421052631579,
+      "steady_window_s": 1.1180509669999998,
+      "block_rate_per_s": 33.98771712703148,
+      "total_window_s": 11.655508325000001,
+      "block_rate_per_s_total_window": 3.2602610663057456,
+      "steady_tps": 2.6832408258182747,
+      "p50_ms": 503.5726755,
+      "endorse_median_ms": 178.090319,
+      "order_commit_median_ms": 336.9610055,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 2705,
+        "polls": 3,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 32070,
+          "at_poll": 2
+        }
+      }
+    },
+    {
+      "condition": "H",
+      "run_index": 3,
+      "W": 20,
+      "n": 500,
+      "committed": 28,
+      "blocks_produced": 39,
+      "height_delta_all_agree": true,
+      "height_deltas": {
+        "org1": 39,
+        "org2": 39,
+        "org3": 39,
+        "org4": 39
+      },
+      "tx_per_block": 0.717948717948718,
+      "steady_window_s": 1.403382519,
+      "block_rate_per_s": 27.789999855342362,
+      "total_window_s": 13.035223681,
+      "block_rate_per_s_total_window": 2.9918934231137113,
+      "steady_tps": 2.137692296564797,
+      "p50_ms": 766.3229550000001,
+      "endorse_median_ms": 254.287973,
+      "order_commit_median_ms": 491.0594645,
+      "convergence": {
+        "converged": true,
+        "wait_ms": 1691,
+        "polls": 2,
+        "timeout_ms": 900000,
+        "poll_ms": 1000,
+        "laggards_last_poll": {
+          "peers": [
+            "org2"
+          ],
+          "target_height": 32111,
+          "at_poll": 1
+        }
+      }
+    }
+  ]
+}
